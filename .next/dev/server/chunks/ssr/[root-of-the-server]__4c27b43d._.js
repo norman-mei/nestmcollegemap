@@ -1,0 +1,2663 @@
+module.exports = [
+"[externals]/next/dist/compiled/next-server/app-page-turbo.runtime.dev.js [external] (next/dist/compiled/next-server/app-page-turbo.runtime.dev.js, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("next/dist/compiled/next-server/app-page-turbo.runtime.dev.js", () => require("next/dist/compiled/next-server/app-page-turbo.runtime.dev.js"));
+
+module.exports = mod;
+}),
+"[project]/src/contexts/ThemeContext.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "ThemeProvider",
+    ()=>ThemeProvider,
+    "useTheme",
+    ()=>useTheme
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+'use client';
+;
+;
+const ThemeContext = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createContext"])(undefined);
+const ThemeProvider = ({ children })=>{
+    const [theme, setTheme] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('light');
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if ("TURBOPACK compile-time truthy", 1) return;
+        //TURBOPACK unreachable
+        ;
+        const saved = undefined;
+        const initial = undefined;
+    }, []);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+        if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
+        ;
+    }, [
+        theme
+    ]);
+    const toggleTheme = ()=>{
+        setTheme((prev)=>{
+            const next = prev === 'light' ? 'dark' : 'light';
+            localStorage.setItem('isDarkMode', String(next === 'dark'));
+            if (next === 'dark') {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+            return next;
+        });
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ThemeContext.Provider, {
+        value: {
+            theme,
+            toggleTheme
+        },
+        children: children
+    }, void 0, false, {
+        fileName: "[project]/src/contexts/ThemeContext.tsx",
+        lineNumber: 50,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0));
+};
+const useTheme = ()=>{
+    const context = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useContext"])(ThemeContext);
+    if (!context) throw new Error('useTheme must be used within a ThemeProvider');
+    return context;
+};
+}),
+"[project]/src/data/students.json (json)", ((__turbopack_context__) => {
+
+__turbopack_context__.v(JSON.parse("[{\"name\":\"Adam Vogel\",\"classYear\":\"21\",\"college\":\"CCNY\",\"major\":\"Undecided Major\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/adamv.links/\",\"congratsCaption\":\"@adamv.links to CCNY 💜💜!\"},{\"name\":\"Alex Procaccino\",\"classYear\":\"21\",\"college\":\"UCLA\",\"major\":\"Pre-Mathematics\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/ale.procaccino/\",\"congratsCaption\":\"@ale.procaccino off to California !\"},{\"name\":\"August Siegel\",\"classYear\":\"21\",\"college\":\"Middlebury (POSSE)\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/august-siegel-b28653343/\",\"instagram\":\"https://www.instagram.com/soupthedogg/\",\"congratsCaption\":\"Another one off to Middlebury @soupthedogg !!!\"},{\"name\":\"Benjamin Ebanks\",\"classYear\":\"21\",\"college\":\"Massachusetts Institute of Technology\",\"major\":\"Computer Science, Economics, & Data Science\",\"linkedin\":\"https://www.linkedin.com/in/benjamin-ebanks-5492b5211/\",\"instagram\":\"https://www.instagram.com/benjamin.ebanks/\",\"congratsCaption\":\"@benjamin.ebanks off to MIT !!❤️❤️\"},{\"name\":\"Bernadine Gurning\",\"classYear\":\"21\",\"college\":\"Fordham\",\"major\":\"Neuroscience\",\"linkedin\":\"https://www.linkedin.com/in/bernadine-gurning-064b0b20a/\",\"instagram\":\"https://www.instagram.com/bernadinegurning/\",\"congratsCaption\":\"Congrats @bernadinegurning !!\"},{\"name\":\"Carli Seigelstein\",\"classYear\":\"21\",\"college\":\"NEU\",\"major\":\"Communication Studies\",\"linkedin\":\"https://www.linkedin.com/in/carli-seigelstein-226418251/\",\"instagram\":\"https://www.instagram.com/curligrill/\",\"congratsCaption\":\"@curligrill to Northeastern !❤️🖤\"},{\"name\":\"Emily Cavanaugh\",\"classYear\":\"21\",\"college\":\"Cornell\",\"major\":\"Entomology\",\"linkedin\":\"https://www.linkedin.com/in/emily-cavanaugh-19566030b/\",\"instagram\":\"https://www.instagram.com/eco_evergreen/\",\"congratsCaption\":\"@eco_evergreen off to Cornell! 🤎❤️\"},{\"name\":\"Emma Griebsch\",\"classYear\":\"21\",\"college\":\"University of Edinburgh\",\"major\":\"History & Politics\",\"linkedin\":\"https://www.linkedin.com/in/emma-griebsch-48b689350/\",\"instagram\":\"https://www.instagram.com/emmagriebsch/\",\"congratsCaption\":\"Congrats to @emmagriebsch on committing !!\"},{\"name\":\"Etai Kurtzman\",\"classYear\":\"21\",\"college\":\"Tufts\",\"major\":\"Computer Science\",\"linkedin\":\"https://www.linkedin.com/in/etai-kurtzman-b91700259/\",\"instagram\":\"https://www.instagram.com/etai_kurtzman/\",\"congratsCaption\":\"@etai_kurtzman off to Tufts !!\"},{\"name\":\"Haylie Parrilla\",\"classYear\":\"21\",\"college\":\"Emerson\",\"major\":\"Media Arts Production\",\"linkedin\":\"https://www.linkedin.com/in/haylie-p-7a7650264/\",\"instagram\":\"https://www.instagram.com/hmparrilla/\",\"congratsCaption\":\"Congrats to @hmparrilla !💜\"},{\"name\":\"Henry Foster\",\"classYear\":\"21\",\"college\":\"UMich\",\"major\":\"Computer Science\",\"linkedin\":\"https://www.linkedin.com/in/henry-foster-5871b0202/\",\"instagram\":\"\",\"congratsCaption\":\"@henry.foster1 off to UMich !\"},{\"name\":\"Isabella Bogosel\",\"classYear\":\"21\",\"college\":\"Ithaca\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/isabellabogosel/\",\"instagram\":\"https://www.instagram.com/isabellabogosel/\",\"congratsCaption\":\"Congrats to @isabellabogosel_ !!\"},{\"name\":\"Israel Selassie\",\"classYear\":\"21\",\"college\":\"Towson\",\"major\":\"Social Sciences\",\"linkedin\":\"\",\"instagram\":\"\",\"congratsCaption\":\"@israelll.s off to Towson !!💛💛\"},{\"name\":\"Liam Ninger\",\"classYear\":\"21\",\"college\":\"UAlbany\",\"major\":\"Computer Science\",\"linkedin\":\"https://www.linkedin.com/in/liam-n-9150171b1/\",\"instagram\":\"https://www.instagram.com/skelatafoot/\",\"congratsCaption\":\"@skelatafoot off to UAlbany !!\"},{\"name\":\"Lila Shulmister\",\"classYear\":\"21\",\"college\":\"University of Edinburgh\",\"major\":\"Social Anthropology\",\"linkedin\":\"https://www.linkedin.com/in/lila-shulmister-a50968346/\",\"instagram\":\"https://www.instagram.com/lilashulz/\",\"congratsCaption\":\"Another one off to Scotland @lilashulz !!\"},{\"name\":\"Lizbeth Yumbla\",\"classYear\":\"21\",\"college\":\"Northwestern\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/lizyum/\",\"instagram\":\"https://www.instagram.com/lizbethyumbla/\",\"congratsCaption\":\"Congrats @lizbethyumbla !💜\"},{\"name\":\"Madison Roberts\",\"classYear\":\"21\",\"college\":\"Babson\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/madisonbroberts/\",\"instagram\":\"https://www.instagram.com/madisonnrobertss/\",\"congratsCaption\":\"@madisonnrobertss to Babson !!\"},{\"name\":\"Maeve O' Donnell\",\"classYear\":\"21\",\"college\":\"Oberlin\",\"major\":\"Law & Society\",\"linkedin\":\"https://www.linkedin.com/in/maeve-o-donnell-7b46a3350/\",\"instagram\":\"https://www.instagram.com/maeve.od/\",\"congratsCaption\":\"Congrats to @maeve.od !!\"},{\"name\":\"Maya Soudatt\",\"classYear\":\"21\",\"college\":\"Bing\",\"major\":\"Biology\",\"linkedin\":\"https://www.linkedin.com/in/maya-soudatt/\",\"instagram\":\"https://www.instagram.com/mayasoudatt/\",\"congratsCaption\":\"@mayasoudatt off to Bing !!\"},{\"name\":\"Michaela Cusin\",\"classYear\":\"21\",\"college\":\"Pratt\",\"major\":\"Photography\",\"linkedin\":\"https://www.linkedin.com/in/michaela-cusin-1b62a726a/\",\"instagram\":\"https://www.instagram.com/michaela.cusin/\",\"congratsCaption\":\"@michaela.cusin to Pratt !!🖤🖤\"},{\"name\":\"Nafisa Chowdhury\",\"classYear\":\"21\",\"college\":\"CCNY\",\"major\":\"Psychology\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/nafii.i/\",\"congratsCaption\":\"@nafii.i to CCNY !!💜\"},{\"name\":\"Natalya Rebeca Nuñez\",\"classYear\":\"21\",\"college\":\"CCNY\",\"major\":\"Psychology\",\"linkedin\":\"\",\"instagram\":\"\",\"congratsCaption\":\"Congrats to @talyariveraa !!\"},{\"name\":\"Sara Gordon\",\"classYear\":\"21\",\"college\":\"USC\",\"major\":\"Communications\",\"linkedin\":\"https://www.linkedin.com/in/sara-gordon20/\",\"instagram\":\"https://www.instagram.com/sara.gordon/\",\"congratsCaption\":\"Congrats to @sara.gordon !❤️\"},{\"name\":\"Sophie Blumstein\",\"classYear\":\"21\",\"college\":\"McGill\",\"major\":\"Business\",\"linkedin\":\"https://www.linkedin.com/in/sophieblumstein/\",\"instagram\":\"https://www.instagram.com/sophieblumstein/\",\"congratsCaption\":\"Congrats to @sophieblumstein !!\"},{\"name\":\"Stella Fusaro\",\"classYear\":\"21\",\"college\":\"Columbia\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/stella-fusaro/\",\"instagram\":\"https://www.instagram.com/stellaafusaro/\",\"congratsCaption\":\"Congratulations to @stellaafusaro !\"},{\"name\":\"Stephanie Quichimbo\",\"classYear\":\"21\",\"college\":\"Middlebury\",\"major\":\"Sociology & Environmental Studies\",\"linkedin\":\"https://www.linkedin.com/in/stephanie-quichimbo-1407851b8/\",\"instagram\":\"https://www.instagram.com/estefany.jpeg/\",\"congratsCaption\":\"@estefany.jpeg off to Middlebury 💙💙\"},{\"name\":\"Terrance Bobb\",\"classYear\":\"21\",\"college\":\"BMCC\",\"major\":\"Physical Therapy & Exercise Science\",\"linkedin\":\"https://www.linkedin.com/in/terrance-bobb-a9287918b/\",\"instagram\":\"\",\"congratsCaption\":\"Congratulations to Terrance !!\"},{\"name\":\"Victoria Briggiler\",\"classYear\":\"21\",\"college\":\"WashU\",\"major\":\"Psychology\",\"linkedin\":\"https://www.linkedin.com/in/victoria-briggiler/\",\"instagram\":\"\",\"congratsCaption\":\"Congrats to @victoriabriggiler_ !!❤️💚\"},{\"name\":\"Adrianna Rodriguez\",\"classYear\":\"22\",\"college\":\"Bentley\",\"major\":\"Marketing Management\",\"linkedin\":\"https://www.linkedin.com/in/adrianna-g-rodriguez/\",\"instagram\":\"https://www.instagram.com/adrianna.grrace/\",\"congratsCaption\":\"Watch out Bentley, Adrianna is in business! Congratulations! Goo Falcons!💙🖤\"},{\"name\":\"Afieni Cayetano\",\"classYear\":\"22\",\"college\":\"Bing\",\"major\":\"Anthropology\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/afienininini/\",\"congratsCaption\":\"As Afieni plays her final note at NEST, she starts a new at Bing! Gooo Bearcats!💚🤍\"},{\"name\":\"Amarya Levy-Mazie\",\"classYear\":\"22\",\"college\":\"Tulane\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/amarya-levy-mazie-33646b346/\",\"instagram\":\"https://www.instagram.com/amaryapetra/\",\"congratsCaption\":\"Congrats to Amarya on joining the ROLL WAVE!! Gooo Pelicans!💚🤍\"},{\"name\":\"Analiz Quezada\",\"classYear\":\"22\",\"college\":\"Fordham\",\"major\":\"Economics\",\"linkedin\":\"https://www.linkedin.com/in/analiz-quezada/\",\"instagram\":\"https://www.instagram.com/analiz_1575/\",\"congratsCaption\":\"Analiz is ready to take on the market! Congratulations, Goo Rams!🤍❤️\"},{\"name\":\"Anastasia Kim\",\"classYear\":\"22\",\"college\":\"SBU\",\"major\":\"Computer Science & Pre-Dental\",\"linkedin\":\"https://www.linkedin.com/in/anastasia-kimstk/\",\"instagram\":\"https://www.instagram.com/kim.stk/\",\"congratsCaption\":\"Anastasia will be extracting some wisdom 🦷 from Stony Brook! Congrats! Gooo Seawolves!❤️💙\"},{\"name\":\"Ariel Cthwe\",\"classYear\":\"22\",\"college\":\"RIT\",\"major\":\"Game Design and Development\",\"linkedin\":\"https://www.linkedin.com/in/arielcthwe/\",\"instagram\":\"https://www.instagram.com/arielnotoreo/\",\"congratsCaption\":\"RIT gained a colorful & talented student! Congratulations Ariel! Gooo Tigers!🧡🖤\"},{\"name\":\"Audrey Nannor\",\"classYear\":\"22\",\"college\":\"Yale\",\"major\":\"Cognitive Science\",\"linkedin\":\"https://www.linkedin.com/in/audrey-nannor-5272191b1/\",\"instagram\":\"https://www.instagram.com/au.class/\",\"congratsCaption\":\"Worth a yell, Audrey’s off to Yale! Goo Bulldogs!💙🤍\"},{\"name\":\"Benny Goodstein\",\"classYear\":\"22\",\"college\":\"University of the Highlands and Islands\",\"major\":\"Foresty & Urban Arboriculture\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/benny.goodsteinmusic/\",\"congratsCaption\":\"He’s always prepared for whatever nature throws at him! Congratulations Benny! Have fun in Scotland! 💜🤍\"},{\"name\":\"Chayla Murray\",\"classYear\":\"22\",\"college\":\"Howard\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/chayla-murray/\",\"instagram\":\"https://www.instagram.com/chaylazz/\",\"congratsCaption\":\"Can’t wait for this popular loner, Chayla, to stunt at Howard. Congrats! Goo Bison!❤️💙\"},{\"name\":\"Chenxin Wang\",\"classYear\":\"22\",\"college\":\"RIT\",\"major\":\"Biomedical Studies & Finance\",\"linkedin\":\"https://www.linkedin.com/in/chenxin-wang/\",\"instagram\":\"https://www.instagram.com/xin__.6/\",\"congratsCaption\":\"Check the lab reports! … ChenXin made it to RIT! Gooo Tigers!🧡🖤\"},{\"name\":\"Chetna Dawda\",\"classYear\":\"22\",\"college\":\"Davidson\",\"major\":\"Computer Science\",\"linkedin\":\"https://www.linkedin.com/in/chetna-dawda-60a7bb224/\",\"instagram\":\"https://www.instagram.com/dawdachetna/\",\"congratsCaption\":\"Stop scrolling!” Chetna’s going to Davidson College! Goo Wildcats!❤️🖤\"},{\"name\":\"Chloe Shiffman\",\"classYear\":\"22\",\"college\":\"Yale\",\"major\":\"English Language & Literature\",\"linkedin\":\"https://www.linkedin.com/in/chloe-shiffman-817705266/\",\"instagram\":\"https://www.instagram.com/chloeshiffman/\",\"congratsCaption\":\"Chloe is assigning another chapter, but this time at Yale! Congratulations! Gooo Bulldogs!💙🤍\"},{\"name\":\"Clara Medina\",\"classYear\":\"22\",\"college\":\"Wesleyan University (QuestBridge)\",\"major\":\"Computer Science & Philosophy\",\"linkedin\":\"https://www.linkedin.com/in/clara-m-428b901ba/\",\"instagram\":\"https://www.instagram.com/clxramedina/\",\"congratsCaption\":\"Questbridge Scholar, Clara, is killing it. Go Cardinals!!❤️🖤\"},{\"name\":\"Cody Bertrand\",\"classYear\":\"22\",\"college\":\"UB\",\"major\":\"Mechanical Engineering\",\"linkedin\":\"https://www.linkedin.com/in/cody-bertrand-179465330/\",\"instagram\":\"\",\"congratsCaption\":\"Perfect Match: our macho classmate, Cody, makes it to uBUFF! Gooo Bulls!💙🤍\"},{\"name\":\"Colter Diehm\",\"classYear\":\"22\",\"college\":\"RIT\",\"major\":\"Biotechnology & Molecular Science\",\"linkedin\":\"https://www.linkedin.com/in/colter-diehm-5058b1311/\",\"instagram\":\"https://www.instagram.com/colterdiehm/\",\"congratsCaption\":\"Upload Complete: our star MVP, Colter, has found his way to RIT! Goooo Tigers!🤍🧡🖤 #RIT\"},{\"name\":\"Donald Zheng\",\"classYear\":\"22\",\"college\":\"Boston U (QuestBridge)\",\"major\":\"Biochemistry & Molecular Biology\",\"linkedin\":\"https://www.linkedin.com/in/donald-zheng-962623235/\",\"instagram\":\"https://www.instagram.com/donald.zheng/\",\"congratsCaption\":\"Donald is leaving the nest and joining the litter as well. Gooooo terriers!❤️🤍\"},{\"name\":\"Dylan Marfrey\",\"classYear\":\"22\",\"college\":\"RIT\",\"major\":\"Mechanical Engineering\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/dylan_marfey/\",\"congratsCaption\":\"Dylan builds the bridge from NEST to RIT. Gooo Tigers!!🧡🖤\"},{\"name\":\"Edwin Zamora\",\"classYear\":\"22\",\"college\":\"Bing\",\"major\":\"Business Administration & Finanical Economics\",\"linkedin\":\"https://www.linkedin.com/in/edwin-zamora-0760202ba/\",\"instagram\":\"\",\"congratsCaption\":\"Kanye’s favorite ghostwriter, Edwin, makes his way to Bing. Gooo Bearcats!💚🤍\"},{\"name\":\"Elizabeth Beck\",\"classYear\":\"22\",\"college\":\"Cornell\",\"major\":\"Undecided Major\",\"linkedin\":\"\",\"instagram\":\"\",\"congratsCaption\":\"Izzie just made a Touchdown! Gooo Big Red!!❤️🤍\"},{\"name\":\"Emma Khidr\",\"classYear\":\"22\",\"college\":\"Cornell\",\"major\":\"Biomedical Engineering\",\"linkedin\":\"https://www.linkedin.com/in/emma-khidr-013a122a9/\",\"instagram\":\"https://www.instagram.com/e.mma.k/\",\"congratsCaption\":\"Our studious queen, Emma, takes her crown at Cornell! Gooo Big Red!❤️🤍\"},{\"name\":\"Erik Huovilainen\",\"classYear\":\"22\",\"college\":\"Bing\",\"major\":\"Economics\",\"linkedin\":\"https://www.linkedin.com/in/erik-huovilainen/\",\"instagram\":\"https://www.instagram.com/erik.hu13/\",\"congratsCaption\":\"Erik can answer your big questions about inflation! Goooo Bearcats!!💚🤍\"},{\"name\":\"Esther Bistricher\",\"classYear\":\"22\",\"college\":\"Brandeis (POSSE)\",\"major\":\"Neuroscience & HSSP\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/esther.bistricer/\",\"congratsCaption\":\"The Sweetest Brainiac is off to her next posse! Go judges!💙🤍\"},{\"name\":\"Fabiana Montenegro\",\"classYear\":\"22\",\"college\":\"Johns Hopkins\",\"major\":\"Pre-Med\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/fabiana.isaura/\",\"congratsCaption\":\"Congrats to our essential hard worker, Fab!! 😝 Gooo Blue Jays!!💙🤍🖤\"},{\"name\":\"Farooq Shaikh\",\"classYear\":\"22\",\"college\":\"Arizona State University\",\"major\":\"Software Engineering\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/pakistaniprince27/\",\"congratsCaption\":\"Our favorite Drake fan, instigator, and playlist maker, Sumaiya, is off to Williams on a FULL RIDE!! Go milk those purple cows or not… (imagine being lactose intolerant) 💜💛\"},{\"name\":\"Fran Velez\",\"classYear\":\"22\",\"college\":\"NYU\",\"major\":\"Teacher Tech Design\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/i_speak_donut/\",\"congratsCaption\":\"Fran goes behind the scenes at NYU! Gooo Bobcats!💜🤍\"},{\"name\":\"Gabrielle Mollin\",\"classYear\":\"22\",\"college\":\"Duke\",\"major\":\"History & Public Policy\",\"linkedin\":\"https://www.linkedin.com/in/gabrielle-mollin-1a5b7b267/\",\"instagram\":\"https://www.instagram.com/m__gabby/\",\"congratsCaption\":\"Congrats to Student Gov President, Gabby, as she’s off to North Cackalacky!! Gooo Blue Devils!🤍💙\"},{\"name\":\"Gaby Fuki\",\"classYear\":\"22\",\"college\":\"Tufts\",\"major\":\"Chemistry\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/gaby_fuki/\",\"congratsCaption\":\"Change of plans… Gaby has found some new chemistry with TU! Gooo Jumbos!🐘💙🤍\"},{\"name\":\"Grace Gorreja\",\"classYear\":\"22\",\"college\":\"NYU\",\"major\":\"Finance\",\"linkedin\":\"https://www.linkedin.com/in/grace-gorreja/\",\"instagram\":\"https://www.instagram.com/gracegorreja/\",\"congratsCaption\":\"Grace has always been one with numbers! Congratulations ! Gooo Bobcats!💜🤍\"},{\"name\":\"Grace Lessig\",\"classYear\":\"22\",\"college\":\"Muhlenberg\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/grace-lessig-4192942b0/\",\"instagram\":\"https://www.instagram.com/graceelessig/\",\"congratsCaption\":\"Our Calculus Queen, Grace, is heading off! Congrats, Gooo Mules!❤️🤍\"},{\"name\":\"Grace Zhu\",\"classYear\":\"22\",\"college\":\"University of East London\",\"major\":\"Philsophy & Politics and Economics\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/zhu.grxce/\",\"congratsCaption\":\"I hope you like tea, Grace! Congratulations! Gooo Phoenix!🖤\"},{\"name\":\"Gregory Roitbourd\",\"classYear\":\"22\",\"college\":\"Brandeis (POSSE)\",\"major\":\"Physics\",\"linkedin\":\"https://www.linkedin.com/in/gregory-roitbourd/\",\"instagram\":\"https://www.instagram.com/gregroit/\",\"congratsCaption\":\"Greg is moving on to another posse! Go judges!💙\"},{\"name\":\"Harold Iwuala\",\"classYear\":\"22\",\"college\":\"Cornell\",\"major\":\"Chemical Engineering\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/chikethegoat17/\",\"congratsCaption\":\"⚠️ Harold has something cooking up in the lab🧪 Congratulations Harold! Gooo Big Red!❤️🤍\"},{\"name\":\"Henry Pincus\",\"classYear\":\"22\",\"college\":\"Oberlin\",\"major\":\"Music & Creative Writing\",\"linkedin\":\"https://www.linkedin.com/in/henry-pincus-5673b6268/\",\"instagram\":\"https://www.instagram.com/icemilk/\",\"congratsCaption\":\"Stay tuned for Henry's Ukulele concerts at Oberlin College. Congrats! Goo Yeomens!💛❤️\"},{\"name\":\"Hudson Wong\",\"classYear\":\"22\",\"college\":\"Boston U\",\"major\":\"Business\",\"linkedin\":\"https://www.linkedin.com/in/hudsonjwong/\",\"instagram\":\"https://www.instagram.com/hdsnwng/\",\"congratsCaption\":\"See you on Forbes, Hudson. Congratulations! Gooo Terriers!❤️🤍\"},{\"name\":\"Ilai Sternoff\",\"classYear\":\"22\",\"college\":\"Tufts\",\"major\":\"Film\",\"linkedin\":\"https://www.linkedin.com/in/ilai-sternoff-4ba86422b/\",\"instagram\":\"https://www.instagram.com/ilaisternoff/\",\"congratsCaption\":\"Ilai joins the herd! Go Jumbos!!💙🤍\"},{\"name\":\"Jack Cao\",\"classYear\":\"22\",\"college\":\"NYU\",\"major\":\"Finance & Business\",\"linkedin\":\"https://www.linkedin.com/in/jack-cao-1ba19a185/\",\"instagram\":\"https://www.instagram.com/jackkcao/\",\"congratsCaption\":\"Jack runs it up! 💸 Congratulations! Goo Bobcats!💜🤍\"},{\"name\":\"Jack Lefkowitz\",\"classYear\":\"22\",\"college\":\"Cornell\",\"major\":\"Physics\",\"linkedin\":\"https://www.linkedin.com/in/jack-lefkowitz-255789202/\",\"instagram\":\"https://www.instagram.com/jack.lefkowitz/\",\"congratsCaption\":\"Jack’s accelerating out of NEST! Goo Big Red!❤️🤍🖤\"},{\"name\":\"Jane Curry\",\"classYear\":\"22\",\"college\":\"Duke\",\"major\":\"Undecided Major\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/janeecurry/\",\"congratsCaption\":\"Congrats to the newest resident of North Cackalacky, Jane. Goooo Blue Devils!!💙🤍 #dukeadmissions\"},{\"name\":\"Janeth Palagot\",\"classYear\":\"22\",\"college\":\"Hunter\",\"major\":\"Computer Science\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/winkyblur/\",\"congratsCaption\":\"Congratulations to Janeth as she also joins the bunch in staying in the city. Gooo Hawks!!💜🤍 #headed2hunter\"},{\"name\":\"Jonah Berlin\",\"classYear\":\"22\",\"college\":\"NEU\",\"major\":\"Civil & Environmental Engineering\",\"linkedin\":\"https://www.linkedin.com/in/jonah-berlin-510179246/\",\"instagram\":\"https://www.instagram.com/berlin.jonah/\",\"congratsCaption\":\"Congrats Jonah on joining the pack. Go Huskies!!❤️\"},{\"name\":\"Jonathan Bender\",\"classYear\":\"22\",\"college\":\"USC\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/jonathanbender1/\",\"instagram\":\"https://www.instagram.com/jonathanbenderr/\",\"congratsCaption\":\"Jonathan’s chasing the sun! Congratulations he’s off to USC. Goo Trojans!❤️💛\"},{\"name\":\"Josh Poole\",\"classYear\":\"22\",\"college\":\"William and Mary\",\"major\":\"Business & Economics\",\"linkedin\":\"https://www.linkedin.com/in/joshua-poole-a09a8b237/\",\"instagram\":\"https://www.instagram.com/__joshpoole/\",\"congratsCaption\":\"Continue soaring Josh! Go Griffins!💚\"},{\"name\":\"Justin Burkett\",\"classYear\":\"22\",\"college\":\"Bates\",\"major\":\"Economics\",\"linkedin\":\"https://www.linkedin.com/in/justin-j-burkett/\",\"instagram\":\"https://www.instagram.com/justinb.237/\",\"congratsCaption\":\"Congrats to Justin as he heads off to Maine. Gooo Bobcats!!❤️🤍\"},{\"name\":\"Kiara Reyes\",\"classYear\":\"22\",\"college\":\"U Rhode Island\",\"major\":\"Undecided Major\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/keeahwuh/\",\"congratsCaption\":\"Kiara is the only kiwi that can grow in a cold climate! So proud & Congrats! Gooo Rams! 💙🤍\"},{\"name\":\"Kira Liang\",\"classYear\":\"22\",\"college\":\"Bing\",\"major\":\"Physics\",\"linkedin\":\"\",\"instagram\":\"\",\"congratsCaption\":\"The most stylish woman in STEM, Kira, heads off to Bing! Gooo Bearcats!💚🤍\"},{\"name\":\"Leo Gentile\",\"classYear\":\"22\",\"college\":\"Williams\",\"major\":\"Statistics\",\"linkedin\":\"https://www.linkedin.com/in/leo-gentile-235390260/\",\"instagram\":\"https://www.instagram.com/leo.gentile1104/\",\"congratsCaption\":\"We are 100% confident Leo’s heading to Williams College. Gooo Ephs!💜💛\"},{\"name\":\"Lola Regard\",\"classYear\":\"22\",\"college\":\"McGill\",\"major\":\"Materials Engineering\",\"linkedin\":\"https://www.linkedin.com/in/lola-regard-420384316/\",\"instagram\":\"https://www.instagram.com/lola_regard/\",\"congratsCaption\":\"Lola’s joining the party up north! Congrats!🥳 Goo Redbirds!❤️🤍\"},{\"name\":\"Luca Palacardo\",\"classYear\":\"22\",\"college\":\"UMich\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/luca-palacardo/\",\"instagram\":\"https://www.instagram.com/lucapala04/\",\"congratsCaption\":\"Congrats to Luca on making Mr. Martin proud! Goooo Wolverines!💙💛\"},{\"name\":\"Madison Loughlin\",\"classYear\":\"22\",\"college\":\"Georgetown\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/madison-loughlin-86a425287/\",\"instagram\":\"\",\"congratsCaption\":\"Madison is leaving the nest and touching down on land! Go Hoyas!!💙\"},{\"name\":\"Madyson Gregory\",\"classYear\":\"22\",\"college\":\"Brooklyn College\",\"major\":\"Psychology\",\"linkedin\":\"https://www.linkedin.com/in/madyson-gregory-0152401b8/\",\"instagram\":\"https://www.instagram.com/1.877.dumb.shit/\",\"congratsCaption\":\"Mady is the first of the bunch to stay in the city. The icon she is, Goo Bulldogs!!❤️💛\"},{\"name\":\"Marcos Moya\",\"classYear\":\"22\",\"college\":\"Northwestern\",\"major\":\"Mechanical Engineering\",\"linkedin\":\"https://www.linkedin.com/in/marcos-moya-northwestern/\",\"instagram\":\"https://www.instagram.com/marcos_.nyc/\",\"congratsCaption\":\"The chillest wildcat is leaving NEST! Congratulations Marcos! Gooo Wildcats!💜🖤\"},{\"name\":\"Margaux Simons\",\"classYear\":\"22\",\"college\":\"Occidental\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/margaux-simons-634b1930b/\",\"instagram\":\"https://www.instagram.com/mmamargaux/\",\"congratsCaption\":\"Margaux’s heading to LA! Congratulations! Gooo Tigers!🧡🤍🖤\"},{\"name\":\"Maria Cuevas\",\"classYear\":\"22\",\"college\":\"Columbia\",\"major\":\"Astrophysics & Computer Science\",\"linkedin\":\"https://www.linkedin.com/in/maria-c-a143581a8/\",\"instagram\":\"https://www.instagram.com/mariacuevasss/\",\"congratsCaption\":\"Maria takes on the big city…AGAIN! Congratulations! Goo Lions!💙🤍\"},{\"name\":\"Mariwa Gambo\",\"classYear\":\"22\",\"college\":\"Boston College (QuestBridge)\",\"major\":\"Biology\",\"linkedin\":\"https://www.linkedin.com/in/mariwa-gambo-7982b0296/\",\"instagram\":\"https://www.instagram.com/mvriwa/\",\"congratsCaption\":\"Congrats to Questbridge Scholar, Mariwa! An Eagle forever!💛❤️\"},{\"name\":\"Matthew Sylvester\",\"classYear\":\"22\",\"college\":\"NEU\",\"major\":\"Engineering & Pre-Med\",\"linkedin\":\"https://www.linkedin.com/in/matthew-sylvester-1a6b552a6/\",\"instagram\":\"https://www.instagram.com/matthewsly189/\",\"congratsCaption\":\"No need to FRET our guitarist, Matthew, heads to Northeastern! Goo Huskies!❤️🤍\"},{\"name\":\"Maureen Soelaiman\",\"classYear\":\"22\",\"college\":\"Hunter\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/maureen-soelaiman/\",\"instagram\":\"https://www.instagram.com/maureen_erica/\",\"congratsCaption\":\"Maureen rocks purple differently as she makes her way to Hunter! Goo Hawks!💜🤍\"},{\"name\":\"Maxie Danenberg\",\"classYear\":\"22\",\"college\":\"Pratt\",\"major\":\"Architecture\",\"linkedin\":\"https://www.linkedin.com/in/maxie-danenberg-694a40229/\",\"instagram\":\"https://www.instagram.com/maxiedeannn/\",\"congratsCaption\":\"Use code: “MAXIE DEAN” to get premium access at Pratt Institute. Goooo Cannoneers!💛🖤\"},{\"name\":\"Maya Jelassi\",\"classYear\":\"22\",\"college\":\"Hunter\",\"major\":\"Art History\",\"linkedin\":\"https://www.linkedin.com/in/maya-jelassi-209a01269/\",\"instagram\":\"https://www.instagram.com/m.jpeg404/\",\"congratsCaption\":\"The Vincent Van GOAT, is heading off to Hunter. Goo Hawks!💜🤍\"},{\"name\":\"Mayim Richman\",\"classYear\":\"22\",\"college\":\"Oberlin\",\"major\":\"Undecided Major\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/mayim.tombi/\",\"congratsCaption\":\"Mayim is making Curry Patel Proud! Go Yeomens!!❤️💛\"},{\"name\":\"Melanie Candelo\",\"classYear\":\"22\",\"college\":\"Babson (POSSE)\",\"major\":\"Business Management\",\"linkedin\":\"https://www.linkedin.com/in/melanie-candelo536/\",\"instagram\":\"https://www.instagram.com/melaniecandelo/\",\"congratsCaption\":\"Congratulations to Melanie as she’s off to Babson College!! Go Beavers!💚🤍 #babsonbound\"},{\"name\":\"Natasha Milton\",\"classYear\":\"22\",\"college\":\"Hunter\",\"major\":\"Psychology\",\"linkedin\":\"https://www.linkedin.com/in/natasha-tyranij-milton/\",\"instagram\":\"https://www.instagram.com/femo.bench/\",\"congratsCaption\":\"Natasha will continue encoding at Hunter College! Gooo Hawks! 💜🤍\"},{\"name\":\"Nia Mayers\",\"classYear\":\"22\",\"college\":\"Howard\",\"major\":\"Sociology\",\"linkedin\":\"https://www.linkedin.com/in/nia-mayers/\",\"instagram\":\"https://www.instagram.com/nia.sanaaaa/\",\"congratsCaption\":\"With an excellent JUDGE of character, Nia heads off to Howard! Goo Bison!❤️💙\"},{\"name\":\"Nicholas Mancuso\",\"classYear\":\"22\",\"college\":\"Williams\",\"major\":\"Undecided Major\",\"linkedin\":\"\",\"instagram\":\"\",\"congratsCaption\":\"Congratulations to Mancuso as he’ll be joining the purple valley. Gooo Ephs!💜💛\"},{\"name\":\"Nicholas Medoro\",\"classYear\":\"22\",\"college\":\"Bing\",\"major\":\"Biology\",\"linkedin\":\"https://www.linkedin.com/in/nick-medoro-1a5690334/\",\"instagram\":\"https://www.instagram.com/nick_medoro/\",\"congratsCaption\":\"Congrats to Nick the King going to Bing. Gooo Bearcats!💚🤍\"},{\"name\":\"Nicole Surowka\",\"classYear\":\"22\",\"college\":\"Bing\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/nicole-surowka-774683203/\",\"instagram\":\"https://www.instagram.com/nicolesurowka/\",\"congratsCaption\":\"Nicole’s springing into Bing. Congrats Nicole! 🌸 Gooo Bearcats!💚🤍\"},{\"name\":\"Nusrat Jahan\",\"classYear\":\"22\",\"college\":\"Bing\",\"major\":\"Integrative Neuroscience\",\"linkedin\":\"https://www.linkedin.com/in/nusrat-jahan22/\",\"instagram\":\"https://www.instagram.com/nusratj19/\",\"congratsCaption\":\"Brainy Nusrat finds her places at Bing! Goooo Bearcats!💚🤍\"},{\"name\":\"Olivia Segura\",\"classYear\":\"22\",\"college\":\"Tulane\",\"major\":\"Comparative Literature\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/_oliviasegura/\",\"congratsCaption\":\"Have you heard the news?! Olivia’s heading to Tulane! Gooo Pelicans!💚🤍\"},{\"name\":\"Pierluigi Di Iorio\",\"classYear\":\"22\",\"college\":\"Boston U\",\"major\":\"Undecided Major\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/pierluigidiiorio/\",\"congratsCaption\":\"Pierluigi is off to Boston University. Go Terriers!!❤️🤍\"},{\"name\":\"Rachel Svoyskiy\",\"classYear\":\"22\",\"college\":\"NEU\",\"major\":\"Business Administration & Psychology\",\"linkedin\":\"https://www.linkedin.com/in/rachel-svoyskiy-13b90229a/\",\"instagram\":\"https://www.instagram.com/rachelsvoyskiy/\",\"congratsCaption\":\"We're PSYCHED to see Rachel attend NE and lead the pack! Congratulations! Goooo Huskies!❤️🤍\"},{\"name\":\"Rendy Cabral\",\"classYear\":\"22\",\"college\":\"SBU\",\"major\":\"Marine Biology\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/rendycabral/\",\"congratsCaption\":\"There’s many fish in the sea but there’s only one Rendy! 🎣 And he’s going to Stony Brook CONGRATULATIONS! Goo Seawolves!❤️💙\"},{\"name\":\"Renelle Mark\",\"classYear\":\"22\",\"college\":\"Molloy\",\"major\":\"Nursing\",\"linkedin\":\"https://www.linkedin.com/in/renellemark/\",\"instagram\":\"https://www.instagram.com/renelle.mark/\",\"congratsCaption\":\"Renelle takes another SWEET victory! Goooooo lions!❤️🤍\"},{\"name\":\"Rubie Menendez\",\"classYear\":\"22\",\"college\":\"Syracuse\",\"major\":\"Architecture\",\"linkedin\":\"https://www.linkedin.com/in/rubiemenendez9/\",\"instagram\":\"https://www.instagram.com/rubie.9/\",\"congratsCaption\":\"Humming her way out of NEST!🎶 Congratulations Rubie! Gooo Orange!🧡💙 #BleedOrange\"},{\"name\":\"Ryan Lam\",\"classYear\":\"22\",\"college\":\"Bing\",\"major\":\"Biology\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/ryan.lamny/\",\"congratsCaption\":\"Skating his way out, Ryan heads off to Bing!🛹 Gooo Bearcats!💚🤍\"},{\"name\":\"Ryan Persad\",\"classYear\":\"22\",\"college\":\"Queens College\",\"major\":\"Astronomy & Astrophysics\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/pilotpersad/\",\"congratsCaption\":\"The sky was never Ryan’s limit. Congratulations! Gooo Knights!❤️💙🤍\"},{\"name\":\"Salomé Noufele\",\"classYear\":\"22\",\"college\":\"Brown\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/salom%C3%A9-noufele-3892441b1/\",\"instagram\":\"https://www.instagram.com/salome.nouf/\",\"congratsCaption\":\"Looks like Salomé found the right cub. Gooo Bears!!🤎🤍\"},{\"name\":\"Samantha Candelo\",\"classYear\":\"22\",\"college\":\"Barnard\",\"major\":\"Undecided Major\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/sammmcan/\",\"congratsCaption\":\"Samantha conquers the city once more, but this time with Millie! Congratulations! Gooo Bears!💙🤍\"},{\"name\":\"Shyanne Brevard\",\"classYear\":\"22\",\"college\":\"Hostos\",\"major\":\"Digital Design & Animation\",\"linkedin\":\"\",\"instagram\":\"\",\"congratsCaption\":\"Shyanne always has an eye for art! Congratulations! Goooo Caimans!💙🤍\"},{\"name\":\"Simone Olivier\",\"classYear\":\"22\",\"college\":\"Brown\",\"major\":\"Africana Studies & Economics & Multi-Cultural Media\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/olivdeeznutz/\",\"congratsCaption\":\"Did you hear the color, brown, is trending? Well our stylish Simone heads to Brown! Goo Bears!🤍🤎\"},{\"name\":\"Sofia Dokianos\",\"classYear\":\"22\",\"college\":\"UVA\",\"major\":\"Business\",\"linkedin\":\"https://www.linkedin.com/in/sofia-d-8741b1202/\",\"instagram\":\"https://www.instagram.com/sofiadokianos/\",\"congratsCaption\":\"Sofia has flown out the nest! Go Cavaliers!!🧡\"},{\"name\":\"Solana Nevarez\",\"classYear\":\"22\",\"college\":\"Bing\",\"major\":\"English\",\"linkedin\":\"https://www.linkedin.com/in/solana-nevares-78613132b/\",\"instagram\":\"https://www.instagram.com/solanarn/\",\"congratsCaption\":\"We know Solana looks good in any color! But she’s making Bing’s green work! Gooo Bearcats!!💚🤍\"},{\"name\":\"Solana Quezada\",\"classYear\":\"22\",\"college\":\"UW Madison (POSSE)\",\"major\":\"Nursing\",\"linkedin\":\"https://www.linkedin.com/in/solana-quezada-45a468252/\",\"instagram\":\"https://www.instagram.com/sullyq_18/\",\"congratsCaption\":\"Solana has officially earned her Badgers badge. Go Badgers!!❤️🤍\"},{\"name\":\"Sophia Tranguch\",\"classYear\":\"22\",\"college\":\"USC\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/sophia-tranguch-76b971252/\",\"instagram\":\"https://www.instagram.com/sophiatranguch/\",\"congratsCaption\":\"Sophia chassés her way to USC. Enjoy the sun!😍 Gooo Trojans!💛❤️\"},{\"name\":\"Stella Rieben\",\"classYear\":\"22\",\"college\":\"Purdue\",\"major\":\"Mechanical Engineering\",\"linkedin\":\"https://www.linkedin.com/in/stella-rieben/\",\"instagram\":\"https://www.instagram.com/stellarieben/\",\"congratsCaption\":\"Stella is truly stellar! 🎯 Purdue’s lucky to have you, congratulations! Gooo Boilermakers!🖤\"},{\"name\":\"Susoma Halder\",\"classYear\":\"22\",\"college\":\"SBU\",\"major\":\"Biology\",\"linkedin\":\"https://www.linkedin.com/in/susoma-halder-867168280/\",\"instagram\":\"https://www.instagram.com/susomaa_h/\",\"congratsCaption\":\"No need for a microscope, Susoma makes the big choice of attending Stony Brook! Goo Seawolves!❤️💙\"},{\"name\":\"Tallulah Cohen\",\"classYear\":\"22\",\"college\":\"McGill\",\"major\":\"Art History & Religious Studies\",\"linkedin\":\"https://www.linkedin.com/in/tallulah-cohen/\",\"instagram\":\"https://www.instagram.com/t4llu1ah/\",\"congratsCaption\":\"The iconic T makes it to McGill. Gooooo Redbirds!❤️🤍\"},{\"name\":\"Tamar Greenberg\",\"classYear\":\"22\",\"college\":\"U Colorado Boulder\",\"major\":\"Ecology & Evolutionary Biology\",\"linkedin\":\"https://www.linkedin.com/in/tamar-greenberg-b80aa62b1/\",\"instagram\":\"https://www.instagram.com/tamargreenberg_/\",\"congratsCaption\":\"Always party time when it’s mountain time! Congratulations Tamar! Gooo Buffs!💛🖤\"},{\"name\":\"Taz Hasan\",\"classYear\":\"22\",\"college\":\"CCNY (Macaulay)\",\"major\":\"Architecture\",\"linkedin\":\"https://www.linkedin.com/in/taz-hasan-8b19a3287/\",\"instagram\":\"https://www.instagram.com/taz.hsn/\",\"congratsCaption\":\"Taz will be building a future at City College! Congrats! Goo Lions & Beavers!🧡💜\"},{\"name\":\"Tenzing Tsepak\",\"classYear\":\"22\",\"college\":\"OSU\",\"major\":\"Exercise Science\",\"linkedin\":\"https://www.linkedin.com/in/tenzing-tsepak-029436272/\",\"instagram\":\"https://www.instagram.com/tsepak.11/\",\"congratsCaption\":\"Don’t pull a muscle?! Tenzing’s going to Ohio State! Goo Buckeyes!❤️🤍\"},{\"name\":\"Tina He\",\"classYear\":\"22\",\"college\":\"NYU\",\"major\":\"Applied Psychology\",\"linkedin\":\"https://www.linkedin.com/in/zi-ting-tina-he-6a0925237/\",\"instagram\":\"https://www.instagram.com/peppermintcolor/\",\"congratsCaption\":\"Congrats to Tina as she joins the Steinhardt community! Gooo Bobcats💜🤍 #nyusteinhardtbound #nyu2026\"},{\"name\":\"Winson Zheng\",\"classYear\":\"22\",\"college\":\"SBU\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/winson-zheng-1a4984296/\",\"instagram\":\"https://www.instagram.com/winsn.z/\",\"congratsCaption\":\"Winson is bringing the Ws to Stony Brook. Congratulations!😁 Gooo Seawolves!❤️💙\"},{\"name\":\"Abigail Geragthy\",\"classYear\":\"23\",\"college\":\"University of Rhode Island\",\"major\":\"English\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/abigailgeraghty/\",\"congratsCaption\":\"Uh oh… Mystic Falls got competition! The love Abi has for the hometown of the iconic Vampire Diaries is about to be challenged by her new admiration for South Kingston! Besides her recreation of scenes between Damon and Elena, she’s carrying on traditions like her incredible karaoke sessions singing “I Will Survive” or having another Harry Potter movie marathon. With her generosity and passion for talking about the little things in life like her food not being able to touch, Rhode Island is so lucky to have someone who serves at everything they do. 🏐 Update us on your many trips throughout the world! Go Rams! 💙🤍\"},{\"name\":\"Alem John\",\"classYear\":\"23\",\"college\":\"SUNY New Paltz\",\"major\":\"Political Science & Anthropology\",\"linkedin\":\"https://www.linkedin.com/in/alem-john-9b30ba30b/\",\"instagram\":\"https://www.instagram.com/alem.john1/\",\"congratsCaption\":\"Just hold on we’re going to college! 🎶 Our resident tiktoker, future lawyer, and backbone of the NEST community, Alem, is off getting sturdy at SUNY New Paltz. With her contagious laugh, her endless “hi”s to everyone in the hallways, and her subway horror stories, she brightens any room she’s in and has made our long school days memorable. Say bye to Lucy for us and keep loving your sprite and blue raspberry candies! Go Hugo Hawks! 🧡💙\"},{\"name\":\"Alex Huynh\",\"classYear\":\"23\",\"college\":\"McGill\",\"major\":\"International Development\",\"linkedin\":\"https://www.linkedin.com/in/alexander-huynh-a44741260/\",\"instagram\":\"https://www.instagram.com/alexanderhuynhh/\",\"congratsCaption\":\"Let’s unpack these layers. The man who’s practically been to every state is about to go INTERNATIONAL and take on the provinces of Canada! 🇨🇦 With his pilot lessons, he’s about to maneuver the skies while also managing his love for the Minnesota Wilds, somehow knowing the capitals of all 50 states, and fondness for tres leches cake. Being the goal-oriented 🥅 person that he is, Alex’s sure to make Marigold and Hunter proud with everything he accomplishes! Go Redbirds!🤍❤️\"},{\"name\":\"Alexandra Sokolowska\",\"classYear\":\"23\",\"college\":\"Bing\",\"major\":\"Chemistry\",\"linkedin\":\"https://www.linkedin.com/in/alexandra-sokolowska-0227202a2/\",\"instagram\":\"https://www.instagram.com/alex.sokolowska/\",\"congratsCaption\":\"Slay mammas! Alex has found the Light at the end of the tunnel at Binghamton! With her intelligence that sure makes Grima ready to cold call on her, iconic locker featuring Neymar, best 2000s music playlist, and Episode addiction, she definitely emits a fun yet chaotic energy that we ALL love! Binghamton isn’t ready for your spikes 🏐, spelling skills, Polska pride🇵🇱, or Minecraft backpack. Keep revving up those motorcycles! Go Bearcats!💚🤍\"},{\"name\":\"Alina Brockway\",\"classYear\":\"23\",\"college\":\"UCSD\",\"major\":\"Engineering\",\"linkedin\":\"https://www.linkedin.com/in/alina-brockway-abc1/\",\"instagram\":\"https://www.instagram.com/lina.brockway/\",\"congratsCaption\":\"Yeah, she’s from the down under! You can never forget that! Our competitive Aussie with the most hilarious laugh, Alina, is off to San Diego!! Known for her Ozzy v Alina games, her serious dedication to both her basketball and soccer teams, her expertise in Just Dance and math as well as her love for mystery books, she’s been a true joy to the NEST community. We hope that you continue your pescatarian diet and make the most delicious Lamingtons! Go Tritons! 💙💛\"},{\"name\":\"Amila Shah\",\"classYear\":\"23\",\"college\":\"NEU\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/amila-shah-a7b471347/\",\"instagram\":\"https://www.instagram.com/amila_j_s/\",\"congratsCaption\":\"Do you like eating banana laffy taffy? Well, meet Amila, who’s just as passionate about her love for this delectable treat as you are! Our insightful song writer and film connoisseur, Amila, is off to join the pack at Northeastern! With her undying obsession with iced coffee (in a jar of course), Remy from Ratatouille, and doing critiques of different horror movies during AP Lit, we’ll definitely miss her bright energy and thoughtfulness here at NEST! We can’t wait to hear about your new book recommendations and we better be seeing your original songs on Spotify soon! Go Huskies! ❤️🤍\"},{\"name\":\"Andrew Basnet\",\"classYear\":\"23\",\"college\":\"SBU\",\"major\":\"Computer Science\",\"linkedin\":\"https://www.linkedin.com/in/andrew-basnet-648a6232a/\",\"instagram\":\"\",\"congratsCaption\":\"The man bun legend is about to be the drippiest man at Stony Brook with his superior Crocs! When he isn’t being the best basketball captain, he’s learning from Steph Curry’s plays, strumming the guitar, singing at his local church, or playing Chinese Poker during lunch. We’ll miss seeing him dribble his way through NEST’s winning streak but Stony just gained the best shooting guard. Keep cool like Perry the Platypus and make sure to show off those incredible swimming skills! 🏊‍♂️ Go Seawolves! ❤️💙\"},{\"name\":\"Anwar Burks\",\"classYear\":\"23\",\"college\":\"u colorado boulder\",\"major\":\"Astrophysics & Astronomy\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/ultimxtea/\",\"congratsCaption\":\"Watch out Colorado! Anwar is in your area! This fellow Blink is off to Boulder beating records with his every move from his 5,000 hours playing Geometry Dash to actually appearing on Google eating ice cream. Pretty impressive! But he’s also leaving with a handful of knowledge about celestial objects and a dedication towards helping the local community. Skooo Buffs! 💛🖤\"},{\"name\":\"Ariel Mekonen\",\"classYear\":\"23\",\"college\":\"Harvard\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/ariel-mekonen/\",\"instagram\":\"https://www.instagram.com/ariel__mekonen/\",\"congratsCaption\":\"Mr. Student Government Vice President is off to Harvard! He’s one of the most enthusiastic people we know with his love for putting chips in his Turkey baconeggandcheese, covering desks in gum wrappers, and public speaking. We will forever miss your contagious laugh but we can’t wait for you to continue your career with your new adorable puppy!! Roll Crimson! ❤️🤎\"},{\"name\":\"Arthur Izik\",\"classYear\":\"23\",\"college\":\"Hunter\",\"major\":\"Human Biology\",\"linkedin\":\"https://www.linkedin.com/in/arthur-izik-882955263/\",\"instagram\":\"https://www.instagram.com/izikarthur/\",\"congratsCaption\":\"The guy who’s got every pet in the book is moving on from juggling taking care of his 100+ pets to juggling his life at Hunter! When he isn’t chilling with his cool dog Simba 😎, he’s binge-watching any show he can find on Netflix, bumping to Frank Ocean, or deadlifting 450 lbs💪🏼! Our fellow valedictorian is about to be the best neurosurgeon in the city and hope you continue to keep up your love for One Piece. Go Hawks! 💜🤍\"},{\"name\":\"Ashlee Rodriguez\",\"classYear\":\"23\",\"college\":\"Hunter\",\"major\":\"Pre-Health\",\"linkedin\":\"https://www.linkedin.com/in/ashlee-rodriguez-554202256/\",\"instagram\":\"https://www.instagram.com/_ashleesophia/\",\"congratsCaption\":\"Acrylic or gel?? You should definitely ask our nail expert and Dominican baddie 🇩🇴, Ashlee, who can always think of the coolest designs. With a coffee always in her hand in the morning, wearing her signature leather jacket, and having an amiable personality, she is definitely ready to show these Hunter students what she’s all about! Go Hawks! 💜🤍\"},{\"name\":\"Ashtyn Daring\",\"classYear\":\"23\",\"college\":\"UAlbany\",\"major\":\"Africana Studies\",\"linkedin\":\"https://www.linkedin.com/in/ashtyn-daring-646688281/\",\"instagram\":\"https://www.instagram.com/hiiiashtyn/\",\"congratsCaption\":\"Oh my, oh my god! 🐰 With superior taste in Kpop music, our natural blonde and loyal Pause customer, Ashtyn, is simming her way to UAlbany after 13 years! We can’t wait for you to take over the Greedi Vegan restaurant someday and strut the campus with your pink fits! Go Great Danes! 💜💛\"},{\"name\":\"Aspen Woods\",\"classYear\":\"23\",\"college\":\"NYU\",\"major\":\"Psychology & Political Science\",\"linkedin\":\"https://www.linkedin.com/in/aspen-woods-8a094726b/\",\"instagram\":\"https://www.instagram.com/_aspen_does_stuff_/\",\"congratsCaption\":\"Aspen’s looking cool and feline good after his recent W at NYU! Besides his love for fostering animals, his passion and ability to communicate his thoughts so eloquently for social justice issues, his writing skills, and his gains at the gym never fail to amaze us. NEST will miss your iconic bleached hair and your love for Halloween but we know that NYU is the purrfect fit for your enthusiasm! Go Bobcats! 💜🤍\"},{\"name\":\"Brandon Mai\",\"classYear\":\"23\",\"college\":\"RIT\",\"major\":\"Civil Engineering\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/i.of.th.beholder/\",\"congratsCaption\":\"Knock knock! Here comes Brandon, our Spit prodigy, who has found his one in a million love for RIT! Not only is he a pro at Smash Bros and Mario Kart but is one to have great recommendations in anime. We look forward to your future engineering projects that meet the eyes of heaven! Go Tigers! 🤍🧡\"},{\"name\":\"Carissa Braam\",\"classYear\":\"23\",\"college\":\"Pace\",\"major\":\"Criminal Justice & Psychology\",\"linkedin\":\"https://www.linkedin.com/in/carissa-braam-1b383b280/\",\"instagram\":\"https://www.instagram.com/carissabraam/\",\"congratsCaption\":\"And we’ll take some time just to be thankful that we had days full of Carissa, Carissa! Our ultimate Frank Ocean fan known for the best assortment of jewelry and thrifted clothing as well as her signature slicked-back hairstyles, Carissa, is off to Pace University! With her great interest in true crime, beautiful melodic voice 🎶, and joy found from uplifting kids in her community, we know that she’s killing it in whatever she does! We hope to see your notes app filled to the brim from documenting your college years! Wishing you godspeed! Go Setters! 💙💛\"},{\"name\":\"Carolyn Tenesa\",\"classYear\":\"23\",\"college\":\"Williams\",\"major\":\"Undecided Major\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/carol.yn_78/\",\"congratsCaption\":\"We’re about to send an Emergency Intercom to Williams because they just scored one of the best saxophone and clarinet player in the biz! 🎷 When Carolyn isn’t proclaiming her love for Colombian food, she’s talking about Fleabag, crocheting, and Scott Street. We will all miss your stylish outfits but know that Enya and Drew will be proud of everything you will accomplish at Williamstown! Go Cows! 🐮💜💛\"},{\"name\":\"Choiti Deb\",\"classYear\":\"23\",\"college\":\"SBU\",\"major\":\"Biology\",\"linkedin\":\"https://www.linkedin.com/in/choiti-deb-a66bba245/\",\"instagram\":\"\",\"congratsCaption\":\"The Master Tetris player reaches the final level and finds her perfect fit in Long Island! With her record breaking times on Sudoku to her natural instincts kicking in when playing Minesweeper, Choiti’s ability to think quick on her feet is taking her places! Can’t wait to see her cure cancer while also single-handedly saving these Long Islanders with her train knowledge! Go Seawolves! ❤️💙\"},{\"name\":\"Clara Miller\",\"classYear\":\"23\",\"college\":\"Bing\",\"major\":\"Undecided Major\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/_clara.fy_/\",\"congratsCaption\":\"Can we get a suggestion from the audience? Cause the coolest redhead and performer is ready to act it out at Binghamton! When she’s not off exploring underground bands, (or blasting Glass Animals and the 1975) she’s drinking bubble tea, working at a pigeon farm, or being a star catcher. She sure isn’t Anti-Social and ready to “Yes and” her way through college. Keep up your love for John Mulaney and we can’t wait to see your future performances! Go Bearcats! 💚🤍\"},{\"name\":\"Clara Nordgren\",\"classYear\":\"23\",\"college\":\"McGill\",\"major\":\"Kinesiology\",\"linkedin\":\"https://www.linkedin.com/in/clara-nordgren-0a394726b/\",\"instagram\":\"https://www.instagram.com/claranordgren_/\",\"congratsCaption\":\"It’s a beautiful day to save lives and to post this decision! Clara, our libero/co-captain with strong convictions, is diving not for the ball but McGill! Juggling 4 languages (call her Mrs. Worldwide), she now has to add French as part of her repertoire. We better see you party it up at Montreal and stay loyal to the hemland! 🇸🇪 Go Redbirds! 🤍❤️\"},{\"name\":\"Clyde Paul\",\"classYear\":\"23\",\"college\":\"Boston U\",\"major\":\"Business Adminstration\",\"linkedin\":\"https://www.linkedin.com/in/clydejpaul/\",\"instagram\":\"https://www.instagram.com/clydepaull/\",\"congratsCaption\":\"After 13 years our very own Mansa Musa, Clyde, is leaving the nest and heading to Boston University! Don’t ever mistrust, Bill Gates and Elon Musk, he leaves them in the dust! Gooooo Terriers! ❤️🤍🖤\"},{\"name\":\"Daisy Polowetzky\",\"classYear\":\"23\",\"college\":\"Syracuse\",\"major\":\"Magazine, News & Digital Journalism\",\"linkedin\":\"https://www.linkedin.com/in/daisy-polowetzky-1a0752290/\",\"instagram\":\"https://www.instagram.com/daisyy.karoline/\",\"congratsCaption\":\"I don’t know about you but Daisy is feeling Syracuseee! 🎶 To the sushi lover who miraculously ALWAYS looks on pointe, is drinking Dr. Pepper and brings joy to everyone around her, the next exciting chapter is going on record! Don’t keep us on our toes 🩰 , update us on your museum adventures and make sure to live your wildest dreams! Go Orange!🧡💙\"},{\"name\":\"Daniel Adamopulos\",\"classYear\":\"23\",\"college\":\"Haverford\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/dadamopulos/\",\"instagram\":\"https://www.instagram.com/917_daniel_/\",\"congratsCaption\":\"Save your tears! We need to celebrate! Our #1 The Weeknd listener on Spotify and top Supreme collector, Dan, is smoothly driving his way to Haverford College! With his insane embroidery and sewing skills, loyalty to Mcdonald's, fire outfits, math skills, and the best recommendations for classic movies, Haverford is calling his name!! We’re excited to see your sneaker collection grow even more and know that your pes 🐶🇨🇿 will miss you very much! Go Black Squirrels! ❤️🖤\"},{\"name\":\"Demetrios Giannopoulos\",\"classYear\":\"23\",\"college\":\"Baruch (Dean Scholars)\",\"major\":\"Finance\",\"linkedin\":\"https://www.linkedin.com/in/demetrigiann/\",\"instagram\":\"https://www.instagram.com/dj.demetri/\",\"congratsCaption\":\"Don’t be hitting the wall too soon! Demetri’s here to guide you! Our ultra determined jogging and anatomy expert (only when it has to do with his own body), Demetri, is off dribbling at Baruch! With his signature handgrip and mastery of dexterity through ping pong, he’s taking his destiny into his own hands. We can’t wait for you to tell us more about your crazy adventures at Greece 🇬🇷 and live out your Wolf of Wall Street life! Go Bearcats! 🤍💙\"},{\"name\":\"Doran Kaufman\",\"classYear\":\"23\",\"college\":\"Bing\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/doran-kaufman-0a994726b/\",\"instagram\":\"https://www.instagram.com/doran.k_615/\",\"congratsCaption\":\"His name is Doran Kaufman yo! And he’s off to college yo! Our Breaking Bad and Al Green enthusiast is now going to hit the gyms at Binghamton! We hope that you continue rocking on with the bass and demolishing those eggs provided in the dining halls! Go Bearcats! 💚🤍\"},{\"name\":\"Dylan Sohmer\",\"classYear\":\"23\",\"college\":\"RIT\",\"major\":\"Aerospace Engineering\",\"linkedin\":\"https://www.linkedin.com/in/dylan-sohmer-39343630b/\",\"instagram\":\"https://www.instagram.com/betterdylan.s/\",\"congratsCaption\":\"Don’t be foiled! Dylan may be a master at poking others with his sword but what he’s truly a master of is making others laugh. From his love for underground concerts to his fascination with planes, his curiosity will once again take him to unprecedented heights. Make sure to update us on all of the innovative spacecrafts you work on! Go Tigers! 🧡🧡\"},{\"name\":\"Eileen Polanco\",\"classYear\":\"23\",\"college\":\"Barnard\",\"major\":\"Computer Science\",\"linkedin\":\"https://www.linkedin.com/in/eileen-polanco/\",\"instagram\":\"https://www.instagram.com/eileen.pola/\",\"congratsCaption\":\"Need Vitamin water? Eileen's got you! Our soulful singer and NHS committee leader, Eileen, is off bingeing the latest TV shows at Barnard College. With her endless talent for cooking delicious dishes, immersion in all things STEM, and obsession with apocalyptic shows like The Last of Us and Walking Dead, she's prepared to spread her bountiful knowledge to her fellow Bears! Hug all of your pets tight and treat yourself to a good crispy chicken now and then! Go Bears!💙🤍\"},{\"name\":\"Elizabeth Cruz\",\"classYear\":\"23\",\"college\":\"RIT\",\"major\":\"Flim Production\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/elizabethhh.cruz/\",\"congratsCaption\":\"Mmmm, my, my… what have we here? We heard that Liz is coming on over to RIT! Our lovely The Nightmare Before Christmas fanatic with a unique eye for photography and film is capturing the little moments at the town of Henrietta. 📸 Don’t miss the Cruz Crew and Knickerbocker Bagels too much and we can’t wait for many more years for your love of Dunkin’ Donuts iced coffee! Go Tigers! 🧡🤍\"},{\"name\":\"Elle Woodward\",\"classYear\":\"23\",\"college\":\"UArizona\",\"major\":\"Communications\",\"linkedin\":\"https://www.linkedin.com/in/elle-woodward-ab5a8b215/\",\"instagram\":\"https://www.instagram.com/ellewoodwardd/\",\"congratsCaption\":\"What? Like it’s hard? The biggest Legally Blonde fan doesn’t need a backup because she’s meant to bask in the Arizona sun ☀️! Known for bringing her daily Starbucks drinks, convincing others she has blue eyes, or clearing the levels at Candy Crush, she’s truly a joy to be around! Long story short, keep up your love of rats and shopping because with a personality like Elle’s, she is in limited stock, and Arizona is lucky to witness it! Go Wildcats! 💙🤍❤️\"},{\"name\":\"Emilia Wasilewicz\",\"classYear\":\"23\",\"college\":\"Flordia State University\",\"major\":\"Nursing\",\"linkedin\":\"https://www.linkedin.com/in/emilia-wasilewicz-2a8b431b3/\",\"instagram\":\"https://www.instagram.com/emilia.wasilewicz/\",\"congratsCaption\":\"Now do an aerial! With a huge allergy to the cold (and nuts), it’s no wonder Emilia wants to head out to Florida State and chill underneath the palm trees! We also thank you for writing those multiple choice answers on the board during Calculus BC. 🫡 One of these days, go post those beach photos and entertain usssss with those dance routines you’ve worked so hard on! Go Seminoles! ❤️🤍💛\"},{\"name\":\"Emma Tyka\",\"classYear\":\"23\",\"college\":\"Penn State\",\"major\":\"Engineering\",\"linkedin\":\"https://www.linkedin.com/in/emma-tyka-a4392526b/\",\"instagram\":\"https://www.instagram.com/emma_tyka/\",\"congratsCaption\":\"Wipe the block! Emma’s already acing on the volleyball court, but now she’s gonna ace it in space. To our future NASA engineer, we are ready to hear you roar but always remember to soarrr. Go Nittany Lions! 🤍💙\"},{\"name\":\"Emmett King\",\"classYear\":\"23\",\"college\":\"BMCC\",\"major\":\"Undecided Major\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/emmettmking/\",\"congratsCaption\":\"This feels like Deja Vu because we’ve predicted Emmett’s success from a mile away. With his long-winded stories in English, knowledge of the judicial branch, experience in the interior design industry, and being a JID enthusiast, he’s truly a keeper! BMCC is lucky to have someone so prideful of their Irish identity🇮🇪 and we better see you partying it up on the Lower East Side! Go Blue Panthers! 💙💛\"},{\"name\":\"Emmi Chen\",\"classYear\":\"23\",\"college\":\"Ithaca\",\"major\":\"Film, Photography, and Visual Arts\",\"linkedin\":\"https://www.linkedin.com/in/emmi-c-5161a2230/\",\"instagram\":\"https://www.instagram.com/nehc.e/\",\"congratsCaption\":\"Our hearts are tearing apart at the sight of her leaving! The legendary “NEST Core” observer who captures every little and grand memory from Mr. Grima’s smile to sports games, Emmi, is off to Ithaca College! With her fencing skills, IT and graphic design knowledge, vast taste in music from Dev Lemons to Remi Wolf as well as the instrument mastery to create a one person garage band, we are sure of her great success down the line! Bring Greg with you on your trip to Ithaca and show us all the vinyls you end up collecting sometime! Go Bombers! 💙🤍\"},{\"name\":\"Fina Strazza\",\"classYear\":\"23\",\"college\":\"NYU\",\"major\":\"Collaborative Arts\",\"linkedin\":\"https://www.linkedin.com/in/fina-strazza-01b30b26b/\",\"instagram\":\"https://www.instagram.com/finastrazza/\",\"congratsCaption\":\"And fellas, don’t be afraid to make your way to the stage, for a girl that we name Fina! Our professional actress with years of experience under her belt including her roles as Matilda and KJ in Paper Girls, Fina, is off to NYU Tisch! With her ingenuity when it comes to her writing, her love for collecting greeting cards, and her habit of constantly singing, we can safely say that she hates to be lame! To many more years of eating Dig Inn and spreading love to everyone you meet with your infectious personality! Go Bobcats! 💜🤍\"},{\"name\":\"Fitzmore Codogan\",\"classYear\":\"23\",\"college\":\"AMDA\",\"major\":\"Acting\",\"linkedin\":\"https://www.linkedin.com/in/fitzmore-prince-codogan-34774831a/\",\"instagram\":\"https://www.instagram.com/pr1nce2king/\",\"congratsCaption\":\"Mr. Best Dressed is one step closer to making it onto the big screens at AMDA! With his classy hats, love for Kali Uchis, and hilarious improv skits, we’ll make sure to leave the door open for everyone who wants to witness his talent. Despite improv’s one rule of performances which state to stay in the moment, Fitzmore’s devotion to theater and ability to bring smiles onto others' faces is something we will always take away when he’s either acting in Prodigal Son or Anti-Social. We can’t wait to see you act with Timothee Chamalet in the future and ask you for autographs Mr. Hollywood! 💙🤍\"},{\"name\":\"Frances Lu\",\"classYear\":\"23\",\"college\":\"Williams\",\"major\":\"Economics & Mathematics\",\"linkedin\":\"https://www.linkedin.com/in/frances-lu-student/\",\"instagram\":\"https://www.instagram.com/francess.lu/\",\"congratsCaption\":\"She’s a runner, she’s a trackstar! Frances, the speedy runner (who can run a mile in seven minutes!) and fencer, gets the touch at Williams! Through her exploration of the city from endless wandering, she’s found herself mesmerized by the cities in Studio Ghilbi films, capturing the scenic views with 0.5 photos, and falling for Roosevelt Island. To one of the most supportive person, we can’t wait to see your future endeavors as a business woman (#atlas😛) and make sure to always remember the wise words of Uncle Iroh! Go Cows! 🐮💜💛\"},{\"name\":\"Freya Braiker\",\"classYear\":\"23\",\"college\":\"Vassar\",\"major\":\"Anthropology\",\"linkedin\":\"https://www.linkedin.com/in/freya-braiker-29609b347/\",\"instagram\":\"https://www.instagram.com/braiker1.9/\",\"congratsCaption\":\"Our New Girl fanatic, Braiker, takes a deep dive on ancient DNA at Vassar! Go Brewers! ❤️🤍\"},{\"name\":\"Gabi Tien\",\"classYear\":\"23\",\"college\":\"Harvard\",\"major\":\"Integrative Biology\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/gabi.tnn/\",\"congratsCaption\":\"Forget Michael Scott, Gabi’s the #1 Boss at everything she does and now those skills are taking her to Cambridge! 🤓 Miraculously knowing it all, she’s mastered clogging, baking cakes that aren’t stodgy (Paul Hollywood would be proud!), and her love for reading through her somewhat popular BookTok account. NEST+m would not be the same without her constantly keeping us entertained from her approachable personality, iconic puns (we’re on a roll!), and awesome soccer skills. Keep up your love for salads and we’ll make sure to call you Gabey! Go Crimson! ❤️🤎\"},{\"name\":\"Gabriel Lev\",\"classYear\":\"23\",\"college\":\"US Naval Academy\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/gabriel-lev-b0192826b/\",\"instagram\":\"https://www.instagram.com/greatergabe/\",\"congratsCaption\":\"Who’s that in the victory ship? Oh my god, that’s Gabe! Our jazz combo leader and wartime know-it-all is off to be the Top Gun at the US Naval Academy! With his mastery of instruments like the alto sax and piano, obsession with War Thunder, and his ability to spew the history of the world (with impressive details), he’s definitely making Tom Cruise proud. We can’t wait to see the horror of your classmates after they hear stories about your neighbor and make sure to keep soaring✈️! 💙💛\"},{\"name\":\"Gabriela Sloane\",\"classYear\":\"23\",\"college\":\"UMass Amherst\",\"major\":\"Political Science\",\"linkedin\":\"https://www.linkedin.com/in/gabriela-sloane-a9030a26b/\",\"instagram\":\"https://www.instagram.com/gabrielasloane/\",\"congratsCaption\":\"Who’s that girl? Who’s that girl? It’s Gabby! Our unofficial UGG brand ambassador (though she should be) and loyal New York Rangers fan has swam her way to UMass Amherst! From always being updated on the current news to having great taste in book adaptations like Normal People, she’s well versed in both politics and media. Go Minutemen! 🤍❤️\"},{\"name\":\"Galia Shkedi\",\"classYear\":\"23\",\"college\":\"McGill\",\"major\":\"Psychology\",\"linkedin\":\"https://www.linkedin.com/in/galia-shkedi-61b386215/\",\"instagram\":\"https://www.instagram.com/galiashkedi/\",\"congratsCaption\":\"Oui oui! Our insightful writer who’s words magically flow down to her laptop, pro at the sax, and has learned Hebrew (one of the hardest languages in the world), Galia, is off to McGill! We look forward to your recommendations on delicious vegetarian places at Montreal and for you to teach us some French slang! Go Redbirds! ❤️🤍\"},{\"name\":\"George Hausman\",\"classYear\":\"23\",\"college\":\"Carleton College\",\"major\":\"Mathematics & Ancient History\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/georgethewizurd/\",\"congratsCaption\":\"What is the probability that the guy with the coolest hair will commit to Carleton College? 100%! He’s on the pursuit of happiness with his love for typing games, Word Hunt and his honk shooo honk shooo jokes! The city (and his four cats) will miss his analysis of the world and curious personality but we know for sure you’ll be a hit at Minnesota! Go Knights! 💙💛\"},{\"name\":\"Grace Aun\",\"classYear\":\"23\",\"college\":\"Case Western Reserve University\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/graceaun/\",\"instagram\":\"https://www.instagram.com/aunmond_grace/\",\"congratsCaption\":\"Today’s the day her new life begins! Our creative writer and master baker, Grace, is off to Case Western Reserve University! With her intricate Minecraft architecture and her imaginative mind writing about crime-fighting squirrels and romance, Case Western is definitely enchanted to meet her! Recommend us some new bubble tea places in Cleveland and never stop your obsession with cats! Go Spartans! 💙🤍\"},{\"name\":\"Graydon Pound\",\"classYear\":\"23\",\"college\":\"URochester\",\"major\":\"Business\",\"linkedin\":\"https://www.linkedin.com/in/graydon-pound/\",\"instagram\":\"https://www.instagram.com/graydonpound/\",\"congratsCaption\":\"Can’t keep a poker face? That’s because he smiles when he dominates! Our mischievous board game aficionado, Graydon, is determined to tackle the finance industry with his math skills at the University of Rochester. With his signature shorts and wry sense of humor, he’s ready to brighten up the campus day by day. We better see you cooking up the most delicious spam fried rice and poking up your peers with your épée! Go Bees! 💛💙\"},{\"name\":\"Hazel Corona\",\"classYear\":\"23\",\"college\":\"Bucknell\",\"major\":\"Animal Behavior\",\"linkedin\":\"https://www.linkedin.com/in/hazel-corona-520828306/\",\"instagram\":\"https://www.instagram.com/hazel._.cccc/\",\"congratsCaption\":\"The unbeatable Mario kart player found her love buzz in Pennsylvania. To the biggest Aristotle & Dante enthusiast, cassette collector and future farmer, we hope that the community at Bucknell is just like heaven! Keep on eating that honey (with fruits, of course!) and continue to bee the lovable person that you are! 🐝 Go Bisons!🧡💙\"},{\"name\":\"Hudson Athas\",\"classYear\":\"23\",\"college\":\"Cornell\",\"major\":\"Industrial Labor Relations\",\"linkedin\":\"https://www.linkedin.com/in/hudson-athas-hca35/\",\"instagram\":\"https://www.instagram.com/hudson_athas/\",\"congratsCaption\":\"That’s all folks! This Techie is off to making major changes in the labor industry at Ithaca. When he isn’t cracking jokes in class, he’s showing off his amazing Press Conference skills in improv, trying out weird food combos, and letting out his adventurous side by exploring new places. Keep creating incredible music videos with horses, don’t forget country girls (shake it for me), and with your incredible public speaking skills, we know for sure you’ll get all the spotlight in Cornell! Go Big Red! ❤️🤍\"},{\"name\":\"Ian Splaver\",\"classYear\":\"23\",\"college\":\"Connecticut College\",\"major\":\"History & Music\",\"linkedin\":\"https://www.linkedin.com/in/ian-splaver/\",\"instagram\":\"https://www.instagram.com/iansplatterpaint/\",\"congratsCaption\":\"Quiet guys, it’s Ian’s time to blow!! Our jazz pianist who magically pulls off the grandpa sweater vibe is off to the quirky, seaside city of New London! With a timeless music taste ranging from Marvin Gaye to Johnny Cash, he’s sure to be the sunshine to everyone he meets! Keep updating us with the most intricate yo-yo tricks you master and know that Mr. McGorry will miss you very much! Go Camels! 🤍💙\"},{\"name\":\"Isadore Borock\",\"classYear\":\"23\",\"college\":\"UW Madison\",\"major\":\"History\",\"linkedin\":\"https://www.linkedin.com/in/isadore-borock-83146530a/\",\"instagram\":\"https://www.instagram.com/izzy.borock/\",\"congratsCaption\":\"Are you searching for the answers? Mr. Wikipedia’s got you covered! From his infinite knowledge of the history of the world to his love for the Mets and NY Giants, Izzy is sure to score every goal that crosses his path. We better see you feasting on French toast in Wisconsin! Go Badgers!❤️🤍\"},{\"name\":\"Jack Higginbotham Washburn\",\"classYear\":\"23\",\"college\":\"McGill\",\"major\":\"History\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/john_washman/\",\"congratsCaption\":\"Here’s a riddle! Who has broken 4 bones 🦴 and scored a 5 on the AP Euro exam without taking the actual class? The one, the only Jack Higginbotham Washburn!! Our MUN president and history know it all who’s always lifting up the spirits of NEST students and faculty with his silly jokes is ABOOT to go to McGill!! Keep us updated with your progress at the gym and luckily you won’t be under the presence of the big bad US Government this time around! Go Redbirds! ❤️🤍\"},{\"name\":\"Jack Hughes\",\"classYear\":\"23\",\"college\":\"Bing\",\"major\":\"Psychology\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/jaccuse121/\",\"congratsCaption\":\"Gooood morning NEST+M! Today, we’ll greet our morning announcer and hilarious Black Stache, Jack, farewell as he departs for Binghamton! We’re excited to see this scoundrel go to great lengths to achieve his goals whether it be climbing up a traffic sign to take the best photos or pleading his case as a charming Cinderella. Go Bearcats! 💚🤍\"},{\"name\":\"Jackson Hoffman\",\"classYear\":\"23\",\"college\":\"Oberlin\",\"major\":\"Musical Studies & History\",\"linkedin\":\"https://www.linkedin.com/in/jackson-hoffman-28ba2b268/\",\"instagram\":\"\",\"congratsCaption\":\"The best school mascot, Jackson, gets passed the ball and he scores at Oberlin! With his incredible musical performances on his double bass, music taste and story times during English, he’s sure to jazz it up and make Curry-Patel proud! Keep up with the school spirit and update us on your nature walks! Go Yeomen!❤️💛\"},{\"name\":\"Jamie Huang\",\"classYear\":\"23\",\"college\":\"NYU\",\"major\":\"English Literature\",\"linkedin\":\"https://www.linkedin.com/in/jamie-huang-7aaa682a2/\",\"instagram\":\"https://www.instagram.com/jamiehuang_/\",\"congratsCaption\":\"It’s New York, baby! We’re getting jacked up because Jamie, our #1 Harry Styles listener on Spotify, is off to NYU! With the highest kill streaks in senior assassin and killer book recs, Jamie is sure to be the forest fire to NYU’s kerosene. Go Bobcats! 🤍💜\"},{\"name\":\"Janna Galligan\",\"classYear\":\"23\",\"college\":\"UVM\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/janna-galligan/\",\"instagram\":\"https://www.instagram.com/janna_g_1/\",\"congratsCaption\":\"Places everyone! It’s time to shine the light on the biological genius, flip phone user and best tech crew leader. With her show stopping outfits and confident aura, she takes command in every room she’s in. Go Catamounts! 💛💚\"},{\"name\":\"Jerin Tasnim\",\"classYear\":\"23\",\"college\":\"Hunter\",\"major\":\"Nursing\",\"linkedin\":\"https://www.linkedin.com/in/jerin-tasnim-78558624a/\",\"instagram\":\"https://www.instagram.com/jtasnim_/\",\"congratsCaption\":\"A little birdie told us that this One Piece lover, Jerin, is off to Hunter! Diving into her passion for Webtoons and reading through sketchy websites, she’s also posting animals on her story (many from her Bronx Zoo adventures), devouring spicy food, or eating everyone up with her flawless makeup skills. Keep up your love for badminton and we can’t wait to hear more about your adorable fish! Go Hawks!💜🤍\"},{\"name\":\"Johann Maldonado\",\"classYear\":\"23\",\"college\":\"Wesleyan University\",\"major\":\"Undecided Major\",\"linkedin\":\"\",\"instagram\":\"\",\"congratsCaption\":\"Aaaand it’s official! Our certified fashionista and lover for music (with over 3,200 liked songs!), Luné, is the first eagle to leave the NEST for Wesleyan University! Keep up your love for making music, TWICE and being a sailor 🧚🏻‍♀️ because you’re creating an impact everywhere you go. We can't wait for your college OOTDs! Go Cardinals!❤️🖤\"},{\"name\":\"Jolie Leong\",\"classYear\":\"23\",\"college\":\"NYU London\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/jolie-leong-671057281/\",\"instagram\":\"https://www.instagram.com/jolielng/\",\"congratsCaption\":\"Now stretch your hands forward into Child’s Pose! This yogi 🧘 with the coolest sunglasses is off to taking 0.5s with the British! When she isn’t talking about how she loves a good hood, doing a slip stitch, or guiding her friends to restaurants, she’s being a (boy) genius at tackling the world. We’re trying to be Cool About It but we know you’ll lift the Sp(i)rite wherever you go! Go show those Londoners who’s boss and make sure not to eat too many Pancakes For Dinner! Go Bobcats! 💜🤍\"},{\"name\":\"Jonathan Farias Dutra Rodriguez\",\"classYear\":\"23\",\"college\":\"UPenn\",\"major\":\"Electrical Engineering\",\"linkedin\":\"https://www.linkedin.com/in/jfariasdutra/\",\"instagram\":\"https://www.instagram.com/jfariasdutra/\",\"congratsCaption\":\"Jonathan’s got something to flex! Muscle Tees in the Pennsylvania Breeze because JFD’s moonwalking into UPenn! Go Quakers! ❤️🤍💙\"},{\"name\":\"Joseph Nieto\",\"classYear\":\"23\",\"college\":\"Farmingdale State College\",\"major\":\"Computer Programming and Information Systems\",\"linkedin\":\"https://www.linkedin.com/in/joseph-nieto-b2992826b/\",\"instagram\":\"https://www.instagram.com/the_real_jj39/\",\"congratsCaption\":\"Need some sensational music to lift your spirits up? Joseph’s got you covered! With the sickest trap music recommendations and the most fire fits (and editing skills) that Instagram has ever seen, he’s off to take even more drippy fit pics with the wonderful view of Farmingdale! We’ll miss how we can never seem to eliminate you during senior spy, love for anime, and your charming personality! Go Rams! 💚🤍\"},{\"name\":\"Josie Shehadi\",\"classYear\":\"23\",\"college\":\"Oberlin\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/josephine-shehadi-152b25205/\",\"instagram\":\"https://www.instagram.com/jo.shehadi/\",\"congratsCaption\":\"Chorus is definitely their forte! Our very own Lord Leonard Aster and biggest foodie who’s experienced the world at the tip of her tongue is off to get some Buckeyes at Oberlin! Make sure to send us some photos if you see any 70s pickup trucks or even a TARDIS?! 🧐 Go Yeomen! ❤️💛\"},{\"name\":\"Julia St. John\",\"classYear\":\"23\",\"college\":\"Cornell\",\"major\":\"Plant Science\",\"linkedin\":\"https://www.linkedin.com/in/julia-st-john-ba044130a/\",\"instagram\":\"https://www.instagram.com/juliasstj/\",\"congratsCaption\":\"True New York bagel lover Julia hits the key for success at Cornell! With her strong affinity to nature and fresh produce, it’s no wonder she wants to revolutionize the agricultural industry. Cozying it up with her favorite books and guitar, we hope she’ll witness the beautiful landscapes of Ithaca by her window. Go Big Red! ❤️🤍\"},{\"name\":\"Justin Colon\",\"classYear\":\"23\",\"college\":\"Bing\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/justin-colon-308570335/\",\"instagram\":\"https://www.instagram.com/justinjcln/\",\"congratsCaption\":\"And that’s a 3 pointer!! Our biggest sneaker-head and #14 on the basketball team is off shooting hoops at Binghamton! With the curliest hair tied in a ponytail and a heart filled with gold, we believe that you can accomplish anything when you put your mind to it. We and Ms. Krumgalz will definitely miss your questions about the lactic acid buildup in your muscles after your workouts. Go Bearcats! 💚🤍\"},{\"name\":\"Kaitlyn Huang\",\"classYear\":\"23\",\"college\":\"Babson (POSSE)\",\"major\":\"Entrepreneurship\",\"linkedin\":\"https://www.linkedin.com/in/kaitlynhuang/\",\"instagram\":\"https://www.instagram.com/kaitlxnh/\",\"congratsCaption\":\"Student Government President, Kaitlyn, shoots her shot at Babson and she scores! Forget Lightning McQueen cause Kaitlyn is speeding around with her passion for bringing spirit to others even if it means dressing as a street cone, perfecting the art of balloon animals or posting silly photos at Starbucks. Don’t miss Jack too much and keep us updated on your coffee adventures! ☕️ Go Beavers! 💚💚\"},{\"name\":\"Kate Lin\",\"classYear\":\"23\",\"college\":\"Wellesley College\",\"major\":\"Biology\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/kate.l223/\",\"congratsCaption\":\"Is anybody craving for those delicious samoas and tagalongs? Ask Kate for an order! Our girl scout, origami expert, active swimmer, and courageous lifeguard is unfolding a new chapter in her life at Wellesley College! Keep being the lucky gal that you are, eliminating the competition at Chinese poker 🃏, and innovating new technology like those clear masks during COVID! Go Blue! 💙🤍\"},{\"name\":\"Katie Wiltshire\",\"classYear\":\"23\",\"college\":\"Skidmore\",\"major\":\"Education\",\"linkedin\":\"https://www.linkedin.com/in/katie-wiltshire-0991ba302/\",\"instagram\":\"https://www.instagram.com/k4tie.finn/\",\"congratsCaption\":\"Didn’t cha know? She’s headed for big things! Our honorary Ham Fish resident, Katie, is speedwalking her way to Skidmore! With her unique jewelry and outfits, a book always in her hand, and her adoration for musical icons, Erykah Badu and Amy Winehouse, her cool taste really sent us flying! The parks at Saratoga Springs await you and keep us posted about your adventures around the world! Go Thoroughbred! 💛💚\"},{\"name\":\"Kayla Jaffier\",\"classYear\":\"23\",\"college\":\"University of Edinburgh\",\"major\":\"History & Politics\",\"linkedin\":\"https://www.linkedin.com/in/kayla-jaffier-084155355/\",\"instagram\":\"https://www.instagram.com/kaylajaffier/\",\"congratsCaption\":\"Say the name! Kayla! Our favorite SEVENTEEN fan is off to Scotland and it’s litewally awesome! We will miss your incredible jokes, bubbly and animated personality, fresh outfits, awesome book recs, and deine Liebe zu allem Deutschen. Say hello to Dolly the Sheep for us and make Dr. Duncan proud at Edinburgh! ❤️💙\"},{\"name\":\"Krzystof Gwiazdowski\",\"classYear\":\"23\",\"college\":\"UPitt\",\"major\":\"Pre-Law\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/krzys1000_/\",\"congratsCaption\":\"He’s in attack position! Our expert mountain biker, Krzys, is cleaning that trail 🚵‍♀️ towards the University of Pittsburgh! With his insightful knowledge on aviation and history, he loves to see the world in entirely new perspectives and we’re excited to see those develop even more during his pre-law track! You better show up at all the football games there, dress up as a troop for Halloween, and rock that baritone sax of yours! Keep hitting the griddy and stay true to both the Patriots and Polska 🇵🇱! Go Panthers! 💙💛\"},{\"name\":\"Lang Yi Chen\",\"classYear\":\"23\",\"college\":\"WashU\",\"major\":\"Mathematics & Statistics\",\"linkedin\":\"https://www.linkedin.com/in/langyichen/\",\"instagram\":\"https://www.instagram.com/lanxyi.chz/\",\"congratsCaption\":\"Our statistics god, Red Cross treasurer, and badminton expert, Lang Yi, is off to WashU on a FULL RIDE! Keep juggling your Calculus and Physics work on your iPad and posting all those delicious treats on Instagram when you’re at St. Louis, Missouri! Go Bears! ❤️💚🤍\"},{\"name\":\"Langston Perry\",\"classYear\":\"23\",\"college\":\"Oberlin\",\"major\":\"Studio Art\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/langst0n_/\",\"congratsCaption\":\"Next decision, give it up for Langston!!!! Our charismatic and fashionable MC with the famous late pass shrine is off cracking them jokes at Oberlin! We hope that you keep filling your art account with the coolest sketches 🖌and vibing out to your fav artists ranging from A Tribe Called Quest to Radiohead! Go Yeomen!! ❤️💛\"},{\"name\":\"Leah Tamayev\",\"classYear\":\"23\",\"college\":\"Hunter\",\"major\":\"Biology\",\"linkedin\":\"https://www.linkedin.com/in/leah-tamayev/\",\"instagram\":\"https://www.instagram.com/leah_tamayev/\",\"congratsCaption\":\"Hold onto your calculators cuz Leah’s gonna serve 🏐 at Hunter after 13 years being at NEST!! From her lightning speed solutions of difficult integrals, amazing book recs, crocheting skills resulting in comfy blankets and pillows to her persistence in wearing her uncomfortable Doc Martens, she’s a true all-rounder to not be reckoned with. Although we’ll miss your little bickers with Mr. Grima, keep making him very proud, working out those calves, and taking 0.5 (or should we say 0.7) photos of Goose! Go Hawks! 🤍💜\"},{\"name\":\"Lila Purvis\",\"classYear\":\"23\",\"college\":\"Babson (POSSE)\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/lilapurvis2027/\",\"instagram\":\"https://www.instagram.com/lila.purvis/\",\"congratsCaption\":\"Another eagle has left the nest! Congratulations Lila! Make like a beaver and chomp on those weird food combos at Babson!\"},{\"name\":\"Liliana Sofia\",\"classYear\":\"23\",\"college\":\"Princeton\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/liliana-sofia-183a32255/\",\"instagram\":\"https://www.instagram.com/lilianaxsofia/\",\"congratsCaption\":\"To our biggest Smashing Pumpkins fan, go smash it at Princeton! Congratulations on your FULL RIDE. Go get em tiger!\"},{\"name\":\"Lycianne Pitts\",\"classYear\":\"23\",\"college\":\"FIT\",\"major\":\"Marketing & Advertising\",\"linkedin\":\"https://www.linkedin.com/in/lycianne-pitts-64aa00350/\",\"instagram\":\"https://www.instagram.com/l.y.c.i.a.n.n.e/\",\"congratsCaption\":\"Someone get this girl a chai latte because she’s about to make these NYC streets her runway! Exuding confidence that NEST has never seen, our most fly Aaliyah fan, Aveeno user, and horror movie connoisseur, Lycianne, is off to get sturdy at FIT! We hope to get daily updates on Molly and Prince and keep vibing to 2000s music on your way to class! Go Tigers! 💙🤍\"},{\"name\":\"Maliha Antara\",\"classYear\":\"23\",\"college\":\"Hunter\",\"major\":\"Biology\",\"linkedin\":\"https://www.linkedin.com/in/maliha-antara-7a58291a1/\",\"instagram\":\"https://www.instagram.com/mxntar/\",\"congratsCaption\":\"Our Pookie with the best Instagram stories is off to spam us with all her life updates at Hunter! As a loyal Sephora and Ulta supporter, she’s constantly recommending makeup (Kulfi especially) and skincare products that will save our skin. When she isn’t devoting her time to self-care, she’s binge-watching KDramas, perfecting her henna skills, and obsessing over cute babies. We can’t wait for you to fix our teeth 🦷 and your many more food adventures throughout the city! Go Hawks!💜🤍\"},{\"name\":\"Mark Depountis\",\"classYear\":\"23\",\"college\":\"Baruch\",\"major\":\"Finance\",\"linkedin\":\"https://www.linkedin.com/in/mark-depountis-22922227a/\",\"instagram\":\"https://www.instagram.com/caesar_dictator_of_rome_100/\",\"congratsCaption\":\"What is it? Seagull Eren, a plane, no it’s just Mark and he’s off to chase the rumbling at Baruch! Beyond his iconic flannels, he’s probably the smartest person he knows with his ability to recite all 50 US presidents in chronological order🤯, love for strategy games (with over 9k+ hours on them!), and watching recaps instead of the actual TV show. We can’t wait to see you continue your passion for Game of Thrones Mr. Best Duo Winner because Baruch isn’t ready for your awesomeness! Go Bearcats!💙🤍\"},{\"name\":\"Marley Berman Rossi Kempner\",\"classYear\":\"23\",\"college\":\"Oberlin\",\"major\":\"Politics & Flim\",\"linkedin\":\"\",\"instagram\":\"\",\"congratsCaption\":\"I motion to approve! Our MUN debater, Marley, who’s all knowing of the political world and incorporates vibrant colors into her outfits and hair has found her fit at Oberlin. Her taste in film is elite ranging from Scott Pilgrim vs The World to Star Wars movies. We’re excited to see her capturing the uniqueness of Oberlin City in different lenses! Go Yeomen! 💛❤️\"},{\"name\":\"Marley Drakes\",\"classYear\":\"23\",\"college\":\"u colorado boulder\",\"major\":\"Undecided Major\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/marleydrakes/\",\"congratsCaption\":\"The British are coming? No, that’s just Marley! The passionate London boy kicks off the next four at Colorado. From his spot on recreations of Tame Impala songs and life long dedication to the Arsenal Football Club, we hope that Marley will find his stairwell to seven. Skooo Buffs! 💛🖤\"},{\"name\":\"Mattan Feldman\",\"classYear\":\"23\",\"college\":\"u colorado boulder\",\"major\":\"Mathematics\",\"linkedin\":\"https://www.linkedin.com/in/mattan-feldman-952907252/\",\"instagram\":\"https://www.instagram.com/oldsoulclimber/\",\"congratsCaption\":\"Forget rocks, Mattan is climbing onto BOULDERS too! From his nostalgic music taste to casually solving polar curves and improper integrals, he never ceases to amaze our minds. L’hôpital’s rule more like Mattan rules! Skooo Buffs! 💛🖤\"},{\"name\":\"Max Cantor\",\"classYear\":\"23\",\"college\":\"Union\",\"major\":\"Undecided Major\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/maxn_c/\",\"congratsCaption\":\"Max is Bound 2 falling in love with the beautiful scenery of Schenectady! With his need to take basketball seriously during gym class, enthusiasm for skiing through the slopes⛷️, and watching the journeys of Walter White’s life, he loves to step out of his comfort zone. This includes traveling to unknown territories and learning (as well as acing) new math and science topics. Union hit the home run in picking someone who’s about to grow much stronger with every academic obstacle! Go Dutchmen!❤️🤍\"},{\"name\":\"Melissa Munroe\",\"classYear\":\"23\",\"college\":\"Georgetown\",\"major\":\"Business Marketing\",\"linkedin\":\"https://www.linkedin.com/in/melissakmunroe/\",\"instagram\":\"https://www.instagram.com/melissakmunroe/\",\"congratsCaption\":\"Our pillar at NEST who has dedicated her career to uplifting the school community, Melissa, is off to Georgetown. She’s known for serving everyday not just in volleyball but for her killer braiding skills, makeup, and angelic voice. These Hoyas better watch out because she’s making big impact when she puts her mind to it. 💙🤍\"},{\"name\":\"Menghan Zhang\",\"classYear\":\"23\",\"college\":\"UMich\",\"major\":\"Nursing\",\"linkedin\":\"https://www.linkedin.com/in/menghan-zhang-03430b26b/\",\"instagram\":\"https://www.instagram.com/meg.bby/\",\"congratsCaption\":\"Menghan arrived at her destination! The only one we could rely on to guide us through the streets of Flushing now has to familiarize herself with the city of Ann Arbor! With her collected sense of leadership at NHS and trendy outfits, she’s sure to make heads turn at UMich! Don’t forget to take photos of you eating Burger King! Go Blue! 💙💛\"},{\"name\":\"Michael Chan\",\"classYear\":\"23\",\"college\":\"Boston University\",\"major\":\"Mechanical Engineering\",\"linkedin\":\"https://www.linkedin.com/in/michael-chan-nyc/\",\"instagram\":\"https://www.instagram.com/m.ichaelchan/\",\"congratsCaption\":\"Order up! He’s on a fantastic roll today!!! B-hopping at Boston University, Michael definitely has his eyes laser-focused on anything he does. Staying in tune with his passions whether it be smashing it on the court 🎾, playing multiple instruments like the alto sax, and even making sushi, this guy has no limits to what he can do. Keep us updated on any delicious KBBQ restaurants in Boston and your League gameplays! Go Terriers! 🤍❤️🖤\"},{\"name\":\"Michelle Chen\",\"classYear\":\"23\",\"college\":\"Oberlin\",\"major\":\"Psychology & Archaeological Studies\",\"linkedin\":\"https://www.linkedin.com/in/michelle-chen-2ab8122b1/\",\"instagram\":\"https://www.instagram.com/grumpymimi/\",\"congratsCaption\":\"Say farewell to Michelle and her raccoon, Ricky, as they venture onto the Buckeye state!! Be on the lookout for her future crochet projects! Go Yeomen! ❤️💛\"},{\"name\":\"Michelle Tang\",\"classYear\":\"23\",\"college\":\"Barnard\",\"major\":\"Economics\",\"linkedin\":\"https://www.linkedin.com/in/michelle-tang-12694826b/\",\"instagram\":\"https://www.instagram.com/miche1leee/\",\"congratsCaption\":\"What a smash!! Our fiery badminton singles player and acapella captain is heading off to study the impact of our choices at Barnard. Don’t miss Johnny too much and recommend us great coffee places at Morningside Heights! Go Bears! 🤍💙\"},{\"name\":\"Michelle Zhuang\",\"classYear\":\"23\",\"college\":\"UVA\",\"major\":\"Psychology\",\"linkedin\":\"https://www.linkedin.com/in/michelle-zhuang-48932b294/\",\"instagram\":\"https://www.instagram.com/mvchelle._.zhvang/\",\"congratsCaption\":\"Aaand the final Michelle, with the best snack locker that’s always packed to the brim, is off to flaunting her treats at Virginia! When she isn’t showing her favorite shows at Anime Club, her angelic voice is crushing all the keys of CPop songs, clearing the game with her smashing badminton skills, and obsessing over cats. We’ll miss the best AP Chemistry TA but Virginia isn’t ready for what she’s about to be cooking in the psych field! Go Cavaliers!🧡💙\"},{\"name\":\"Nicole Lin\",\"classYear\":\"23\",\"college\":\"Rutgers\",\"major\":\"Computer Science & Business\",\"linkedin\":\"https://www.linkedin.com/in/nicole-lin-1b330a26b/\",\"instagram\":\"https://www.instagram.com/niccisaurus/\",\"congratsCaption\":\"If you mix Rutger’s colors, what color would it be? Nicole definitely knows! Pink! With her outgoing personality, cute OOTDs, dedication to ACC, knowledge of building a PC, and her love for the spring season, she’s sure to always cherish the most beautiful moments in life. We can’t wait for many more years of rallying in badminton, cake baking, and waiting in queues to play Val! Make sure to remember us when your Insta reels blow up! Go Knights! ❤️🤍\"},{\"name\":\"Noah Feig\",\"classYear\":\"23\",\"college\":\"WashU\",\"major\":\"Economics & Mathematics\",\"linkedin\":\"https://www.linkedin.com/in/noah-feig/\",\"instagram\":\"https://www.instagram.com/noah_feig/\",\"congratsCaption\":\"WashU is about to have less Missouri with Noah stepping in to play on the court! 🎾 Whatever he does, he smashes it. From his random phone games, completing calculus problems with the blink of an eye, and love for skiing, you all better washhh out cause he’s a force to be reckoned with. We can’t wait to hear more about your future study abroad trips (though nothing can replace your trip to Israel) and fencing wins! Go Bears! 🐻❤️💚\"},{\"name\":\"Noemi Maller\",\"classYear\":\"23\",\"college\":\"Connecticut College\",\"major\":\"Philosophy & Sociology\",\"linkedin\":\"https://www.linkedin.com/in/noemi-maller-486641293/\",\"instagram\":\"https://www.instagram.com/noemimaller/\",\"congratsCaption\":\"Take it all awayyy 🎶 Our outstanding songwriter, Noemi, who truly took all of our breaths away with her voice and guitar skills is off catching stars at Connecticut College! Entering the campus with her dashing blonde hair, the coolest hats and jewelry as well as a tenacious attitude, she’s sure to fascinate everyone she meets. We better see your songs on Spotify soon and take photos of the beautiful views of New London while you’re biking! Go Camels! 💙🤍\"},{\"name\":\"Oliver Hatta Jones\",\"classYear\":\"23\",\"college\":\"NYU Shanghai\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/oliver-hatta-jones-55592626b/\",\"instagram\":\"https://www.instagram.com/monke_84/\",\"congratsCaption\":\"Change in plans! Oliver will no longer be among us in the city because he's off to benching it at Shanghai! When we aren't thinking about his iconic body pillow or the manzana jokes, we're thinking about his epée-c ability to guide others in fencing. Can't wait for NYU to see your vibrant personality, League addiction, and gym updates. Go Bobcats!💜🤍\"},{\"name\":\"Otish Das\",\"classYear\":\"23\",\"college\":\"St. John's University\",\"major\":\"Business Management\",\"linkedin\":\"https://www.linkedin.com/in/otish-das-76a435335/\",\"instagram\":\"https://www.instagram.com/ot1sh/\",\"congratsCaption\":\"Marvel or DC?? Otish definitely has a solid explanation for both sides! Our charismatic film maker and Superhero Club Prez who’s known for interviewing random people on the streets of NYC got a full ride to St. John’s! Can’t wait to see your work on the big screen someday and continue to explore the Lower East Side! Go Thunderbirds! ❤️🤍\"},{\"name\":\"Ozzy Miceli\",\"classYear\":\"23\",\"college\":\"American University\",\"major\":\"Philosophy & Journalism\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/ozzymiceli/\",\"congratsCaption\":\"Ozzy moves on from battling Alina at sports to battling the world of philosophy at DC! His incredible baking skills (though he claims to be horrible), improv and his admiration for Kurt Vonnegut is one unlike other. We’ll miss his lively personality and mafia related story times! To many more years of soaring and remember to always look like a broccoli! Go Eagles! 🦅❤️💙\"},{\"name\":\"Paola Goldsand-Lamboy\",\"classYear\":\"23\",\"college\":\"Smith\",\"major\":\"Biology\",\"linkedin\":\"https://www.linkedin.com/in/paola-goldsand-643409211/\",\"instagram\":\"https://www.instagram.com/paolagoldsand/\",\"congratsCaption\":\"To our beloved Phoebe Bridgers fan, “there are no words in the English language, [we] could scream to […]” celebrate your acceptance into Smith! Congratulations Paola! Go Pioneers! 🤍💙💛\"},{\"name\":\"Patrycja Grazda\",\"classYear\":\"23\",\"college\":\"Fordham\",\"major\":\"Psychology\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/patrycja.xxo/\",\"congratsCaption\":\"Get in kids! Patrycja’s driving her way to Fordham University! With her caring personality and being the manager of the girl’s volleyball team, she truly brings the best out of everyone she meets! You better bring us to some good croissant spots near Fordham and we can’t wait to see you working at a klinika someday! Go Rams! ❤️🤍\"},{\"name\":\"Phillip Raymond\",\"classYear\":\"23\",\"college\":\"CSI\",\"major\":\"Electrical Engineering\",\"linkedin\":\"https://www.linkedin.com/in/phillip-raymond-64692826b/\",\"instagram\":\"https://www.instagram.com/philup_yes/\",\"congratsCaption\":\"Now that’s a demolition! Our Rocket League and Mario Kart master, Phillip, is drifting his way to the College of Staten Island! With his willingness to tackle new things when it comes to his Spotify music and even calculus, we think he’s ready to take on the depths of electrical systems! To many more years of slurping on chocolate milk and riding around campus with your scooter! Go Dolphins! 💙🤍\"},{\"name\":\"Phoebe Wolf\",\"classYear\":\"23\",\"college\":\"UVM\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/phoebe-wolf-9b12282bb/eet \",\"instagram\":\"https://www.instagram.com/phoebewolf_/\",\"congratsCaption\":\"Adidas and Tiki’s🐱 #1 supporter, Phoebe, is off to tackle the cold and quench her thirst for learning at Vermont! When she isn’t off being the mysterious cool girl who’s always blasting music, she’s crushing it at soccer (MVP!!), making delicious brownies, crocheting her amazing cat hats, and fueling her love for salt by devouring pretzels. Burlington is so lucky to see her energetic yet fun personality. We know for sure that Phoebe will excel and that the next four will be as beautiful as a butterfly! Go Catamounts! 💛💚\"},{\"name\":\"Rashi Roselin\",\"classYear\":\"23\",\"college\":\"WPI\",\"major\":\"Computer Science\",\"linkedin\":\"https://www.linkedin.com/in/rashi-roselin-10a751308/\",\"instagram\":\"\",\"congratsCaption\":\"The G.O.A.T. is off to (Super) Smash (Bro) it at WPI! When he isn’t leading others with his impressive computer science and calculus skills, he’s geeking out about salmon, playing on his Switch, rooting for the Yankees, and skiing through the slopes of Colorado. Worcester really hit the home run ⚾️ with someone holding this much talent and we can’t to see what lengths you’ll go to with your hard work and kindness! Go make your twin proud and keep poking others 🤺! Go Goats! ❤️🤍\"},{\"name\":\"Ronan McCartney\",\"classYear\":\"23\",\"college\":\"SBU\",\"major\":\"Business Management\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/ronan.mccartney/\",\"congratsCaption\":\"Now that’s buffed! Our very own bodybuilding expert, with a record of benching 315, scores a touchdown at Stonybrook! 💪 With his expertise on rear uppercuts, he’s about to be a knock out. We better see you tell the great tales of North Carolina and dress up in a viking costume next Halloween! Go Seawolves! ❤️💙\"},{\"name\":\"Ruby Kiesewalter\",\"classYear\":\"23\",\"college\":\"Ithaca\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/ruby-kiesewalter-577bb92bb/\",\"instagram\":\"https://www.instagram.com/rubkie_/\",\"congratsCaption\":\"How many words can you make up in 60 seconds? Ruby can probably beat that! Our expert Word Hunter, actress, genius director, and favorite Leith Ross fan, Ruby, is doing a chassé to Ithaca College! From her earth-toned sweaters and genuine personality to her drumming skills, she is truly easy to understand and filled with sweetness. Don’t miss Geronimo too much and we can’t wait to see your future projects that you direct! Go Bombers! 💙🤍\"},{\"name\":\"Sambidha Gurung\",\"classYear\":\"23\",\"college\":\"Brown\",\"major\":\"Neuroscience & Public Health\",\"linkedin\":\"https://www.linkedin.com/in/sambidha-gurung-832a3731b/\",\"instagram\":\"https://www.instagram.com/sambida.gurung/\",\"congratsCaption\":\"Someone pull up an ambulance cause this future doctor is headed to Brown! With the brains of Einstein, moves like Gerevich 🤺, acting skills like Emma Watson, and passion for Twilight and Teen Wolf, Sam lives no ORDINARY LIFE. So with her love for exploring novel things and traveling the world, she’ll sure have no problem fitting in with these fellow Brunonians! Go Bears! 🤎❤️\"},{\"name\":\"Samia Anisha\",\"classYear\":\"23\",\"college\":\"Baruch (Macaulay)\",\"major\":\"Computer Information Systems\",\"linkedin\":\"https://www.linkedin.com/in/samia-anisha-6aaa6b244/\",\"instagram\":\"https://www.instagram.com/sxmiaaaa/\",\"congratsCaption\":\"Our favorite henna artist isn’t just amazing in the arts, she stores a whole lot of information! From her daily Hay Day check ins to her love for kdramas, Samia has a lot to MacHandle. We hope that you’ll discover new cheesecake bakeries and keep up with that contagious laugh of yours! Go Bearcats! 💙🤍\"},{\"name\":\"Sana Lee\",\"classYear\":\"23\",\"college\":\"Wesleyan University\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/sana-lee-63aba623b/\",\"instagram\":\"https://www.instagram.com/sanashimo/\",\"congratsCaption\":\"Breaking news! Our ballet queen who’s been everywhere, Sana, is now pirouetting her way to Wesleyan. Don’t forget about us when you’re famous and you better SPAM us with your bento boxes! Go Cardinals! ❤️🖤\"},{\"name\":\"Sarah Toniuk\",\"classYear\":\"23\",\"college\":\"Bing\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/sarah-toniuk-ba9845352/\",\"instagram\":\"https://www.instagram.com/sarg._77/\",\"congratsCaption\":\"All ashore who’s going ashore! Our one and only Captain Scott, weevils fan, and true pro at rhythm games is off to Binghamton! We’ll truly miss your contagious laugh and love for Light from Death Note. Now, we better see you rocking out at heavy metal concerts 🤟, continuing to be the math whiz that you are, and serenading people with your guitar skills! Go Bearcats! 💚🤍\"},{\"name\":\"Sayed Hassan\",\"classYear\":\"23\",\"college\":\"Colgate\",\"major\":\"Neuroscience\",\"linkedin\":\"https://www.linkedin.com/in/sayed-hassan/\",\"instagram\":\"https://www.instagram.com/say3d_h/\",\"congratsCaption\":\"Forget his singing challenges, Sayed is about to fly his way to Colgate! With his constant food distributions in his neighborhood, infective laugh that sends people dying for hours and his love for Heat Waves, he’s about to steer his way to the time of his life. Let’s see those teeth after four years 🦷 and keep recreating all those Tik Tok audios! Go Raiders! ❤️🤍\"},{\"name\":\"Serena Pendharkar\",\"classYear\":\"23\",\"college\":\"Temple University\",\"major\":\"Environmental Engineering\",\"linkedin\":\"https://www.linkedin.com/in/serena-pendharkar-20b784292/\",\"instagram\":\"https://www.instagram.com/serena.pendharkar/\",\"congratsCaption\":\"Gold or silver? Hit up Serena for her input! Our jewelry aficionado, Ham Fish lover, and senior Student Government rep, Serena, is off to Temple University! Having gained work experience in a variety of places from cafés to jewelry stores and having met THE Noah Schnapp, we’re affirmative that she’s able to adapt very well to the life of an Owl! Keep drinking jasmine tea, exploring the world, and battling the transit system of Philly! Go Owls! 🦉🤍❤️\"},{\"name\":\"Shumalia Azim\",\"classYear\":\"23\",\"college\":\"Hunter\",\"major\":\"Public Health\",\"linkedin\":\"https://www.linkedin.com/in/shumaila-azim-a26795302/\",\"instagram\":\"https://www.instagram.com/shumailaazim16/\",\"congratsCaption\":\"And that’s time! Shumaila is about to serve the most delicious baked goods at Hunter and they’re not ready for it! From her past love for collecting pens and bullet journaling to her current passion for the Sims Freeplay and Thai food, Shumaila is SIMply ready for any quest. With notes that neat and admiration of exploring unknown territories, she’s living beyond the worlds captured in her manga. Let us know about your future artistic endeavors and keep making Grima proud Ms. Exemplary Work! Go Hawks! 💜🤍\"},{\"name\":\"Sofie Towers\",\"classYear\":\"23\",\"college\":\"Cooper Union\",\"major\":\"Architecture\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/sofietowers/\",\"congratsCaption\":\"Sofie’s next four are about to feel like the start of a movie at Cooper Union! Her incredibly aesthetic outfits and cool jewelry says it all: Sofie’s truly a master of the arts. From her detailed doodles and newly found love for crocheting, to her love for playing the guitar, she carries her enthusiasm and caring personality everywhere she goes. We know she could do this ALL DAY and can’t wait for her to find many more Thai spots around the city. Make sure to also keep posting Jessie! Go Pioneers!❤️💛\"},{\"name\":\"Sonia Ehrich\",\"classYear\":\"23\",\"college\":\"NYU\",\"major\":\"Mathematics & English Literature\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/soniaehrich/\",\"congratsCaption\":\"Craving bread? Ask our expert baker—who has mastered both Rye Sourdough and Raisin Walnut Loaves—for some! Sonia is about to bless these NYU kids' taste buds but also amaze them with her intelligence. After her calculus tutoring sessions (she’s practically Grima!), she’s writing about the world around her, reading, mountain biking, or talking about her love for TV shows like The Office. This Charming (Wo)Man is about to devour these men in finding the integral for success with her eloquent yet nuanced comments and we’re excited to hear about it! Go Bobcats! 💜🤍\"},{\"name\":\"Sumaiya Sayeed\",\"classYear\":\"23\",\"college\":\"Williams (QuestBridge)\",\"major\":\"Public Health\",\"linkedin\":\"https://www.linkedin.com/in/sumaiya-sayeed-758519214/\",\"instagram\":\"https://www.instagram.com/sumviyaa/\",\"congratsCaption\":\"Our favorite Drake fan, instigator, and playlist maker, Sumaiya, is off to Williams on a FULL RIDE!! Go milk those purple cows or not… (imagine being lactose intolerant) 💜💛\"},{\"name\":\"Supratim Shaud\",\"classYear\":\"23\",\"college\":\"NEU\",\"major\":\"Mechanical Engineering\",\"linkedin\":\"https://www.linkedin.com/in/supratim-shaud-ab1480214/\",\"instagram\":\"https://www.instagram.com/shaud.saha/\",\"congratsCaption\":\"Oooo! Shaud is blinded by the lights at Northeastern! 💡🎤 Even with his devotion to local New Yorker Elliot Choy, he’s always been destined to rep the city of Boston. Through his gym bro story updates (#gains💪🏼), love for playing the harmonium and his hard work in building the school community, Shaud is rockin’ it all. Don’t forget us when you change the world and meet Abel! 🤟🏽 Go Huskies!❤️🤍\"},{\"name\":\"Sydney Yuille\",\"classYear\":\"23\",\"college\":\"John Hopkins\",\"major\":\"Medicine, Science, and The Humanities\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/sydyuille/\",\"congratsCaption\":\"Lights, camera, action! Sydney, NEST's favorite actor and a trailblazer to not be messed with, is on her way to John Hopkins! When she’s not watching Spirit the Horse, she’s recording her audition for Survivor while simultaneously watching wildlife documentaries. Break a leg and gooo Blue Jays! 💙🖤\"},{\"name\":\"Talia Guigui\",\"classYear\":\"23\",\"college\":\"GWU\",\"major\":\"Pre-Law\",\"linkedin\":\"https://www.linkedin.com/in/talia-guigui-71637810b/\",\"instagram\":\"https://www.instagram.com/talia._.guigui/\",\"congratsCaption\":\"Don’t forget to collect your eggs and corn! Our Pause Cafe consumer and thrifting expert, Talia, is off spreading the Hay Day craze at George Washington University! With her signature red lips 💋, coolest hemmed pants, speaker to play the most bomb 2000s music, and outgoing personality, she truly brings out the life of a party! Go express your pride in anything French and rave about how much you love the show, Shameless! Go Colonials! 💙🤍💛\"},{\"name\":\"Tricia Derecho\",\"classYear\":\"23\",\"college\":\"Cornell\",\"major\":\"Applied Economics and Management\",\"linkedin\":\"https://www.linkedin.com/in/tricia-d-209396214/\",\"instagram\":\"https://www.instagram.com/ktdx.02/\",\"congratsCaption\":\"Tricia can finally check Cornell off her “to-do” list because that’s where she’ll be solving inflation and marketing her love for Passionfruit Green Tea! When she’s not off being the productive IPad kid that she is, she’s catching up on the latest tv shows, blasting Raveena and dancing to songs she adores. We’ll definitely miss Tricia’s ability to manage it all: leadership, delicious lunches that makes us hungry, and love for knowing it all but she’ll kill it—oceans, engines, and all—at Cornell. Go Big Red! ❤️🤍\"},{\"name\":\"Violet Fraser\",\"classYear\":\"23\",\"college\":\"Tufts\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/violet-fraser-04b94726b/\",\"instagram\":\"https://www.instagram.com/violetfraserr/\",\"congratsCaption\":\"Let’s address the elephant in the room. 🐘 The boba enthusiast and Nina Dobrev’s look alike, Violet, can’t get Tufts off her mind! With her ability to manipulate a paintbrush to create whatever piques her interest, her love for novels ranging from James Baldwin to Margaret Atwood, and sick films taken at beaches and on vacation, her talent approaches infinity. We know the next four may not be the same as it was but with her ability to always make others feel seen and genuine kindness, Violet will derive nothing but triumphs! Go Jumbos!💙🤍\"},{\"name\":\"Zack Schteingart\",\"classYear\":\"23\",\"college\":\"UMich\",\"major\":\"Economics\",\"linkedin\":\"https://www.linkedin.com/in/zack-schteingart-57930b26b/\",\"instagram\":\"https://www.instagram.com/zackschtein/\",\"congratsCaption\":\"Zack has passed another hurdle and kicks off his journey at Ann Arbor! 🏈 This sports enthusiast somehow does it all. From his expertise in tennis to his love for the NY Giants to biking to managing the basketball team, he’s truly an en-cyclo-pedia! When he isn’t blasting Kendrick Lamar, he’s doing the best impressions of his teachers and we can’t wait for him to go even “fast-ER” in furthering his success. Keep us updated on your travels with your friends around the world and can’t wait to see you fit perfectly into the football culture! Go Blue!💙💛\"},{\"name\":\"Aeriel Revivo\",\"classYear\":\"24\",\"college\":\"Lehigh University\",\"major\":\"Architecture\",\"linkedin\":\"https://www.linkedin.com/in/aeriel-revivo-b5b132278/\",\"instagram\":\"https://www.instagram.com/aeriel.r/\",\"congratsCaption\":\"Lehigh had a blank space baby, and they wrote your name Aeriel! This swiftie is dancing her way off to college, and we know she’ll do great things! Also a fan of Masterchef Jr, Gordon Ramsey would be proud of this girl🧑‍🍳! As well as being a dedicated student, Aeriel is also always playing a little tune on her flute🪈. Her cool jazz performances always show off her musical prowess, and we can’t wait to see what she’ll do next. NY to PA is a path many have taken from Nest, and we know she’s on the right track. Always rocking some true religions, her jean game is fire! Though her heart is in Stars Hollow, Bethlehem will have to do, though it might not have Luke’s coffee, we’re sure this espresso enthusiast will be just fine ☕️! Though she is a proud swiftie, slim shady is often playing from her headphones. You can find her in her kitchen cooking up some brownies that she’ll always share with a fellow nestie. Congratulations and GOOOOOO MOUNTAIN HAWKS!\"},{\"name\":\"Aleksandra Kulis\",\"classYear\":\"24\",\"college\":\"Boston University\",\"major\":\"Undecided Major\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/aleksandra_kulis/\",\"congratsCaption\":\"This red and white 🇵🇱 (and blue 🇺🇸) girl is making her way up to Boston, not for any old timey revolution but for a scientific revelation!!! Olcia is off to study biology or chemistry at Boston University… with a possible minor in the NEW maybelline telescopic mascara studies?? (the best)! Always cracking open her hot tea during second period, and pairing that with her clever remarks and spilling steaming hot tea to Anya and Ava third period, we hope she doesn’t do anything else with that tea up in Boston, 🫣😉. Nest is sad to loose you, but we’re still ecstatic ever since we found out you chose us over Hollywood Arts highschool!! Keep on being an awesome hard worker and leader— Art Club, Red Cross, Student Gov! — (totally don’t start a revolution 🤞) and remember to pack your uggs since it gets chilly up where the (BU) Terriers roam 🐾❤️ Wishing you the best of luck in the dog pound!! 🐶🐶🐶 Goooo Aleks!!!!\"},{\"name\":\"Alexandra Ralles\",\"classYear\":\"24\",\"college\":\"McGill\",\"major\":\"Undecided Major\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/alexralles/\",\"congratsCaption\":\"Yoooohooooo! Our first nestie to leave the states is off! Our beautiful Madame Alex is heading off to McGill undecided and we know this Sheerio is going to love Canada! She’s sweet, she’s kind, and always makes people laugh. Though she’s far from the beautiful beaches of Love Island, we’re sure she’ll find a wonderful Canadian to crack on with. She is one of the best nest photographers and we bet we’ll continue to see her posting the best pics that will once again be pinterest viral up North! You can find her in her element on aux at nest functions, and we hope she will continue showing off her musical prowess in Montreal! With her iconic black eyeliner in hand, she’s unstoppable and we can’t wait to see what she’ll do next. Au Revoir Alex and GO MARTLETS!\"},{\"name\":\"Amelia Leone\",\"classYear\":\"24\",\"college\":\"Cornell\",\"major\":\"Philosophy and Linguistics\",\"linkedin\":\"https://www.linkedin.com/in/amelialeone/\",\"instagram\":\"https://www.instagram.com/amelialeone_/\",\"congratsCaption\":\"WAIT!! Only 232.1 miles to Ithaca? We know this track star can make it (we’ll see it on her Strava)! Amelia is Ivy Bound! Always letting nesties in on the inside scoop while running the Newspaper club, this Eagle is getting ready to leave the nest! While working on Learning Pals with other nesties, Amelia is always making a difference in people’s lives. Even everyone at Heaven’s knows this bagel-lover and her order! She always comes in clutch with healthy snacks and a good attitude, just not always on time to first period. Despite her occasional lateness 😉 we know she’s always early to host the best hangouts before nest parties! Her staple little braids and other cute hairstyles always match her adorable outfits, and we can’t wait to see what existential ideas she’ll come up with at Cornell! Congratulations and GOOOOO BIG RED!\"},{\"name\":\"Anna Levi\",\"classYear\":\"24\",\"college\":\"McGill\",\"major\":\"Undecided Major\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/anna.1evi/\",\"congratsCaption\":\"u Revoir! Goodbye! Adios! 👋לְהִתְרָאוֹת👋 A multilingual nestie is leaving and we are sad to see her go. Anna is a big reader, and though her next chapter is in Canada, we know she’s going to miss these last pages at nest📚. As a fave of Ms Svirsky (you can find her at office hours on wednesdays), this stats queen has worked so hard this year, and we can all see it. If you want to go out to lunch with her, you better go somewhere that allows outside food because Anna always has a beautifully prepared lunch. It’s no surprise that someone as bright as the sun can often be found sunbathing in the courtyard, but she’ll never be caught without some sunscreen #antiskincancer🌅! She’s always up for a good chat, and talking with Anna can easily become an enriching, hour long conversation. Bringing the W home, we can’t wait to see what she’ll do up north, and even though she’s undecided, we know whatever she picks to pursue will be amazing. Congratulations and GOOOOOO MARTLETS!\"},{\"name\":\"Anya Shulga\",\"classYear\":\"24\",\"college\":\"Case Western Reserve University\",\"major\":\"Cognitive Science\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/anyas456/\",\"congratsCaption\":\"Another smarty is leaving the nest! Anya is off to Case Western Reserve University! Raise your wands high and drink your Felix Felicis for this Harry Potter fan! Top of the badminton courts and Ap psych , this future doctor — with her game and precision on point she is bound to achieve her neurosurgery dreams. A lover for birdies 🏸, both in game and nest spirit we can’t wait to see her friendship and support as she heads on over to Ohio! We know she’ll have a bright future, wingardiumleviosa-ing her way to success! Go Spartans and good luck with the sorting hat 🎩 !!!\"},{\"name\":\"Anya Thompson\",\"classYear\":\"24\",\"college\":\"Wesleyan University\",\"major\":\"Anthropology\",\"linkedin\":\"https://www.linkedin.com/in/anya-thompson-29a559346/\",\"instagram\":\"https://www.instagram.com/anyathompsonn/\",\"congratsCaption\":\"Hold your horses! This gal is off to Wesleyan University for ANTHROPOLOGY! Anya's distinct mane of show-stopping curls and Doc Martin boots make her ready to strut (or trot) her knowledge at college! Speaking of which… Park Slope told us they will miss your beautiful jewelry and stylish outfits that adore their streets and the 7th Avenue Hancos. We know you are Curry-Patel’s #1 fan, so we hope to see you come back and teach an APUSH lesson, or two! Continue to make the NEST+M community proud, gooooo cardinals!\"},{\"name\":\"Ava Vogel\",\"classYear\":\"24\",\"college\":\"UVM\",\"major\":\"Secondary English Education\",\"linkedin\":\"https://www.linkedin.com/in/ava-vogel-666626364/\",\"instagram\":\"https://www.instagram.com/afa_fogel/\",\"congratsCaption\":\"This confident fashionista queen is off to Vermont to continue their powerful creative writing (and eat lots of Ben & Jerry’s Ice Cream). The short stories and poems by Ava Vogel shared with friends or at Spotlight express passionate and skillful craftsmanship which have brought tears, laughter, and unique perspective to audiences. She will continue to bring this talent to UVM, where she’s sure to strut around in outfits that qualify as unique vintage masterpieces, along with her countless variations of hair colors and endless, colorful pins on her bag. This #1 Hamilton Stan and proud Italian will be missed at Zest+M for their warmth, friendliness, and personal anecdotes that forever keep class interesting. Because of her friendship with so many of the students and even some teachers (Chandler Wells), they’ve brought many a nestie together since Kindergarten as a Day 1. Ava has always had so many interesting stories and we’re so excited she’s ready to pursue her talents at UVM, we can’t wait to see what she’ll do next! Congratulations and Go Catamounts!\"},{\"name\":\"B Epstein-Reyes\",\"classYear\":\"24\",\"college\":\"Tufts\",\"major\":\"Mechanical Engineering\",\"linkedin\":\"https://www.linkedin.com/in/b-epstein-reyes-42a955346/\",\"instagram\":\"https://www.instagram.com/b.a.er/\",\"congratsCaption\":\"Though it is her name, she’s never a B, always an 🅰️➕! This super smart nestie is leaving and heading over to Tufts! As one of the biggest fans of calculus and even physics, B is a clear fave of Mr Grima, a title that is definitely hard to come by. Though difficult math and challenging physics problems are one of her talents, she’s also big into art! She’s a talented artist (hit her up if you want a super cool pin) and we can’t wait to see what creatively smart things she’ll come up with in the future. A proud cat lover, she has one of her own that we know for sure she’ll miss when in Medford🐈. Mechanical Engineering is her major, and we would expect nothing less from someone so head over heels for math! Maybe she’ll come up with a better solution to walking all the way from Broadway Lafayette in the morning! We know this alto sax player is going to go far. Congratulations and GOOOOOOOO JUMBOS🐘!\"},{\"name\":\"Ben Lee\",\"classYear\":\"24\",\"college\":\"WashU\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/ben-lee-97b374361/\",\"instagram\":\"https://www.instagram.com/_b3nlee/\",\"congratsCaption\":\"This fortnite god is off to WashU! Nest’s very own Arcteryx warrior and favorite jazz lover is going to be showing Missouri what he’s made of. His Ben Lee for VP era is over, and with the voice of an angel, WashU isn’t ready for him! Sadly he won’t be skiing his way to classes all over campus, but St Louis is just as cool as the mountains. Though a bench warmer during the soccer season, Djokovic has nothing on this tennis pro, and we can’t wait to see him slay singles once again this year in the spring and hopefully once he gets to college! Keep serving (🎾) funny jokes and we can’t wait to see what you accomplish! Congratulations Ben and Go Bears!\"},{\"name\":\"Blake Riley\",\"classYear\":\"24\",\"college\":\"Brown\",\"major\":\"Africana Studies & Political Science\",\"linkedin\":\"https://www.linkedin.com/in/blake-riley-970baa216/\",\"instagram\":\"https://www.instagram.com/blakeriley_22/\",\"congratsCaption\":\"Hippity Hop! This frog enthusiast is makin’ his way up to Rhode Island to study Africana Studies and Political Science at Brown University!  In Blake’s free time you can see him parading around Target or Marshalls, leaping around the court — to help claim the title of Undefeated Division Champs for the Nest 🦅 — and chatting it up with everyone and anyone with his friendly personality! Blakes career at Nest has been a busy and rewarding one for sure. From “Rookie of the Year” to “Most improved” awards, Vice Presidency in BSU, and Model UN success, he is a classic hardworking and caring Older Brother for his family and… to us nesties!!! You could even call him a “Family Guy” especially because he is heading up towards Quahog. Don’t Froget to cook up some good eats in the dorms, watch out for Christian — he is coming for you again 😈— , and we hope your yearly dream sticks with you the way you have stuck to our hearts 🫶. Good luck and GOOOOO BEARS!\"},{\"name\":\"Bodie Seidler\",\"classYear\":\"24\",\"college\":\"UMich\",\"major\":\"Sport Management\",\"linkedin\":\"https://www.linkedin.com/in/bodie-seidler-0462a2292/\",\"instagram\":\"https://www.instagram.com/bodieseidler/\",\"congratsCaption\":\"Bodie Seidler just shot his shot and it swished right into the hoop at the University of Michigan! A Nest Heartthrob and renowned captain of the basketball team (and weightlifting club?); we know you gyatt something cookin’ for UMich. Outside Nest, this rap fan likes the occasional Travy Patty, waiting for his idol Darius to invite him to Cleveland, Ohio – but only in OHIO would THAT ever happen, am I right 😂😂😂? Once encapsulated in an egg, then an eaglet, and now a gracious, show-stopping, dapper, wide-winged eagle is ready to depart from this nest. Maybe he will fly to some Knicks games from Ann Arbor, or come visit the eggs he has laid here for over a decade, fly little birdie, let your wings sway to the wind over Lake Superior as a breeze bristles through your golden locks. We know you will have a blast, good luck and GOOOOO WOLVERINES!\"},{\"name\":\"Candy Wong\",\"classYear\":\"24\",\"college\":\"Northwestern\",\"major\":\"Manufacturing & Design Engineering\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/candy.wng/\",\"congratsCaption\":\"Candy Wong, the queen of equations, steps into Northwestern with awesome celebrations! She is going to study Manufacturing and Design Engineering, a fitting major for another strong student of Mr Park! From her impressive math skills to AP Physics might, her intellect shines, and it is a sight- just like watching her play badminton! With her love of Snoopy, we know she is gonna be a dawg in college. She is a loyal friend, and through her incredible talent and pursuit of design and engineering, her skills transcend! She is the best gift giver and a snack connoisseur who loves kpop, no one will have to look to her TWICE 😉 for help! Always with snacks, and a heart so kind, to Northwestern she goes, brilliance in mind! Congratulations and Go Wildcats!\"},{\"name\":\"Charlotte Rodeghiero\",\"classYear\":\"24\",\"college\":\"McGill\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/charlotte-rodeghiero-318162347/\",\"instagram\":\"https://www.instagram.com/charlotterdgr/\",\"congratsCaption\":\"Well keep this short and sweet, just like Charlotte! It’s god’s plan for Charlotte to go to Canada🇨🇦! This lyrical genius is off to McGill to make us all proud (and jealous when she meets Drake). She started from the bottom (Nest kindergarten) and now she’s here, and the hallways will never be the same without her comedic comebacks. Charlotte will be sporting her iconic pink north face, Uggs, and a hot chai latte to keep warm up North 🥶. She’ll be repping McGills colors with her usual red nails 💅. We all hope this francophone doesn’t pick up Quebecois French the way she picked up a British accent after watching Love Island… If you know Charlotte, you know she’ll crack on with anyone else who loves Atletico Madrid, but careful you don’t say you’re a bigger Greizmann fan than her or she’ll pie you off 😤. She’ll be making us proud in both her studies and her dissemination of UK banter. Charlotte will be the best McGill has ever had with her hardworking, witty, fun, and very sweet self. Congratulations Charlotte and GOOOO MARTLETS!\"},{\"name\":\"Chloe McDermott\",\"classYear\":\"24\",\"college\":\"University of Richmond\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/chloemcdermott/\",\"instagram\":\"https://www.instagram.com/chlomcdermottt/\",\"congratsCaption\":\"Did you know there’s a tunnel under Richmond? You got the invitation, you got the right address 🎶. This La La Land fan is packing her iconic navy longchamp, bringing extra Trader Joe’s takis and tupperware of tofu rice! Chloe’s heading south just in time for Lana’s country album and she’ll need a half up half down hair-do to handle the heat (and lots of sunscreen 🫣). Whether she’s whipping up her infamous tomato mushroom pasta or working at the pilates studio, Chloe is constantly hustling away. And when she’s not, she’s protecting her peace with a good show and a DIY crochet blanket🧶. Unfortunately, they don’t have electric citi-bikes down south, but more importantly she won’t have her cats. We know Bijoux and Venus will miss her dearly🥺. We can’t wait to see her Criminal Minds dreams come true and hopefully she will be working alongside Matthew Gray Gubler in no time! Try not to buy too many clothes in Richmond, just bring all your dad’s sweaters! We’re cheering for you 😉 Congratulations and GOOOO SPIDERS!\"},{\"name\":\"Craig Hohmann\",\"classYear\":\"24\",\"college\":\"Yale\",\"major\":\"Global Affairs\",\"linkedin\":\"https://www.linkedin.com/in/craig-hohmann-59339b126/\",\"instagram\":\"https://www.instagram.com/craighohmann/\",\"congratsCaption\":\"Craig (Show)man is off! From the early days of NEST+m to Yale, Craig’s on his way out to new horizons! We don’t know anyone who can rock a dad fit better, and with this Red Hot Chili Peppers fan, he can’t stop the gods from engineering so we feel so need for any interfering! One of the smartest nesties and a favorite of Mr Grima, we know he’s onto big things in New Haven! From representing the school, he’s now graduated to representing the world with Global Affairs! Calculus whiz and debate champ extraordinaire, he’s beyond compare! From his classic chicken cutlet sandwiches to leading student government, Craig’s got it all. We aren’t sure if he’s a squash champion (however hard he tries to convince people) but he’s a wonderful person and we can’t wait to see what he’ll do next. Goooo Bulldogs!\"},{\"name\":\"Derin Ozgu\",\"classYear\":\"24\",\"college\":\"Indiania University\",\"major\":\"Finance\",\"linkedin\":\"https://www.linkedin.com/in/derinozgu/\",\"instagram\":\"https://www.instagram.com/derinozgu1/\",\"congratsCaption\":\"Nefarious Darius is off! Though he’s flying over to Indiana rather than his usual citi biking, we know he’s only moving up in the world. Ms Robin’s favorite is leaving the nest after many years and we know everyone will miss him. He’s a certified loved boy and because his true love is snacks we hope he has some friends ready to share! If you’re looking for him, he’s often at Pier 5 rocking out some soccer or at Heaven’s probably getting his usual (yes he’s well known there). Good luck getting his attention when he’s on his phone because this Brawl Stars master is always locked in. Make sure you don’t learn the hard way that he’s also an insane poker player and will royally flush you into debt! Nest will miss you Derin! Congratulations and GOOOOOO HOOSIERS!\"},{\"name\":\"Dominika Wilamowski\",\"classYear\":\"24\",\"college\":\"Hunter\",\"major\":\"Nursing\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/dominikawila/\",\"congratsCaption\":\"Orders up! Our favorite waitress is off to college! With many a pet, we know that even though she isn’t venturing far, Lemon Pepper, Mango, Austin, Bailey and Memphis will miss Nika so much (try to figure out which are guinea pigs and which are dogs!)🐕. We all know she appreciates a good meal, as she’s always serving up something delicious (including her outfits, especially those flared leggings she loves so much), but her staple smoothie and playa bowls always rise to the top of the ranks. After a meal, don’t forget to ask her for a mint🌿! Her classic wintergreen lifesavers are always exactly what their name is. With many talents, this Dunkie Junkie is also very talented on the bass guitar! From City Island to the Upper East Side, we know this Polish Queen is going to do great🇵🇱. She’s also a volleyball star, showing her strengths on and off the court as both a great friend and a great player🏐! We can’t wait to see her on the front lines of a hospital one day, hopefully as a nice visit and not a necessary trip to the ER! Pa pa kochana👋! Congratulations and GOOOOOO HAWKS!\"},{\"name\":\"Eli Gordon\",\"classYear\":\"24\",\"college\":\"Vanderbilt (POSSE)\",\"major\":\"Economics\",\"linkedin\":\"https://www.linkedin.com/in/eli-gordon-053a0a283/\",\"instagram\":\"https://www.instagram.com/ea.gordon/\",\"congratsCaption\":\"Elarius the Economist (in the making), the Posse winner who pioneered the OG Nest function and Nest’s all star athlete, is off to Vanderbilt on a full tuition scholarship! The jack of all trades – piano, skateboarding, statistics – is ready to show them off in Nashville, Tennessee, as the only ten WE see! You’re never “kappa”in, but you're always yappin' all over with giggles for Ms. Svirsky’s dad jokes. We will “Still Think About You” for years to come because of your “Timeless” personality. Go be the “Flyest in The City'' of Nashville and show Vanderbilt what the eagles are made of. Don’t be a burger and get some fries, gooooooo Eli!\"},{\"name\":\"Ellery Kilstein\",\"classYear\":\"24\",\"college\":\"Case Western Reserve University\",\"major\":\"Computer Science\",\"linkedin\":\"https://www.linkedin.com/in/ellery-kilstein-undefined-a1377732b/\",\"instagram\":\"https://www.instagram.com/elleryk__7/\",\"congratsCaption\":\"ANNND, Case Western just hit a home run, as Mrs. Met flies straight to Ohio! This Baseball fanatic may not be allowed to play major league, but if Jeopardy ever hosts a baseball themed trivia episode, we know who the star player will be⚾. When she isn’t performing in one of her painstakingly perfected productions inside and outside of school, she’s probably at dance rehearsal, perfecting her choreography moves or blazing new trails in the tap dance world. Though her creativity soars, so does her mathematical prowess➕➗! Her customized met-themed sneakers aren’t the only one-of-a-kind things about Ellery, but her contagious smile, iconic ponytails, and willingness to chat win her a one-of-a-kind place in our hearts. Always ready to defend her team and her friends, Ellery is a ride or die. Though everyone thought she was going to major in Sports Management, Ellery just swung her way into computer science and we can’t wait to see what she’ll do! Congratulations and GOOOOO SPARTANS!\"},{\"name\":\"Ellery Spikes\",\"classYear\":\"24\",\"college\":\"UPenn\",\"major\":\"Environmental Studies & Economics\",\"linkedin\":\"https://www.linkedin.com/in/ellery-s-952088218/\",\"instagram\":\"https://www.instagram.com/ellery_spikes/\",\"congratsCaption\":\"Holy awesome sauce! Our environmentally dedicated and sweetest gal is off to UPENN! Hard work doesn’t even describe all she has done these past 4 years. From hustling APs courses — yes, this girl SELF STUDIED!!! — , creating beautiful conversations with everyone and ideas for Environmental Justice Club, we know the business world just won the lottery. You are the change our world needs so urgently, we cannot wait to see you help pass laws that save our air and water, but also make bank in the biz 🏦 💵 ! If you take up your quarantine hobby of bracelet making again, hit us up, a very secret 🤫 person who wears loads of bracelets wants to buy one! It’s time Morgan Stanley let a woman be in charge, so will we see you on the front page of the Times in a few years?!? You’re gonna do great wherever you go, we just know it. Congratulations and good luck Ms. Spikes!\"},{\"name\":\"Ellie Fecko\",\"classYear\":\"24\",\"college\":\"UW Madison\",\"major\":\"Mechanical Engineering\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/ellie.fecko/\",\"congratsCaption\":\"Sniff Sniff, what’s that delicious aroma? IT’S FROSTED BY FECKO! Nest’s absolute favorite baker is off to Wisconsin🧁! She is the ultimate sweet treat plug at nest and her infamous s’more cookies are actually to die for (like SERIOUSLY)🍪. Hit her up for a delicious way to get through the school day! A sweet tooth herself, you can often find her at Heaven’s grabbing an iced coffee or a Poppi. If you take a peak down, there’s a 95% chance she’s wearing a classic pair of Converse (she has a couple pairs)👟. Another C that’s important is Crochet🧶! If you take a look inside this crochet connoisseur’s crocheted tote bag, there’s probably a new project that she’s started in there! She’s always rocking a cute acrylic set, but don’t ask her what salon she goes to (it’s her own handiwork)💅! Street by Street, Laufey is playing in her ears as she makes her way around NYC and now all the way up to Wisconsin! A classic indie playlist is always filling the sweet-scented air around Ellie! Congratulations and GOOOOOO BADGERS!\"},{\"name\":\"Ellie Miller\",\"classYear\":\"24\",\"college\":\"Brown\",\"major\":\"Philosophy and Religious Studies\",\"linkedin\":\"https://www.linkedin.com/in/ellie-miller-51a9462aa/\",\"instagram\":\"\",\"congratsCaption\":\"…Ready for it? Even more Ivy bound nesties are off! Another wonderfully smart nestie is going to Brown, and will surely be enjoying her staple of year-round iced coffee in the chilly Providence winters. She beat this Amazing Race to decision day and is going to be crossing the finish line at an amazing school! Anyone would be enchanted to meet this swiftie, with her sweet demeanor and perfectly painted nails that are always playing piano beautifully. As she handles her friend’s problems as the designated therapist, we know she’ll handle college so well, going even deeper into the roots of thought and reasoning to study philosophy! Her role as the newspaper club editor in chief puts her up on the recent buzz at nest and without her we aren’t sure anyone would know what’s going on. She has the most delicious first period breakfasts and we can’t wait to see what’s next for her (in the kitchen and the world)! Maybe one day she’ll even have instagram! Congratulations Ellie and GO BEARS!\"},{\"name\":\"Emeilia Martin\",\"classYear\":\"24\",\"college\":\"Fordham\",\"major\":\"Psychology\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/emeilia.isabel/\",\"congratsCaption\":\"Hey Siri, play Lip Gloss by Lil Mama💄! This gorgeous gal always has at least 4 tubes on her and if you’re really lucky maybe she’ll share her combo💋! Catch her in the bathroom or the gallery walk ready to strike up a conversation. As a long time nestie, she’s been a kind staple of nest warmth around the hallways for the past 13 years. She’s always rocking a slick back or other glamorous hairstyle, so ask her if you need some hair tips! But wait! Don’t offer her a snack! She’s got her teeth in🦷! Maybe one day this invisalign queen will be able to eat during class, but not for a while. SPLASH! That’s what Emeilia is always making, both in school and in the pool🌊! She’s a swim coach and lifeguard, and we would definitely trust this otter lover with our lives. Though her jeans aren’t always fully there (always a rip or four), her heart sure is! We aren’t sure if she has ever come to school on time and maybe it’s because of her intricate ring positioning, but we know it’s just who she is💍. Now Emeilia, Please Don’t Stop The Music because we all love hearing you sing some Rihanna, and we can’t wait to see what you get up to uptown! Congratulations and GOOOOOO RAMS🐏!\"},{\"name\":\"Emily Wilkinson\",\"classYear\":\"24\",\"college\":\"Syracuse\",\"major\":\"Communications\",\"linkedin\":\"https://www.linkedin.com/in/emily-wilkinson-986573325/\",\"instagram\":\"https://www.instagram.com/_emilywilk/\",\"congratsCaption\":\"There’s only ONE DIRECTION Emily is headed 😉🍉!!!! And that’s to Syracuse! Harry’s biggest fan is off, from soaring as the basketball team or softball captain, she’s gonna be one hell of a leader some day!!! Known to be the most SPIRITED nestie 🦅,Emily is always in the building chatting it up with someone with her (almost) OG nestie communication skills. If you are wondering how to strike up a conversation with this Wilk (one out of 3 that have roamed nest!!!) her dog Buttercup is forever the right topic to begin with, cause this girl loves that dawg. She also wears the badge of honor proudly as Nadia’s least favorite student (kidding, 😅! Even though you won’t have far to look for her, because her laugh can be heard all around nest, she spends a ton of time in Swann-Pye’s room stealing some prize candy or saying hi to our princess juliana🦎! A great tanning buddy, especially in the gallery walk, coffee extravagazast, and a professional at the bathroom mirror selfie, we can’t wait to see what she’s going to capture herself getting into up to upstate on snap 👻 ! Congratulations and GOOOOOO ORANGE!\"},{\"name\":\"Evan Cedeno\",\"classYear\":\"24\",\"college\":\"UW Madison\",\"major\":\"Mechanical Engineering & Computer Science\",\"linkedin\":\"https://www.linkedin.com/in/evan-cedeno/\",\"instagram\":\"https://www.instagram.com/evancedeno25/\",\"congratsCaption\":\"Nests techiest is off! The president of the robotics team and coding club who is famous for his brandy melville hoodies and kind nature is flying out of the nest to study mechanical engineering and computer science. On from one W to another —Watusee to Wisconsin — we are so proud of this rubix-cube solving Swiftie! We know him as a past aquanaut and certified genius, and are curious to see what college creates for him. Pack that handy candy robot and keep hope that Weezer will play in Wisconsin soon! Congratulations Evan and Go Badgers!\"},{\"name\":\"Ezra Mellor\",\"classYear\":\"24\",\"college\":\"Cornell\",\"major\":\"Industiral and Labor Relations\",\"linkedin\":\"https://www.linkedin.com/in/ezra-mellor-665389329/\",\"instagram\":\"https://www.instagram.com/ezra.mellor/\",\"congratsCaption\":\"Chomp! Crunch! MUNCH! Ice Spice’s #1 golden (haired) admirer, is off to spread the Munchkin Gospel in Ithaca! An expert in the games of Soccer, Tennis and, Soccer-Tennis, we are hoping to see you darting around Cornell’s courts, fields, and back courtyards. Since Kindergarten, Ezra has collected loads of nicknames from “Pezra Pellor” to “Rizzra, at the same time he’s been known for rocking LIT🔥 soccer jerseys!! Cornell better buckle up and get ready for all our fortnite GOD has to offer, LIKE his (British) drill dancing. The Industrial Labor Relations School is about to be hit with a BATTLEBUS, when you DROP IN to Get. That. DUB! May your beats continue and rhymes persist, a poetic journey, forever blissed. Good luck Ezra, watch out for the STORM upstate, and GOOOO BIG RED!!!\"},{\"name\":\"Giulia Pesenti\",\"classYear\":\"24\",\"college\":\"UCSD\",\"major\":\"Molecular and Cell Biology\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/giuliaepesenti/\",\"congratsCaption\":\"And on top of the pyramid, this week is… GIULIA!!! This Abby Lee Miller fan is dancing her way across the USA to become a 24/7 tan West Coast girlie🌊! We know that the first item packed in her suitcase will be goldfish🐠, followed by her little nestie bestie sister Nunu. She can always be found with a snack to share and a story to tell –whether its from her adventures abroad, or a classic Target stroll, they always hit the Bullseye 🐶! So as she enters the smartest college, Revelle, and we just KNOW she’ll excel, especially as one of our multi talented eagles. California better give her a guitar, a mic, a stage, and some snacks to power her talent because Giulia has got some bars to drop (hopefully not a diss track). The Polar bears up North told us they are pretty upset you are not abandoning civilization to roam with them🐻‍❄️, but we think that Cali heat might be a better idea! Ciao Giulia, and GOOO TRITONS… and remember “Everyone’s replaceable” (Abby Lee!!!), except you!!!!!!!!\"},{\"name\":\"Grace Fastovsky\",\"classYear\":\"24\",\"college\":\"Boston College\",\"major\":\"Biology\",\"linkedin\":\"https://www.linkedin.com/in/grace-fastovsky-83119b307/\",\"instagram\":\"https://www.instagram.com/grace.fastovsky/\",\"congratsCaption\":\"Though Grace is not going to college for any D1 sports, we know she will continue her 1D enthusiasm anywhere! Always up and on beat, this contemporary dancer just committed to Boston College as a Biology major! Her passion for learning and pages upon pages of interests have made picking a major difficult for our girl who just wants it to be summer already! We love her classic spiral-y necklace and awesome belts — can’t wait to see what you find thrifting up in Newton to add onto your outfits! Continue through life with your bright smile even in the silliest fifth period class. Sending luck for college and all of your endeavors (and any concert tickets you will ever want). Gooo Eagles (pt 2?!)\"},{\"name\":\"Hannah Pollack\",\"classYear\":\"24\",\"college\":\"Vassar\",\"major\":\"Chemistry & Mathematics\",\"linkedin\":\"https://www.linkedin.com/in/hannah-rachel-pollack/\",\"instagram\":\"https://www.instagram.com/hannah.r.pollack/\",\"congratsCaption\":\"H(A+)nnah is off to Vassar! This wildly talented chemistry genius is leaving the nest and heading north🧪! Her trusted companion Oswald (who also happens to be a cat) is going to miss her so much, almost as much as Ms Ball🐈‍⬛. Even though she can be quiet, Hannah’s kindness and intelligence shines bright, even more than her always-colorful socks! She is also a big Jessie fan, and we know Betram and Ravi would be so proud of how far she’s come. Physics C is known to not be kind to many, but Hannah has persevered through and is one of the most hardworking nesties I know. As a through and through Adele fan, we know she’s going to Set Fire to The Rain of college, and hopefully make some of her amazing oreo brownies for us to have before she goes🍪. We know it’s cold up there, but that won’t bother this ice skating queen⛸️! Now Hannah, pack your sunscreen and a taylor swift playlist, and get ready for Vassar! Congratulations and GOOOOOO BREWERS!\"},{\"name\":\"Harrison Wong\",\"classYear\":\"24\",\"college\":\"NEU\",\"major\":\"Business Analytics\",\"linkedin\":\"https://www.linkedin.com/in/harrisonwong282/\",\"instagram\":\"https://www.instagram.com/harrisonwong__/\",\"congratsCaption\":\"OG Fortnite or season 15? Let’s ask our resident fort-pro… Harrison? Off to study business up in Boston, this 🤫 king is going to go far assisting on the basketball court and across the world. Though the tennis bench will be FREEZING without you all over it next year, we know those Northeastern halls will be on fire from your thrift fits! 📞📲 YO! Who’s calling at this hour? It’s Daniel Caesar and he just wants YOU, Mr. Wong, to know, now who's gon' stop YOU? You’re unstoppable, yes. Woah thanks for calling from Canada just for your #1 fangirl! Remember that dog inside of you papi caution, and some eagle, Goooooo Huskies! \\nP.s. bark extra loud for us\"},{\"name\":\"Hindani Patel\",\"classYear\":\"24\",\"college\":\"Yale\",\"major\":\"Environmental Engineering and Ethics\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/chandani_1016/\",\"congratsCaption\":\"Woah! A third nestie off to Yale! Hindani, a staple of nest programs, is off! They are a master organizer, and from clubs to events to mutual aid organizations, Hindani does it all! With both the planning bone and green thumb, they are always ready and able to fix a project- or a plant! When they aren’t busy organizing and setting things up for nest kids to have a good time, they can be found reading, especially rereading old manga favorites! They can also be found at libraries, museums, and outside at parks! If they are sharing comfort, it often comes in the form of delicious food, and in terms of the future, they’re planning on becoming a union or human rights lawyer! Their big dreams are sure to come true at Yale! Congratulations and GOOO BULLDOGS!\"},{\"name\":\"Hugh Black\",\"classYear\":\"24\",\"college\":\"Bard\",\"major\":\"Undecided Major\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/inktorrent/\",\"congratsCaption\":\"Whether he is strutting around in a trapper hat or a newly shaved head, there’s always some genre of music blasting in this guy's ears! His open-mindedness and curious personality don't just stop at exploring music, though. During his past eight years at NEST, he has provided hilarious comments to anyone who will hear them, friendship to those he loves, and, of course, his funky mannerisms that can only pertain to Nest'm’s very own: Mr. Inspectamegalit! Hugh Black, or Lemon Face, has officially committed to Bard College! We are excited to see what he creates because we know it will be noteworthy. Remember to pack those hiking boots to help you climb your way to the Top (G) and (hopefully) take over Mezzostan from President CliveCoe one day. Good luck, Mr. Black, and keep on that grind!\"},{\"name\":\"Indigo Gordon-Gatica\",\"classYear\":\"24\",\"college\":\"Oberlin\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/indigo-gordon-gatica-707946342/\",\"instagram\":\"https://www.instagram.com/indigo.gg/\",\"congratsCaption\":\"What’s her major? WHO’S TO SAY! But she is IndiGOING off to Ohio (sorry)! We are so proud of this nestie and all her accomplishments. Besides STEM Magazine, she’s also Mrs. Worldwide in Model UN, we know we could drop her anywhere in the world and she would make a positive impact🌎. Always sweet and willing to help, Indigo is someone who’s qualities are ones that are looked for in everyone. She would never turn down an adventure and is forever on a random trip somewhere around NYC. Oberlin isn’t ready for her! Crash and iPod are going to miss her so much 🐈‍⬛! As someone who is always chained to the bit, Indigo loves to surprise people with how far her mind goes, and we know we all enjoy the laughs we have with her. After school, it will be hard to reach her as a classic Trader Joe’s run is always in the cards for this poker master. We know she’s going to get up to some insane stuff in Ohio, but remind her to pack her glock for when she gets to OBlock! If you happen to take a glance at her iPhone screen, Jordan Barrett’s beautiful face will greet you, and we know he would be so proud of this superfan. Watch out Oberlin! Congratulations and GOOOOOOOO YEOBIE🐿️!\"},{\"name\":\"Indigo Ubide Holmes\",\"classYear\":\"24\",\"college\":\"Syracuse\",\"major\":\"Architecture\",\"linkedin\":\"https://www.linkedin.com/in/indigo-ubide-holmes-109946347/\",\"instagram\":\"https://www.instagram.com/27ae0/\",\"congratsCaption\":\"HALA INDIGO Y NADA MÁS!!! This real Madrid fan is off to Syracuse⚽! If you spot the infamous Ralph Lauren logo, it’s probably Indigo with his awesome outfits rocking his dad’s designs. Indigo, you might need to switch up your color palette, because orange is going to be the new earth tone🍊🤎! As an animation lover, maybe one day he’ll create a new movie, or even better, a new building🏗️! Studying architecture, we know that he is on the way to design the next Real Madrid stadium with a designated seat by the field with his name on it! He’s a jack of all trades – our beloved baritone saxophone player and best goalie on the NEST+m soccer team – and we know he’ll be able to draw up a mean blueprint, but there’s never a draw when he’s in front of the net! Indigo “brick wall” Ubide Holmes cannot be stopped! A beast on the volleyball court, he’s always ready to strike his way to success🏐! If you call his name, he might not hear you the first time with his classic wired headphones on, but he heard Syracuse and said yes! Congratulations and GOOOO OTTO THE ORANGE!\"},{\"name\":\"Jade De Los Santos\",\"classYear\":\"24\",\"college\":\"UPenn\",\"major\":\"Psychology\",\"linkedin\":\"https://www.linkedin.com/in/jade-de-los-santos-04b347319/\",\"instagram\":\"https://www.instagram.com/santosincielo/\",\"congratsCaption\":\"In the wise words of Jhene Aiko, like a lotus, you too, have the ability to rise, and that is exactly what Jade did! She is off to UPenn, another Ivy-bound nestie, and we know she’ll bring her great appreciation of music with her! From Jhene Aiko to Bryson Tiller to Kehlani, her taste is impeccable! Not just in music, but in food! Her classic hot fries and monster combo will hopefully travel with her to Philadelphia and her creativity will travel far with her, taking the BSU art director skills away to college. Her leadership skills are also impressive, as the co-president of LHSU, and we can’t wait to see what she’ll get up to in the future. With her trusty crystals and angel numbers by her side, the stars will continue to align for Jade! We know that Philly can never match her perfect chopped cheeses here, but we know she’ll be okay! Congratulations and GOOOO QUAKERS!\"},{\"name\":\"James Pyne\",\"classYear\":\"24\",\"college\":\"NYU\",\"major\":\"Global Public Health & Biology\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/jamespynee/\",\"congratsCaption\":\"Thou shall not lie, thou shall not cheat, Thou shall not get caught or you’ll end up just like James, oh… TO NYU, OH we should’ve known all along! Mr. Pynes, Mr. Blox, and of course, Mr. Minaj, is officially staying in the city! From Ktown to Cane’s he’s destined to keep munching on all his good NYC eats. Though many of us saw him shipping off to Ireland to amend the soil and eat all the fries, we expect to see some trips in the future where you meet all your KPOP idols. Speaking of idols, James is sure as hell one at nest. Always cracking a joke, or window 🎾, this man has got a funny bone thats been chuckling since the day he was born - June 9th 🤣. Keep an eye on the guinea pigs — or rats— you keep in the dorms. RIP mochi 🍨. Always remember these 3 things: 1. baddies eat bagels, 2. cars don’t hit pretty people, and 3. keep on the lookout for boy 14 hunted in girl slay. GOOOOO VIOLETSSS!\"},{\"name\":\"Jayla Lynch\",\"classYear\":\"24\",\"college\":\"Yale\",\"major\":\"Economics & African American Studies\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/jaylalynchh/\",\"congratsCaption\":\"SUSTAINED! This future-lawyer is off to a great start at Yale, and we can’t wait to see what she will do next. From volunteering at the Bowery Mission to interning with justices, Jayla’s resume is definitely going to grow in Connecticut! As a law enthusiast, make sure to hit her up with any questions if you’re afraid of committing a crime- she might get you out of jail someday! A staple in nest leadership, this BSU president has a lot ahead of her. She’ll bring along her Yerba Mates- consumed daily, and is always on aux during volleyball! From her baking skills (maybe one day someone will finally figure out her muffin recipe) to her Gilmore Girls appreciation, we know that she won’t repeat Rory’s mistakes! Congratulations and GOOOO BULLDOGS!\"},{\"name\":\"Jennifer Derise\",\"classYear\":\"24\",\"college\":\"UVM\",\"major\":\"Civil Engineering\",\"linkedin\":\"https://www.linkedin.com/in/jennifer-derise-8bb053303/\",\"instagram\":\"https://www.instagram.com/jenn.der.11/\",\"congratsCaption\":\"All hail the president!!!! Student government leader is off to Vermont! Always a smiling face at nest, Jenn is a super sweet nestie. You probably won’t be able to catch up to them because of all that track talent, but at a student government meeting, they’re always there. Leading in rebounds on the basketball team and a PSAL all star, they are always running back and forth to make NYC a more interesting place. From track field dashes to basketball court smashes, this swiftie gave their blood, sweat, and tears for this🏀💨! But you’re definitely not on your own Jenn, because we’ll always be back here at nest rooting for you! Though civil engineering is far from the medical field that they love in Grey’s Anatomy, we can’t wait to see what they’ll accomplish next, even if it’s far from a hospital🏥. Any restaurant would be lucky to have this hostess, especially Tappo, and they can always be guaranteed to serve up one of those grilled cheeses they so adore🥪. Congratulations and GOOOO CATAMOUNTS!!\"},{\"name\":\"Joey Lin\",\"classYear\":\"24\",\"college\":\"UMaryland College Park\",\"major\":\"Public Health Science\",\"linkedin\":\"https://www.linkedin.com/in/joey-lin-6236632a6/\",\"instagram\":\"https://www.instagram.com/j0ey.lin/\",\"congratsCaption\":\"And the Gold goes to…. JOEY LIN🥇!!! TENS ACROSS THE BOARD 🔟! Our favorite figure skating champion is off to Maryland! From her free skate programs to incredible axles, we are sad but excited to see her skate away to a new start⛸️! As a skate guard, Joey is always watching out for others (on and off the ice). She is a kind face at nest to everyone who meets her, but don’t take her Stanley- she’s very protective. When she’s not on the ice, she’s making an outrageous amount of dumplings or setting up bubble tea sales in ACC! Joey has shown up and worked hard every time to make nest a more interesting place! An avid Kpop listener, Joey is always open to talking about Seventeen and BTS (ask her about the concerts and she’ll talk forever). HOLD ON- 🚨ATTENTION ATTENTION🚨HAS ANYONE SEEN HER TAMAGOTCHI?!?!?!?! Sadly, it’s still missing but we know it’s out there somewhere (please keep an eye out). If you see a flash of purple, it’s probably Joey. Scratch that- it’s definitely Joey. If in a few years you still see a flash of purple, it’s definitely her speeding by in her dream car- a purple VW bug. A jibbit connoisseur, rain or shine Joey has those crocs on. As a professional stylist, she can also give you tips on nails and lashes- she does both herself! Congratulations to a real one and GOOOOOOO TERPS!\"},{\"name\":\"Jonathan Qian\",\"classYear\":\"24\",\"college\":\"Baruch\",\"major\":\"Biology\",\"linkedin\":\"https://www.linkedin.com/in/jonathan-qian-2994ba240/\",\"instagram\":\"https://www.instagram.com/akriaico/\",\"congratsCaption\":\"SMASH! Badminton champion Jonathan strikes again! This time, off to Baruch! He spends many a day working at the hospital, helping people and learning lots! He’s always helping someone out, especially Jeremy and Julie with their tech problems! We know he’s going to learn lots more in college studying biology! You can usually find him in the gallery walk, always happy to chat. Another dunkie junkie, he loves Dunkin! Always equipped with anything you could ever need in his backpack, you could call him Jonathan Poppins! It’s unclear if a fellow nestie has seen him without a smile on his face, our sources say it has yet to occur. We know he’s gonna make an impression at Baruch, especially because they want him so bad, they’re paying him to go! Congratulations and GOOOOO BEARCATS!\"},{\"name\":\"Josie Schlesselman\",\"classYear\":\"24\",\"college\":\"McGill\",\"major\":\"Kinesiology\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/josieschles/\",\"congratsCaption\":\"The Cat’s out of the bag🐈‍⬛!! Another nestie is heading off to McGill! Canada is getting so lucky this year with this sweetheart headed their way🇨🇦. From lacrosse to volleyball, this sports star is seriously talented. Always on a trip around the states to different championships, Josie without a volleyball is like a zebra without its stripes🏐🦓. She just has two cats and a dog that she is very passionate about and even though some say she’s a furry on the dl, sources haven’t confirmed it yet. You can spot her beautiful smile lighting up the courtyard from her favorite bench, but get there quick because in a flash she’s probably already on a citi bike somewhere exciting, maybe even hitting the slopes (ski GOD⛷️)! With all the energy from her frequent celsius usage, she’s always whizzing around! You’ll have to ask nicely, but maybe she’ll use her incredible singing voice for a gorgeous serenade! Ed would be so proud of this Sheerio! As a registered lifeguard, she’s also the perfect person to save someone in trouble and her reliability is something that everyone loves about her🛟. Her short attention span will never affect her grind and we can’t wait to see what she’s going to do next. Congratulations and GOOO MARTLETS!\"},{\"name\":\"Julia Chaly\",\"classYear\":\"24\",\"college\":\"Tufts\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/julia-chaly-8772872b1/\",\"instagram\":\"https://www.instagram.com/jmchaly_218/\",\"congratsCaption\":\"Julia Chaly aka Mrs. Worldwide has hustled her way to Tufts! Accepted and selected, the Jumbo way! Not only did she hustle that, you know that every morning Julia power walks from Bleeker St to the Nest!!??!! And thats on NO coffee. Her skill with a quill is undeniable and embracing the sea with her nautical interests in her constant, favorite sweatshirts, she will be going in undecided- but we already decided she is the best! From her love of candy to soccer, her passions are incredible and we know she is going to do well! Whether it’s Vampire Diaries or Pitbull’s beats, success and adventure she’ll surely meet! Congratulations and GO JUMBO!!\"},{\"name\":\"Julian Berk\",\"classYear\":\"24\",\"college\":\"McGill\",\"major\":\"Materials Science & Engineering\",\"linkedin\":\"https://www.linkedin.com/in/julian-berk-70a92133b/\",\"instagram\":\"https://www.instagram.com/julianberk_/\",\"congratsCaption\":\"This ex-blonde bombshell is following in his big brother’s footsteps to Montreal, and Scout will probably be next! We can’t wait for him to scale the Cliffs of Mount Royal, probably with his airpod pros still in, and one of his fire spotify playlists playing🧗. We can’t wait to see what new tricks this double black diamond ◆ ◆ skier is going to pick up up north. This new JB is gonna give the old one (biebs🎵🎶) a run for his money (in his home country)! Crowned the #1 mew king of the Nest, he’s always rocking the baggiest jeans (in Atlanta) and of course doing his best Jesse Pinkman impression. Julian will definitely be exiting his engineering classes, saying “oooo it’s freezing” in his best Drake impression. Julian is after all the type of guy to major in materials science. MTL is not ready for this jazz fan and Chet Baker extraordinaire! A debate champion and Family Guy enthusiast, he definitely left his mark on Nest+m. We know he’s an expert hiker, but let’s hope he doesn’t trek too far and forget to visit! We can’t wait to see him playing lacrosse on the lawns of the McGill Campus🥍. He’s always the host with the most (thrower of the best Nest shindigs), and we know that his kindness will bring him far! Princess Juliana Berketa will miss him dearly🦎! Congratulations Crodie and GOOOO Martlets!!\"},{\"name\":\"Karolina Komar\",\"classYear\":\"24\",\"college\":\"Brandeis (POSSE)\",\"major\":\"Neuroscience\",\"linkedin\":\"https://www.linkedin.com/in/karolina-komar-263a79272/\",\"instagram\":\"https://www.instagram.com/kar0linamaria/\",\"congratsCaption\":\"THE WINNER OF BEST DRESSED IS… LALA! When you see her outfits in Dress To Impress, you’ll be bound to vote her ⭐️⭐️⭐️⭐️⭐️ stars! Even in college, we predict Karolina will still pick up every midnight Roblox call she gets, and if that doesn’t show her dedication to friendship and work, then we don’t know what does! Karolina is off on a full tuition scholarship to Brandeis, ready to impress her new peers with her Swiftie knowledge and Polish pride 🇵🇱. As a woman of many musical instruments (🎸 🎹🎷), she is taking center stage and beginning to create a REPUTATION for herself in medicine 🩺🐍! Whether it’s LalaLikesPotions, Karol, or Mrs. Elordi, she goes by many names which is what makes her so versatile in her hobbies. Our aspiring world traveler will be sure to snap away pictures on her digital camera 📸 of Boston and all of her future study abroad locations 🌎! Keep that Duolingo Dutch streak going for us 🔥. Third-period AP Psychology’s favorite school-lunch-obsessed TA will be gone but not forgotten, leaving behind a legacy since the 7th grade! Bring Ollie the Owl one of Nest’s mice for when you get up there, go discover something amazing – Congrats!\"},{\"name\":\"Laura DePaolo\",\"classYear\":\"24\",\"college\":\"Indiania University\",\"major\":\"Finance & International Business\",\"linkedin\":\"https://www.linkedin.com/in/ldepaolo/\",\"instagram\":\"https://www.instagram.com/laura_depaolo/\",\"congratsCaption\":\"Yeah sure, America runs on Dunkin’, and so does Laura… but really, Nest+m runs on the Baddies Energy of one, MS. LAURA DEPAOLO!!! So move out of the way McDonald’s coffee, and roll out the red carpet 🤳📸 because Ms. Guadron’s favorite, Laurita, is off to Indiana! Always rocking cowboy boots and a show stopping smile, we were sure this gal was gonna go down south and strut her way right into a rodeo🐴! With a future so bright, and outfits so lit… you might need to put on some sunglasses to even look at this post! Brooklyn and the LES will miss her, but she is switching things up this time and is trekking her way – in those baddie boots – to the exclusive Kelley School of Business! Whether being captain on the basketball or volleyball court or volunteering at the New York Public Library, she is always making a difference, not without a stop at Heaven’s (they know and love Ms Laura!) holding a bagel or an ice cream with always perfect nails. Laura stays singing— her angelic voice always wows a crowd, being a avid music fan, this swiftie makes a playlist like no other nestie 🎧 (especially for nest get togethers) and she plays piano like nobody’s business😉. Speaking of, she will be majoring in finance and international business, and we know this future mogul will be successful. All we’re hoping is that they have Dunkin in Indiana, because this dunkie junkie LOVES her coffee! Congratulations and GOOOO HOOSIERS!\"},{\"name\":\"Lily Hirschson\",\"classYear\":\"24\",\"college\":\"Skidmore\",\"major\":\"Environmental Science\",\"linkedin\":\"https://www.linkedin.com/in/lilyhirschson/\",\"instagram\":\"https://www.instagram.com/lilyhirschson/\",\"congratsCaption\":\"This curly girl is bouncing all the way up to Saratoga Springs! She’s trekking up north, but we know we’ll still be able to hear her sweet, infectious laugh all the way down on the Lower East Side. We hope she’s packing her cute jewelry stacks and even cuter book covers (hey Joan Didion!)📚. Lily is forever capturing the world around her, especially with her trademark cute blue camera (matching her cute blue eyeliner) that makes an appearance to eternalize every nest function📸. With her intelligent vocabulary and classic red nails, Lily is always a shining star at nest. She’s always up to try new things, even things as crazy as living on a sailboat for the summer (don’t ask about the bucket)🛶! Russell Hammond would be so proud of this Almost Famous fan, and so are we! She’s always up for something new and never thinking of the present as a minor, insignificant preamble to something else (ask her about Randy Pink Floyd)! If your neck is feeling chilly, hit up Lily (for a crocheted scarf)! If you see her, there is a 99% chance her kindle is on her somewhere, and we love her literature obsession. We’ll BPCee you upstate! Congratulations Lily and GOOOOO THOROUGHBREDS🐴!\"},{\"name\":\"Liviya Hoskinison\",\"classYear\":\"24\",\"college\":\"Hamilton\",\"major\":\"Theatre\",\"linkedin\":\"https://www.linkedin.com/in/liviya-hoskinson-a3b5b230a/\",\"instagram\":\"https://www.instagram.com/excitededamame/\",\"congratsCaption\":\"Ladies and gentlemen, you could have been anywhere in the world tonight \\nBut you’re here with us on the Nest+m Decisions account. \\nAre you ready for a Hamilton caption huh? \\nThe “issue” on the table, Actor Liviya’s plan to study Theatre and establish a longtime role on broadway creating something of a… legacy 😏🇺🇸 \\nSecretary, you have the floor:\\nEveryone watch out, go to stage right, stage left we don’t care, because a shinning star is walking through!! ⭐️ 🌟 ⭐️ Whether that’s on the nest stage, improv performances or open mic nights, this dunkie junkie (yes, another one… that Houston dunkin has truly been a blessing) is coming through and NOTHING is going to stop them… not even… Aaron Burr! With Liviya to Hamilton College, I have made sure to sneak a few hamilton references in. We hope you are SATISFIED with your commitment 😄, and on a NON-STOP grind up in Clinton. We know the room where it all happened was Mr. Yusahs, so, DO WHATEVER IT TAKES TO GET YOUR PLAN ACCOMPLISHED (and maybe actually on the congress floor, smartie 🤓) Oh rats! Good grief (Charlie Brown)! With all the Hamilton fuss, we have forgotten the most important thing; Liviyas continuing kindness and love for all their friendships and peers!!! The name “urchin” may have a bad rep, so we are just here to remind you about their love. Hopefully Elton John plays you a goodbye as you are leaving, or just have him blasting in your headphones 🎧 (as well all classic rock 🪨). Congrats Liviya, keep shining!!! GOOOOOO CONTINENTALS!\"},{\"name\":\"Lola Wiesner\",\"classYear\":\"24\",\"college\":\"Syracuse\",\"major\":\"Finance\",\"linkedin\":\"https://www.linkedin.com/in/lola-wiesner-784a68304/\",\"instagram\":\"https://www.instagram.com/lola.r0sa/\",\"congratsCaption\":\"Wake up filthy! It’s not the first of the month, but Lola’s going to Syracuse and Carti would be so proud! This opium music lover is heading upstate! Alveterzane to this fashion-forward nestie. Her german roots run deep and if she’s ever on the phone with a family member you’ll definitely hear her bust out some crazy words🇩🇪. Although it’s going to be cold and dark up north, we know she’ll still be rocking that tanned look #BLEEDORANGE🍊! She’s always grinding, especially for her dad’s catering company. Functioning as a barista, bartender, and cashier, we know the restaurant industry up in Syracuse isn’t ready. Majoring in finance, it’s guaranteed that this math whiz will find her way. If you’re trying to reach her after school, there’s a good chance she’s gone on an electric citi bike with the rest of the Strx group🚲! RIP GIGI🦎, Congratulations, and GOOOOOO ORANGE!\"},{\"name\":\"Maddy Bernstein\",\"classYear\":\"24\",\"college\":\"University of Washington\",\"major\":\"Marine Biology\",\"linkedin\":\"https://www.linkedin.com/in/madeline-bernstein-5a1235356/\",\"instagram\":\"https://www.instagram.com/maddybernstein7/\",\"congratsCaption\":\"She had to take her hat off in the booth because we know she’d NEVER rap cap🧢. Our resident Babytron fan is off to Washington and we know he too is just shaking and trembling with excitement for this nestie. Besides hockey, Maddy also loves soccer and apparently football… enough to cosplay as Travis Kelce to school…? If you hear the crunch of something in the hallways, you know who’s coming in those granola blundstones… It’s definitely Maddy as proclaimed most granola as Nest🥜! If you’re hiding from her, there’s a good chance she won’t be able to smell you out, or anything for that matter😉. You’ll see her around nest, most likely in a phone case of one of her many fans. If you check the back of her notebook, an age old question remains: Ghosts, Magic, or Miracles🪄? She’s even a white witch herself as we’ve seen through her Cultura Diarias. We hope to god (or any other mythical power) that she’ll never do the orange justice again (RIP knee). As an excellent chef, she cooked, served, ate, and licked the plate in the college process. This acceptance is well deserved. Even though she’s the queen of committing to the bit, whenever she breaks character everyone is always serenaded by her sweet laugh and we can’t wait for it to travel through this beautiful country to Washington. Congratulations and GOOOOO HUSKIES!!!\"},{\"name\":\"Malaya Angeles\",\"classYear\":\"24\",\"college\":\"McGill\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/malaya-angeles-b4409b34b/\",\"instagram\":\"https://www.instagram.com/malaya.angeles/\",\"congratsCaption\":\"Au Revoir Malaya! Another, yes another, nestie is off to McGill and we could not be prouder! This third of the strx is leaving the country! Though she isn’t heading to the West Coast like the true Lana Del Ray fan she is, we know this Cinnamon Girl is going to have a great time up north. She is a very art (deco) inclined person and drawing is a strong suit of hers! As the opposite of Titanic, this french girl actually paints others🎨! Let’s hope she stays Inspiring bliss on tiktok and in Canada🇨🇦. Oh wait! ACHOO! Sorry, that was Malaya sneezing again because of her cats that she loves so much but happens to have a slight allergy to🐈. You can catch her throwing some clay at a pottery studio or planning a new building as she’s usually frequenting her architecture class🏗️! If you hear a crunch from somewhere, it’s probably Malaya and her BBQ chips, and good luck if you want one! Congratulations and GOOOOOO MARTLETS!\"},{\"name\":\"Margot Ehrsam\",\"classYear\":\"24\",\"college\":\"Cornell\",\"major\":\"Food Science\",\"linkedin\":\"https://www.linkedin.com/in/margot-ehrsam-61399933a/\",\"instagram\":\"https://www.instagram.com/margot.ehrsam/\",\"congratsCaption\":\"Au Revoir Margot! The rapper of the century – with her speciality in debates raps for Econ and Gov – is off to Cornell! This Carrot-top has spent her past four years swinging discs with Bard’s ultimaidens to win championships and in stress ball making workshops to help the Nesties who aren't feeling their bestie. Ithaca isn’t ready for her beautiful singing voice and impressive reading lists! This frenchie is off to major in food science, we are sure that she will thrive at the college of agriculture and land science! Hope you don’t miss the Nest school lunch too much! Allez Big Red!\"},{\"name\":\"Margot Polen\",\"classYear\":\"24\",\"college\":\"Emory\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/margot-polen-083093337/\",\"instagram\":\"https://www.instagram.com/margotpolen/\",\"congratsCaption\":\"Here comes Margot, ready to embargo cause she's gonna go a-fargo! This certified Lego-master is going to be putting the bricks of her future together — without any instructions this time— at Emory! With matcha this and matcha that, we know that we will miss YOU a matcha and your opinions towards rapping in Econ and Gov debates. There is so much for you out there, whether it’s gaining a fortune like Gatsbys, living it up in luxury like Marie Antoinette (Sofia Coppola’s version of course, and before the ending we know all too well from AP World) or scooping up a deal on thredUP. Your captivating wit and character will be missed by all of Nest and the East Coast. Go live it up in Atlanta and keep rooting for all the eagles! Don't forget to “Always believe in yourself. Do this and no matter where you are, you will have nothing to fear.” as Hayao Miyazaki said.\"},{\"name\":\"Mateo Gomez-Kosturowski\",\"classYear\":\"24\",\"college\":\"UVM\",\"major\":\"Zoology\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/mateogom3z_/\",\"congratsCaption\":\"ZOOWEEMAMA! This animal nerd is running 🏃 (13.1 miles) to UVM for zoology! He might hate Mondays but this Garfield lover is no hater at all! The sweetest in all the land, everyone adores him (and his thin crust pizza shout out Antonio 🍕). Just don’t catch him during his post lunch sugar rush, you might not make it out alive. If you’re looking for Mateo, just search for a bright minion suit and you’ll have found him, most likely in ms swannpyes room. Catch him mogging everyone on and off the field with his excellent jawline 🤫 and super footy skills ⚽️ (although he hasn’t been to kickers practice in eons). Don’t you notice how 🎶, Nest gets quiet when Mateo’s not around 🎵? As resident laufey fan, Mateo fills our lives with musical joy and also with quite a bit of yelling about brawl stars, which he excels at. There are plenty of fish in the sea (Whale Sharks being the biggest and his spirit animal) but Mateo is surely the kindest of them all 🐟 . So swim on up to Vermont! Congratulations and GO CATAMOUNTS! 🐱 🌲\"},{\"name\":\"Matilda Cox\",\"classYear\":\"24\",\"college\":\"University of St Andrews\",\"major\":\"Psychology & Art History\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/matildawcox/\",\"congratsCaption\":\"‼️DEPOP🔴: New Notification 🔔 \\nIncoming Queen of Scotland - Coronation fit 👗 \\nPossibilities: Endless \\n(Current) Condition: probably doing the crossword, with Waldman \\nBrand: Brooklyn Baddie \\nPrice: ♾️ 💸 \\nThe infamous liltilly is off, not to another state, but across the pond to St. Andrews University in Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿! And no, Zeus cannot come… heinous toe biting dogs are not welcomed 😢 We all know Matilda as the kind presence in our grade these past four years — lending a hand to any eagle 🦅 I even bet if one of us forgot our big ol’ hoops at home— she would lend hers (an iconic tilly outfit staple). Now.. GAME. SET. MATCH. 🌬️🎾🎾 here comes the winning set… AND MATILDA SMACKS DOWNNNN. Resident houston hawks tennis master just sent a ball flying across the world— pack your movie reviewing tools, beautiful skirts, drill, playlists, and remember Lana’s (and America’s) “National Anthem”, gorgeous girl because you better go get that ball!!! Good luck, and GOOOO The Lion Rampant 🦁💂‍♂️\"},{\"name\":\"Matthew Korochik\",\"classYear\":\"24\",\"college\":\"Purdue\",\"major\":\"Aeronautical Engineering Technology\",\"linkedin\":\"https://www.linkedin.com/in/matthew-korochik/\",\"instagram\":\"https://www.instagram.com/wildrunner123/\",\"congratsCaption\":\"This purDUDE is off to Indiana, ready to make it up to outer space 🪐 with his aeronautical engineering degree!! Standing at over 6 foot, this incredibly friendly and kindhearted giant can always be found joking with his friends — with that signature laugh and smile — playing morning video games, and embracing the cafeteria at Lunch 🥪. We admire your dedication and determination for all things in life, the world always needs more “wildrunners” 😂! Cant wait to see what you do, and what lit car (or two) you decide to rock. GOOOOOO BOILERMAKERS!\"},{\"name\":\"Matthias Gat\",\"classYear\":\"24\",\"college\":\"Emerson\",\"major\":\"Journalism\",\"linkedin\":\"https://www.linkedin.com/in/matthias-gat-a3766b316/\",\"instagram\":\"https://www.instagram.com/matty_brappin/\",\"congratsCaption\":\"Movin’ Out (Matthias’s Song) \\n🎶🎶 \\nIf Emerson College is what it’s all about \\nMatthias if that’s movin’ up \\nThen they’re movin’ out \\nThey’re movin’ out (of Nest!!!) 🎶🎶 \\n⬆️Billy Joels number one fan, meme enthusiast, and charmer of teachers (Hello, Wells, Mcgorry and Nadia 👋) is off to Boston , to study journalism. As an advocate for justice and peace, multi-musician, sketchbook filler, and embellishment lover (talkin’ about your bag and jewelry 💎), we have no doubt you will find yourself in a shortage of Bostonian activities! Though you’re not packing up and moving to New Dorp— the true birthplace of Liberty 🇺🇸 — hopefully you can use all your skills from Emerson and the ways of an Eagle 🦅, to become the greatest journalist in Staten Island History! Keep laughing and you better keep up with Animal Crossing and Fnaf at college. Congrats and Lionssssss 🦁!!!\"},{\"name\":\"Milo Writer\",\"classYear\":\"24\",\"college\":\"UPenn\",\"major\":\"Neuroscience\",\"linkedin\":\"https://www.linkedin.com/in/milowriter/\",\"instagram\":\"https://www.instagram.com/milowriter/\",\"congratsCaption\":\"Extra! Extra! Read all about it! … this just in… Milo flippin Writer is off to UPENN!!! As you make your way down the Penn runway — strutting or running a race — don’t forget to pack those brains and brawn’s! With his wardrobe of sweaters, distressed (destroyed) jeans, and white tanks 🤜👊, we know you will be the best dressed there. We will miss your attentiveness and openness to everyone you talk to, the ability to rock steaks of bleached hair, and your classic smile that brightens the Nest! But what we will miss the most is 🥁🥁🥁the end to your college preparation talks since the first week of freshman year. Welp it all paid off! Congratulations Milo, keep chanting “we are Penn state!” and edit the Declaration of Independence while you’re over there in PA, if you’ve got a minute.\"},{\"name\":\"Misty Brown\",\"classYear\":\"24\",\"college\":\"Bing\",\"major\":\"Undecided Major\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/mistybrwn/\",\"congratsCaption\":\"Beep Bop Boop! This coding queen is typing her way to Binghamton💻! Catch her in the bathroom for a lip gloss touchup💄 or perusing the hallways, we hope Bing doesn’t have hall monitors because they already have an opp. As a unicorn of kindness at nest, we know many will miss her. One of Mr Castillo’s favorites is heading off, and even though Bing doesn’t have nest cafeteria chicken tenders, we hope you’ll love it just the same🍗. You can find her twirling around somewhere making nest a more beautiful place. She’s full of surprises, from her australian citizenship to whatever her beef with Chandler Wells is. Now Misty, put a little extra sparkle on and your thickest sneakers (it’ll be easier to prove the 5 foot 4 narrative) and know that wherever you go, people will appreciate you. For the past 13 years she’s been awesome and we can’t wait to see what she’ll do next. Congratulations and GOOOOOOOO BEARCATS🐻!\"},{\"name\":\"Mya Barbatsoulis\",\"classYear\":\"24\",\"college\":\"Ithaca\",\"major\":\"Health Sciences\",\"linkedin\":\"https://www.linkedin.com/in/mya-barbatsoulis-938645309/\",\"instagram\":\"https://www.instagram.com/mya.barbatsoulis/\",\"congratsCaption\":\"HOWLLL!!!! If you throw this OG Nestie to the wolves, you KNOW she’ll come back leading the PACK🐺. She’s always making a splash, both in the pool and people’s lives. This sweetheart can often be found at Asphalt Green, breaking records and sometimes even her knees! If you ever find yourself drowning, she’s also registered as a lifeguard🛟! BEEP BEEP is both the sound of her 5am alarms and the horn on her giant red pickup truck! Mya is committed and kind, and there is no limit to what she can accomplish. This princess is as selfless as Belle and she will always share her snacks, and maybe if she’s lucky, with her younger nestie sister! Ithaca college is not ready for this alpha, and we know she is going to ROCK on their swim team! Rempe would be so proud of this Rangers fan, and even more proud that she is always fighting her way to success 😉🔥! If you take out an airpod, you’ll probably hear some country music playing (Morgan Wallen stays playing), except of course if she left her case next to the pool again🙄. Congratulations and GOOOOO BOMBERS!!!\"},{\"name\":\"Oscar Schlesinger\",\"classYear\":\"24\",\"college\":\"USC\",\"major\":\"Architecture\",\"linkedin\":\"https://www.linkedin.com/in/oscar-schlesinger-426b28300/\",\"instagram\":\"https://www.instagram.com/oscar__ms/\",\"congratsCaption\":\"Are those converse? NO!!!! What are they?? Who’s Rick Owens??!!! JK! Oscar’s shoe game is always on fleek! From his classic ricks to a good old fashioned clog, he’s always big steppin👠. We hear that bleached hair and frog hats are all the rage in California. Thoughts? Aside from his fashion fascination, Oscar is also one of our more sporty nesties. Soccer captain at heart and big arsenal fan, he’s always running from field to field, whether it be East River or Randall’s Island⚽! If you’re looking for him and he isn’t on the field, he might be hiding out at Dover Street Market! He’s also a proud chess champ, and Magnus Carlsen would be so proud of how far Oscar the Grouch has come♟️. If you ask him to hold something for you, his hands are probably already full with a yerba in one and an iced coffee in the other☕! He’s always ready to strike up a conversation with someone, but don’t bother him when those airpod maxes are in🎧! This citibike connoisseur is always riding around in style, and we’re not sure cali is ready! Though all of nest will miss him, especially his best friend and math buddy Ms. Svirsky, we know he’ll have a great time out West. We just hope he’ll griddy his poodle shoes across the stage at graduation! Congratulations and GOOOOO TROJANS!\"},{\"name\":\"Paola Dominguez\",\"classYear\":\"24\",\"college\":\"Dartmouth\",\"major\":\"English & Creative Writing\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/d3ad.p.girl/\",\"congratsCaption\":\"From head to toe, her outfits are planned and composed of pieces – that everyone can agree –we all want for our closets! With a journal, lipstick, frog plushie, book, or strand memorabilia always in hand, we can assure you everyone at Nest will miss the creativity that emanates from Paola. Now that she is off to live her Rory Gilmore Ivy League College dreams, we look forward to seeing her novels, poems, and autobiography on the Strand shelves very soon! We cannot wait to see you sail right through your English Studies and probably create a world-famous fashion brand while doing so! Good luck, and while you are up there… Can you change the mascot from Keggy the Keg to something of your own creation?!\"},{\"name\":\"Patrick Salinas\",\"classYear\":\"24\",\"college\":\"Cornell\",\"major\":\"Biological Sciences\",\"linkedin\":\"https://www.linkedin.com/in/patrick-salinas-5a4416320/\",\"instagram\":\"https://www.instagram.com/_patricksalinas/\",\"congratsCaption\":\"Beep Beep! Arriving in 1 minute is…… Patrick! Whether it’s eats or the man himself, we know that uber/ubereats owes at least half of their annual income to this loyal customer🚗. Not only is he always taking a car somewhere, but from starbucks in the morning to chick-fil-a in the evening, we know how it gets there! If you are searching for him, look no further than his iconic earring! Sometimes it’s hidden by his staple piece: airpod maxes🎧. As a Nets lover, this basketball fan will probably uber to Barclays🏀! Though his hooping skills might need a little more work, catch Shaquille Oatmeal on the slopes snowboarding his little heart out🏂! BARK! Oh! Hold on, it’s Patrick’s adorable little dog! We know Kona will miss you🐩. He’s an amazing friend and caretaker, so whenever you’re in a pickle, just know he’ll come through 😉🥥! Also, though it doesn’t seem like it, he’s also an incredible violinist and his orchestra would definitely be weak without him! Paganini would be so proud🎻. CONGRATULATIONS AND GOOOOOO BIG RED!!!\"},{\"name\":\"Ric Trotta\",\"classYear\":\"24\",\"college\":\"Farifield University\",\"major\":\"Business\",\"linkedin\":\"https://www.linkedin.com/in/ric-trotta-6816b8255/\",\"instagram\":\"https://www.instagram.com/ricky_trotta/\",\"congratsCaption\":\"HOME RUN⚾!!!! Ric is off to Fairfield! Our resident sports aficionado and big baseball fan is heading out of the nest. As the captain of his own baseball team, he knows how to lead both on the diamond and in the top positions. He’s an impressive hitter, and we know he’s going to hit it out of the park in college. Ric is always at nest supporting his friends, especially ones on the basketball team🏀! He’s the basketball team manager and always lives up to his important role. He’s so cold himself he never even wears a coat! HOLD ON! TOOT🎺 TOOT🎺! Ric also plays the trumpet like a master and we know Louis Armstrong would be so proud. He’s also an online poker powerhouse, always throwing down a great run. Speaking of online, Ric absolutely loves a good sports game on Xbox. From 2k to WWE to MLB the show to Fifa to Madden, Ric is a connoisseur of the game and stays cooking up another win. Though he won’t be in a hospital as he’s majoring in business, we wish this Grey’s Anatomy fan luck at Fairfield! Congratulations and GOOOOOOOO STAGS🦌!\"},{\"name\":\"Sayma Wali\",\"classYear\":\"24\",\"college\":\"NYU\",\"major\":\"Politics & Economics\",\"linkedin\":\"https://www.linkedin.com/in/sayma-w-297a872a2/\",\"instagram\":\"https://www.instagram.com/_sxyma/\",\"congratsCaption\":\"YEEHAW! That’s what Sayma’s going to be saying on her full ride 😉to NYU! Though she won’t be far, nest will still miss her. As a calculus wizard, we’re surprised she’s studying politics and economics, but we can’t wait to see what she’s going to do at NYU! As Ms Borock and Ms Souffrant’s favorite helper and overall person at nest, someone will have really big shoes to fill once she’s gone! Sayma is always running around helping out in one way or another, and we know she’s going to do great things. If you manage to catch her on a break from one task to the next, look out for a Brandy Melville top, and she’s probably in it! She better start practicing her “your honors” now, because in a couple of years she’s definitely going to be making her Elle Woods debut as a lawyer! As SASA President, Student Government Vice President, and Human Rights Club Co-President, she’s no stranger to leadership and is paving the way just North of nest to her new campus. Congratulations and GOOOOOOO VIOLETS!\"},{\"name\":\"Scarlett Albertson\",\"classYear\":\"24\",\"college\":\"Wesleyan University\",\"major\":\"Undecided Major\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/scarlettttalbertson/\",\"congratsCaption\":\"This girl has been giving us Scarlet(t) fever for the past few years, and we’re not talking about the mid-1800s global pandemic! Our Dewdrop’s fiery character and pointy ballet shoes are ready to take on Middletown with a dance! Go ahead and show them your moves to every Lana Del Rey song EVER and use that voice—like you do in Econ and Gov discussions—to make the change this world needs. We are saddened to see you start your descent from the nest, but we are anticipating more updo hairdos from this “cinnamon girl” who’s on the road to success! We are so proud to see you “Say Yes to Wesleyan” — you got this!\"},{\"name\":\"Sebastian Lollos\",\"classYear\":\"24\",\"college\":\"UMiami\",\"major\":\"Finance\",\"linkedin\":\"https://www.linkedin.com/in/sebastian-lollos-sl66/\",\"instagram\":\"https://www.instagram.com/sebastianlollos/\",\"congratsCaption\":\"Point break! This surfing aficionado is off to Miami! From the Hamptons to the Rockaways, you can always find Sebastian catching a new wave. Sebbybandz has been a longtime beach fan so we know he’s going to love Miami! He’s also a big Drizzy Drake fanatic, earning him his title as OVO Soldier. If you head over to Spotify you can find him featured on Buula’s songs throwing down a bar or two! If you can’t find him anywhere, there’s a chance he’s in Rincon, Puerto Rico. Along with many other athletic nesties, he also spends many an hour at Lifetime. From his Kombucha to Fresno lamb over rice, Sebby has his classics. Congratulations and we all know it’s ALL ABOUT THE U!!!!!!\"},{\"name\":\"Simone Bellettiere\",\"classYear\":\"24\",\"college\":\"Babson\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/simone-bellettiere-953b1932b/\",\"instagram\":\"https://www.instagram.com/simonebellettiere_/\",\"congratsCaption\":\"Simone is entering her new era, and it’s not the Tortured Poets Department, it’s Babson College!!!!! This swiftie is off to college and we know Tay Tay Swizzle would be proud! Though she is no longer twinning with Taylor as a blonde, this lulu demon is ready to leave the nest! She’s always bringing joy (mostly on her tiktok), and sometimes it’s hard to catch her because she’s always zooming around on an electric citi bike🚲! Besides being a swiftie, she’s also a proud Arianator and we know she’ll bring eternal sunshine to Wellesley! If she’s not galavanting around the city, you can find her twirling and spinning on the ice at a rink somewhere⛸️! She’s often up early enough to catch the worm and get to skating so good luck reaching her before school starts. With the eras tour movie on repeat and a cup o’ noodles in her hands, Simone is unstoppable! Congratulations and GOOOOO BEAVERS🦫\"},{\"name\":\"Steven Chen\",\"classYear\":\"24\",\"college\":\"Northwestern\",\"major\":\"Mechanical Engineering\",\"linkedin\":\"https://www.linkedin.com/in/steven-chen-619014299/\",\"instagram\":\"https://www.instagram.com/stevens_voicemail_box/\",\"congratsCaption\":\"Congratulations Steven! Mr. Robotics champion is off to Northwestern on a full ride! This wildcat is Mr. Park’s favorite “meowster” of AP Physics C and is going to be studying mechanical engineering! Go Wildcats! 🥳💜\"},{\"name\":\"Tyler Moy\",\"classYear\":\"24\",\"college\":\"Williams\",\"major\":\"Computer Science\",\"linkedin\":\"https://www.linkedin.com/in/tyler-moy-628187233/\",\"instagram\":\"https://www.instagram.com/tiller_kun/\",\"congratsCaption\":\"SPIKE BY MOY! This volleyball legend is off to Williams🏐! He’s also a spike master at Badminton and always enjoys a good smackdown. Always on a wild adventure, Tyler loves trying new things, especially new foods. More specifically, a new flavor of boba🧋! Though it isn’t just culinary items, Tyler is also a master inventor! This isn’t only including developing his very own app, called BrainTiller, but also the creativity and STEM expertise required for Robotics club🤖! On Fridays, you can find him at Key Club, making the world a better place. An avid anime lover, we know that he’s gotten some inspiration from Haikyu! He also loves his friends and would do anything for them, a very reliable guy!From the Brawl Stars Arena to Massachusetts, we know he’s gonna be successful! Congratulations and GOOOO COWS!\"},{\"name\":\"Tyson Lin\",\"classYear\":\"24\",\"college\":\"USC\",\"major\":\"Business & Finance\",\"linkedin\":\"https://www.linkedin.com/in/tyson-lin-873b19249/\",\"instagram\":\"https://www.instagram.com/thetysonlin/\",\"congratsCaption\":\"CHA CHING💸! Business mogul Tyson is off to California! You’ll never catch him with an old phone, he stays with the newest models of everything! He’s always chasing the bag, whether it be money or his Adidas shoe box purse👟. Speaking of Adidas, this samba-obsessed guy is the ULTIMATE style plug! Hit him up if you ever need discounts on any adidas items, he’ll always come through. Style maven Tyson always has the Essentials (hoodies and necessary accessories) and he’s always showing up to school fitted! A dedicated lover of Frosted By Fecko, Le Vain and Crumbl, you can always find him with a cookie or two to share with a fellow nestie🍪. The sweet tooth is always saying “ja” to swedish candy! He’s pretty much omniscient at nest and stays on top of the most relevant nest gossip! If you happen to cross his path, you’ll definitely smell something nice, because Tyson has a healthy appreciation for luxury fragrances! Tyson is off and money is UP! At this rate, we can’t wait to see him topping the Forbes 500 Charts in a few years🤑! Congratulations and GOOOOO TROJANS!\"},{\"name\":\"Una Laffan\",\"classYear\":\"24\",\"college\":\"Hobart and William Smith Colleges\",\"major\":\"Geoscience\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/una_is_laffan/\",\"congratsCaption\":\"There’s a staaarrrmannn flying from the nest, and their name is UNA!!! Nest +m’s #1 David Bowie fan (who has the same bday as him!) is flying upstate to study Geology and English at Hobart & William Smith Colleges! This talented artist is loved around Nest for their iconic painted Doc Martins, kind companionship, and of course that contagious (and dangerous!) laugh!To know Una is to know to keep a safe distance from them when they embark on their roller coaster ride of laughter 😌 Who else’s deep knowledge on the JFK Assassination, everlasting love for chocolate milk, or tasteful ear for music can hope to match Una’s?? We’re sad to see our Irish baddie depart, but we find comfort in knowing that they’ll be making their Archaeologist Barbie proud as they strut through Geneva with their vintage boots and stylish sunglasses 😎! Congrats Una and GO HERONS!!!\"},{\"name\":\"Abigail Veliu\",\"classYear\":\"25\",\"college\":\"Fordham University\",\"major\":\"Biological Sciences\",\"linkedin\":\"https://www.linkedin.com/in/abigail-veliu/\",\"instagram\":\"https://www.instagram.com/abigailveliu/\",\"congratsCaption\":\"GOOOOOOOAALLLLL ⚽️📣!!! Fordham University: 1 \\nThat’s right, Abi has scored… right into Fordham territory!!! This super soccer star is taking a bite of the Big Apple🍎 (although she does prefer grapes 🍇😋) and will stay repping the Bronx 😜! When she’s not visiting her homeland 🇦🇱, look no further to find our Albanian QUEEN 👑 either zipping down the mountains of Pennsylvania⛷️… or cooking up the most FIRE🔥 fan edits (iykyk 🐞😜). This ultimate Robloxian is 🔛🔝 of the leaderboard 🎮🥱 at all times too. Abi might stay humble about her singing skills, but we can’t help but admire her ANGELIC voice 👼 (always featuring her Ariana Grande hyperfixation songs LOL). Our beloved National Honors Society President 🎖️is moving from President to DOCTOR with her sights set on studying medicine👩‍⚕️🩺! Those CPR classes  🏥🚑 and hours of ACComPLISHED lectures 💻 have definitely paid off! Abi, we’re smiling all the way from the LES to the Bronx for ya. We are so proud of everything you’ve accomplished! Congratulations and GOOOO RAMS 🐏❤️!\"},{\"name\":\"Adrian Acker\",\"classYear\":\"25\",\"college\":\"Wesleyan University\",\"major\":\"Undecided Major\",\"linkedin\":\"https://www.linkedin.com/in/adrian-acker-665233317/\",\"instagram\":\"https://www.instagram.com/adrian_acker1/\",\"congratsCaption\":\"🎺 Ba bada buhhh 🎺 this elite jazz trumpeter is off to Wesleyan! As our YMI 🏥 President, ocean lifeguard 🛟, and swimming sprinter 🏊‍♂️, we are so sad to see him go. But as Adrian trades one nest 🪺 for another (from eagles to cardinals) we know he’ll never stray too far from home. Our future doctor🧑🏻‍⚕️ and musician is going to CHANGE THE WORLD 🌍 as the next Dr. Fauci by day and Miles Davis by night! Oh… and did we mention that he’s a foodie too? Because we know this Nestie cannot live without his pizza 🍕 and cheeseburgers 🍔! We know you’ll find your go-to spot in Connecticut (we’ve heard New Haven pizza is almost NYC level?!) Adrian, we know your kind heart will take you incredibly far and hope you get to drive your dream Ford F150 pickup 🛻 all the way up to Middletown! Congratulations and GOOO CARDINALS!!\"},{\"name\":\"Ali Glick\",\"classYear\":\"25\",\"college\":\"Syracuse\",\"major\":\"Television, Radio and Flim\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/aliraeglick/\",\"congratsCaption\":\"This girl was BORN RED-y and now she’s headed to a school as orange as her hair… SYRACUSE🍊! That’s right, you will catch Ali 1st place in the Ginger Run on March 17th, mark your calendars🗓️. Our OG nestie has spent the last 13 unforgettable years filling the void of NEST’s middle and brightening the halls with her iconic fits (yes, she slays the house boots down🏡👢👇), but never ask where she bought her clothes—odds are, they were thrifted (the bins or Cauz for Pawz) and you will be jealous ♻️👗. Dancing Through Life💃🕺, Ali is always the life of the party, but only if the songs are exclusively sung by Rachel Berry. Don’t get it twisted; she will only be listening to Glee covers🎶. Need a dinner recommendation? Ali’s your girl; she knows all the good spots. But… if you are close to a Playa Bowls, best believe you will be going there🫐. She’s a committed photographer for The Eagle, a talented activist for Girls Inc., and just overall scientifically AWESOME. Make sure to thrift yourself a coat on your way up to do BIG things @ Newhouse. We are rooting for you, GLICKY! Congratulations and BLEED ORANGE🍊!\"},{\"name\":\"Ana Dokianos\",\"classYear\":\"25\",\"college\":\"UVA\",\"major\":\"Political Science & History\",\"linkedin\":\"https://www.linkedin.com/in/ana-dokianos-2a51a638a/\",\"instagram\":\"https://www.instagram.com/anadokianos/\",\"congratsCaption\":\"UV-YAYYYYY!!!! Ana is finally off and ready to hitch a ride down south YEEHAW🤠! As a political science and history major she's bound to have a field day with Charlottesville and its rich history (yup, UVA is a UNESCO World Heritage Site🏛️). We know she won’t just stay south though, this girl is known for her yearly pilgrimage to Europe where she goes back to her roots🇬🇷✌️. Catch her skiing in the Italian Alps⛰️ or swimming in the cerulean seas of Greece 🌊. Oh wait, need a translator? Ana is a quadruple threat…she speaks English, Russian, Italian, AND Spanish! And maybe she’ll even learn Portuguese soon…#braziliancitizen🇧🇷. Beyond her extensive linguistic skills, Ana can be found volunteering with the United Jewish Association ✡️ or hitting up the courts (Varsity Volleyball shoutout!🏐)… oh AND she has multiple jobs - Ana teaches chess to kids♟️and works as a receptionist for a medical spa🧖🏻‍♀️! We sure will miss her nest parties (the OG nest function host) and bubbly self, but it’s time to let her out into the world where we know she’ll thrive! Congrats Ana, we are SO proud of you! Wahoowa!!!! Go Hoos!💙🧡 \\nP.S. Macchina Gialla 🚖😉\"},{\"name\":\"Ananya Parekh\",\"classYear\":\"25\",\"college\":\"NYU\",\"major\":\"Biomolecular Engineering\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/ananya.parekhh/\",\"congratsCaption\":\"This future doctor and STEM star 🌟 is heading to NYU🥼🎉🎊! When she’s not playing one of her three instruments (we know, she’s casually a triple threat 🎶🎼🎵), you can find her deep in a Dance Moms binge or breaking down Kardashian drama like a pro. Ananya is as unstoppable as she is inspiring; not only does she lead the Human Rights Club at school, but she also works in a community garden🌻 in her free time! And while she might pass on the sweets ❌🍫, trust us, her energy is plenty sugar-coated. Nothing can stop this girl - even a friendly game of capture the flag that left her rocking the crutches for a bit 🩼🤪💪. New York City consider yourself blessed because Ananya is staying! 💜🖤 Congratulations Ananya, we love NY-YOU! Let’s gooooo bobcats🐾!!!\"},{\"name\":\"Anita Lin\",\"classYear\":\"25\",\"college\":\"Boston University\",\"major\":\"Business\",\"linkedin\":\"https://www.linkedin.com/in/anitalin-/\",\"instagram\":\"https://www.instagram.com/_anita.lin/\",\"congratsCaption\":\"The secret(ary) is OUT 🤫! Anita is going to Boston University!!! The secretary of Peer Leaders AND Key Club 🗝️ is ready to make her mark on the world - up in Massachusetts! This girl means BUSINESS. (And by that… we mean she’s majoring in it!) As our favorite Gracie Abrams lover, we wish we could stay “Close To You,” but we know you have to take that “Risk” leaving the Nest 😉. Who will she have her Tacobell late night deep talks with now we wonder… 🥲? One thing we do know, is that BU isn’t ready for this time management queen ⏱️! Anita might be an avid cat lover 🐈, but she’ll be rooting for the Boston Terriers up at BU 🐶. Lookout Beantown🫘, someone wicked smaht is headed your way! Congratulations Anita, we can’t wait to see everything you accomplish! Aaaaaand BostON she goes... 🥹💔\"},{\"name\":\"Arianna Sukhdeo\",\"classYear\":\"25\",\"college\":\"John Hopkins\",\"major\":\"Molecular and Cell Biology\",\"linkedin\":\"https://www.linkedin.com/in/arianna-sukhdeo-26a864313/\",\"instagram\":\"https://www.instagram.com/ariann.a_priy.a/\",\"congratsCaption\":\"Arianna is off to JOHNS HOPKINS!!! She’s finally getting a mascot as colorful as her personality🩵💙. This girl radiates happiness and color - from planning Holi (the literal Festival of Colors🌈) to her participation in LHSU to her own organization “Passion with Collaboration” - her compassion and enthusiasm shines through everything she touches✨. But don’t let the bright colors distract you, Arianna’s got brains and hustle, she serves as Co-President of STEM Magazine, a leader in Peer Tutors, and totally killing it in Science Olympiad’s Experimental Design and Forensics 🔬🧪. Academic weapon? Absolutely. WOW! This girl needs a break… perhaps in the tropics🌺🌴 with Strawberry Margarita ice cream in hand🍓🍹(non-alcoholic of course)?! And, perhaps, with a book in the other hand (as she reads to the elementary schoolers). She’s also in touch with her creative side, you can catch her acting it up in various Nest plays. Can’t wait to see how far your rainbow reaches over in Baltimore. Congrats Arianna and GOOO BLUE JAYS!🪺\"},{\"name\":\"Arianne de Maat Alvarez\",\"classYear\":\"25\",\"college\":\"Maastricht\",\"major\":\"Psychology\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/ari.dma/\",\"congratsCaption\":\"PAUSE ☕️? No… PAUSE ⏸️ Pack your postcards and prep the iced chai — because Arianne is going INTERNATIONAL… to University of Maastricht! With a Geo-Guesser 🗺️ sixth sense and a suitcase packed with style 👗, sass 😎, and (soon-to-be) stroopwafels 🧇, Arianne will navigate the Netherlands like a BOSS. Cafeteria fruit dealer by day (🍊🍊🍊?), cheerleader, and BSU baddie by night — Arianne does it ALL. And yes, she will tell you Queens is the best borough, don’t fight her on it 😤. In need of a cute coffee chat? Arianne’s got you covered... just make sure you remember her Pause order (it’s an iced chai for those who don’t know). She’s a Max Verstappen enthusiast, hallway yapping professional, and if there’s an ice rink in Maastricht, trust that she’s bringing her skates ⛸️. If she’s not there, you’ll find her paddling across Maastricht’s rivers, on her long walks, or busy repping Mexico 🇲🇽. She’s not taking over the world — just casually making it her runway. Holland, we hope you’re ready. Tot ziens, America 🌎💫, and HELLOOOO Maastricht \\n(P.S don’t forget about Twinkie and Cookie). Congrats and GOOOO LIONS🦁\"},{\"name\":\"Beatrice Biello\",\"classYear\":\"25\",\"college\":\"Northwestern University\",\"major\":\"Theatre & English\",\"linkedin\":\"https://www.linkedin.com/in/beatrice-biello-a60353373/\",\"instagram\":\"https://www.instagram.com/beatrice.b._/\",\"congratsCaption\":\"Come on Beatrice, why don’t we paint the town? And all that jazz 👐😉. Beatrice is off to Northwestern!!! Time for this thrifty girl to thrift a new jacket, because that Chicago wind doesn’t PLAY. Warning to her future friends: do not do karaoke with her—she will out-sing you ⚠️⚠️. We’re talking about a girl who’s been the lead in a play three years in a row (just try to compete with that talent…go ahead, we’ll wait) 🎬. And when she’s not hitting the stage, she’s definitely hitting Brandy Melville for yet another shopping spree (spoiler alert: she got another white tank top 😜). It must’ve been the wind 😅😅?? She’s a walking Pinterest board… don’t believe us? Go ahead and look at her instagram. Perfection. She always has her blush flawlessly applied, perfect sock curls, and a million lip products on hand💄💋. And don’t be fooled… not only is she beauty and brains, but she is also one of the funniest most genuine people you will ever meet!!! Northwestern has NO idea what kind of icon they’re about to have strutting campus💅. Remember us when you’re famous Beatrice🫰😎. LETS GOOO WILDCATS 💜🐾!!!\"},{\"name\":\"Connor Edel\",\"classYear\":\"25\",\"college\":\"Bing\",\"major\":\"Biology\",\"linkedin\":\"https://www.linkedin.com/in/connor-edel-b8354727a/\",\"instagram\":\"https://www.instagram.com/c3edel/\",\"congratsCaption\":\"Binghamton, watch out! Connor is coming your way💚. Connor will no longer have his walks through the city (#31milewalk), but now he can take on Upstate NY 🚶‍♂️ (maybe even walk all the way there?). This health nut 🥜 is about to make Bing even more nutritious with his knowledge on staying healthy and strong—shoutout to his lifting 💪🏼. And maybe he’ll take on the AFROTC there, with all of his training and expertise🏋️. Ever talk to Connor? He can tell you all about aviation and his favorite types of aircraft🛩️, maybe he’ll take his interest out of this world and join the Astronomy club🔭🛸?! If planes aren’t your speed, he’s also quite the history nerd and can keep you up to speed on history & government🧑‍⚖️. Oh! And don’t forget to inquire about his ants🐜… he has a whole farm and is quite passionate about it!! We are incredibly ANTSy to see what you do! While we sure will miss hearing your voice in the Nest halls, we know you’re going to do great things at Bing and beyond💫. Congrats Connor, and GOOOO BEARCATS!!!\"},{\"name\":\"David Gutin\",\"classYear\":\"25\",\"college\":\"UChicago\",\"major\":\"Business Economics\",\"linkedin\":\"https://www.linkedin.com/in/david-gutin-29891a274/\",\"instagram\":\"https://www.instagram.com/david_gutin/\",\"congratsCaption\":\"Hold onto your swim caps🧢 … DAVID IS HEADED TO UCHICAGO!! That’s right, our resident swim star is diving right into Lake Michigan AKA D3 waters🏊‍♂️🌊! David has been consistently making waves in and out of the water… this Agua swimmer (top 300 in the nation, no sweat 🏊‍♂️💨) is trading early morning swim meets in for Econ lectures and Big bank dreams 💰💼, watch out Wall Street 👀. This man is New York City-borne, London made🇬🇧 and powered by Chipotle🌯, weekly Crumbl runs🍪, and the elite bagels he has for breakfast🥯. You can catch this Brooklyn boy zipping through town on his GIANT bike 🚴‍♂️or chilling in the cafeteria grinding a new Block Blast high score 📲. Watch David go from NEST to NATIONALS, with a Euro summer trip in between 🇪🇺! From pool lanes 🏊‍♂️ to profit gains 📈, we already know he looks great in NEST purple 💜💜… but he’s really gonna SHINE in UChicago maroon ❤️❤️😉!! Congratulations David & GOOOOO MAROONS!!\"},{\"name\":\"Edward Maquiling\",\"classYear\":\"25\",\"college\":\"Ithaca\",\"major\":\"Clinical Health Studies & Physical Therapy\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/ed_maq22/\",\"congratsCaption\":\"IT’S A MACQ-ATTACK… EDWARD IS OFF TO ITHACA COLLEGE💣! And going for a DUAL bachelors and doctorate degree👨‍⚕️WOW! If you ever need someone to lend an Ear, Edward is your guy👂Warmhearted and friendly, he makes it his mission to be nice to everyone he encounters❤️‍🩹. Plus, we hear he creates unique handshakes with everyone in the hallway🤝. Beyond his kindness, Edward is truly dedicated to his craft: you can see his hard work pay off with his time on the court with the Nest+m Basketball🏀 and Seward Boys Volleyball🏐 teams💪🏼. Maybe he’ll join a sports team at Ithaca?! When not on a court, you can catch Edward playing Pokémon (and witness his excitement when he gets a rare card✨). Nest fest and the Nest talent show were certainly blessed with Edward’s great electric guitar playing🎸… we even hear that he can learn anything by ear??? While we are sad to see you go, we can’t wait for your journey at Ithaca #doctorontheway! Congrats Edward and GOOOO BOMBERS💣💣💣\"},{\"name\":\"Ellis Peterson\",\"classYear\":\"25\",\"college\":\"Oberlin\",\"major\":\"Ecology & Music\",\"linkedin\":\"https://www.linkedin.com/in/ellis-peterson-40aa0735a/\",\"instagram\":\"https://www.instagram.com/ellisspetersonn/\",\"congratsCaption\":\"🅾️!!!! We hope you’re tuning in 🎶, because Ellis just served 🏐 up some amazing news 😉! Our Julliard-trained violist 🎻, artistic genius 🖌️ , and nature enthusiast 🌳 is heading to Oberlin to compose the next part of her journey. This little rizzler is headed to OHIOOO… ON SKIB!!! Always orchestrating the perfect play on Nest’s court, this Captain never fails to sets an example for the team 🤾. And don’t worry… Ohio is only two states over from her fav place, Vermont 😜! While Ellis kneads (haha) no introduction in the kitchen 👩‍🍳 , let it be known that fellow Obies struck the perfect chord as she is bringing her culinary greatness to college!! Like her favorite animal - the octopus 🐙 - her 8 arms of talent ensure there’s nothing she can’t do… While we’re going to miss her killer sets, breathtaking art 🎨, and perfectly braided hair, this masterpiece 🖼️ is just beginning to paint 🧑‍🎨 her future! Ms. Svihla is gonna miss this DP&P two-timer like CRAZY…. and so are we 🥲. Congratulations Ellis and GOOOO YEOBIES!!!! 🎼\"},{\"name\":\"Eloisa Bromberg\",\"classYear\":\"25\",\"college\":\"Carnegie Mellon\",\"major\":\"Design & Production\",\"linkedin\":\"https://www.linkedin.com/in/eloisa-bromberg-645801372/\",\"instagram\":\"https://www.instagram.com/eloanimates101/\",\"congratsCaption\":\"Exiting stage left and heading to Pennsylvania, Elo is off to CMU!! Our favorite cosplayer 🎭 is about to give Pittsburgh a taste of what NEST’s tech crew has to offer🎚️!!! This star-studded 🌟 stage manager has brought light 💡, sound 🔊, and smiles to NEST shows (ALL K-12!) for four years—her warmth shines through on and off the stage✨. From calling the shots as Stage Manager for Spring Awakening (iconic behavior), to cracking us up with the Improv Troupe, Elo’s been running the show—literally🙂‍↕️. Her long yap 🗣️ sessions about D&D campaigns 🎲, and absurd amount of knowledge on South Asian folklore, Kingdom Hearts, Genshin Impact, and Omori will surely be missed (confusing us just as much as she’s impressed us 💫😋). CMU has certainly earned itself a certified yapper and theorist who will be even more unhinged than MatPat himself🫡. Congratulations Elo, we know you’ll do amazing (and chaotic) things off at CMU, keep running on Mucinex and barely any sleep… and GOOOOO TARTANS!🐾🦴\"},{\"name\":\"Eve Rieser\",\"classYear\":\"25\",\"college\":\"NEU\",\"major\":\"Communications & Sociology\",\"linkedin\":\"https://www.linkedin.com/in/eve-rieser-a6b869171/\",\"instagram\":\"https://www.instagram.com/evesimone/\",\"congratsCaption\":\"We’re not joshin’ this time… Eve is going to NORTHEASTERN! This Brooklynite will be trading in her NYC accent for a Boston one as she moves up north to Beantown. Referencing her iconic T-shirts… LEGEND has it she’s a KEEPER! Citi-bike will have to find a new loyal rider as Eve shifts her allegiance to BLUEbikes 🚴‍♂️😉 (but at least she won’t forget her helmet at school anymore)! On the court, she’s a baller 🏀… but off the court, she’s a beast in any subject (this gal goes APE 🦧for APES), and is the best camp aid out there #honorarykiwi 🇳🇿🥝. Our favorite bookworm 📚🪱 is turning over a new page and starting her next chapter… 🥲 but we’re certain her smile and infectious laughter will brighten up all of Massachusetts. We are so proud of you Eve! Northeastern watch out… there’s a new BOSSton in town.❤️🖤\"},{\"name\":\"Fendy Jean-Pierre Jr.\",\"classYear\":\"25\",\"college\":\"Northwestern University\",\"major\":\"Engineering\",\"linkedin\":\"https://www.linkedin.com/in/fendy-jean-pierre-63946431a/\",\"instagram\":\"https://www.instagram.com/fendyjr.__/\",\"congratsCaption\":\"What’s all that Illi-noise about???👂Fendy is first to leave the Nest… soaring all the way to Northwestern University! Our resident nonchalant king is off to do big things… but he’s definitely left his mark at school as Boys Basketball Captain, AP Physics legend, and even Investment Club Co-President! (Can we get an update on that one?) His unstoppable jorts, Lightning McQueen crocs (…need we say more), and daily NFL computer games are not to be 4gotten. The mid-west food scene is WAITING to be discovered by Fendy and his unmatched foodie reviews… stay tuned for some stellar Evanston ratings. Hopefully they take Regal unlimited passes over there!!! Winter is coming ⚔️🏰❄️… to Illinois! Fendy, we can’t wait to see everything you accomplish and we are so proud of you!\"},{\"name\":\"Harriet Lee\",\"classYear\":\"25\",\"college\":\"UC Berkeley\",\"major\":\"Mathematics & Environmental Science\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/__harrietlee/\",\"congratsCaption\":\"“California, here she comes… right back where she started from!” 🌴☀️ Although SoCal is always calling, our SASSY sea turtle 🐢 is trading sandy LA shores for the Bay because HARRIET is headed to UC BERKELEY! 🐻🌊Armed with a boba in hand (only the finest, shoutout that iconic freshman year Boba Review🧋), this Fort Greene soldier 🥷🏰 is ready to cause some tectonic shifts🫨 in environmental science and beyond. Whether repping as Student Gov’s Big Sib/Lil Sib QUEEN👑, holding it down as EJC VP 🌍💪, or rocking that signature green shirt like the California girl we know she always has been 💚, Harriet always shows up, shows out, and shows heart. She’s a Nets loyalists (yep, her fam has season tickets 🏀), a beach-day enthusiast 🐚, and a Call Me By Your Name lover (Italy you haven’t seen the last of her 🇮🇹). She’s a certified movie buff, best believe she’ll be working her way through the NYT Top 100 🎬🍿 and marking it all down on her Letterboxd, of course 📝⭐. And if you ever need sunshine, leadership, or an elite boba rec, just look for Harriet — she’s bringing all three to Berkeley in full force. Get ready, NorCal… This girl will be BREAKING THE WAVES 🎬🌊 Big congrats HARRIET and GOOOO BEARS 🐻💛\"},{\"name\":\"Ian McCollum\",\"classYear\":\"25\",\"college\":\"Brown\",\"major\":\"Sociology\",\"linkedin\":\"https://www.linkedin.com/in/ian-zane-mccollum-351382322/\",\"instagram\":\"https://www.instagram.com/iaaan.mccollum/\",\"congratsCaption\":\"The nerd accusations are true… our resident environmentalist and future world leader is off to BROWN TOWN🤎!!! Ian better pencil in 📅✏️August 2025 to May 2029✏️📅 in his planner because things are getting serious. NEST has seen Ian advocate in every which way - from leading EJC to planning Speakers for Social Change events to VP in NHS to NYC DOE Leadership Council - no stone was left unturned. Not to mention his work outside of school: TREEage, the Youth Action Institute, campaigning, and so much more✊. When not fighting to save the world (shoutout senior superlative)🌎, you can catch Ian playing trumpet for Jazz at Lincoln Center Youth Big Band🎺 or competing in a Public Forum debate🧑‍⚖️. Wow! No wonder Ian has to send Google Calendar invites for his hangouts😂. Need a food recommendation? Ian’s got you covered… in all nooks and crannies of the city but ESPECIALLY Jackson Heights🗽. We hope you bring Aloha Fridays™️ up to Providence and share some of your Hawaiian spirit! From seed to sapling (seminars) to mature tree we have loved witnessing every stage of growth🌱. Ian we are so so proud of you and we can’t wait to see what you accomplish at Brown and beyond! Congratulations and GOOOO BRUNO! 🐻\"},{\"name\":\"Isa Cheng\",\"classYear\":\"25\",\"college\":\"Duke\",\"major\":\"Environmental Science & Policy\",\"linkedin\":\"\",\"instagram\":\"\",\"congratsCaption\":\"Touché! Isa has made a hit and scored… at DUKE💙. North Carolina... EN GARDE (😂) for this absolute queen to take over 🙌. This D1 purple enthusiast is about to enter the D1 world for fencing, and we couldn’t be more proud🤺💜! #atethat 😜🍽️ (Sorry you’ll have to swap purple for blue 🥲). Isa is a beast on the piste.. did you know she placed #1 for PSAL fencing🥇?! She’s also an avid earth lover x treehugger 😜🌳. Serving as EJC Vice President and majoring in Environmental Science, she’s bound to make some waves 🌊… climate change whooo 😹🌏?! With her affinity for the cold and avoidance of the sun (she’s a bit of a vampire🧛🏼‍♀️), she better fix global warming soon! Wait… need some career or college advice? Feel free to hit up this VP of Comms Club 😉😉. (She’s got those communication skills on LOCK🔐). And TALK about a bookworm 📖… we hope her bookshelf doesn’t collapse from that epic book collection📚. To know her is to love her 🩷, and while we are sad to see Isa go we can’t wait to see everything she accomplishes. Until then… we will be waiting for that official font of her handwriting to drop📝! Congrats Isa and GOOO BLUE DEVILS💙!!!\"},{\"name\":\"Issac Coughlan\",\"classYear\":\"25\",\"college\":\"Tulane\",\"major\":\"Cognitive Studies\",\"linkedin\":\"https://www.linkedin.com/in/isaac-coughlan-204134311/\",\"instagram\":\"https://www.instagram.com/isaac.nycb/\",\"congratsCaption\":\"Out with the old… in with the New (…Orleans!) ⚜️ We’re not kitten around… this cat lover 🐈🐈‍⬛ is headin’ down south to Tulane University!!! With NOLA’s jazzy streets 🎷, frequent festivals 🎭, and delicious food 🥘, Isaac is SURE to have a good time. Or perhaps not… (he’s just a chill guy fr). Isaac may have been a rook-ie nestie in junior year, but he quickly became our best mate, a king, and the grandmaster of our hearts♟️🫶. Nothing to be a-Freud of here… we have no doubt Isaac will continue to be <.05 down in Louisiana! The New Orleans Saints better 🆙 their game… there’s about to be a new bookie in town 🤫. Congrats Isaac, we are so psych-ed for you to start this next chapter! ROLL WAVE! 💚🌊\"},{\"name\":\"Jack Buffolano\",\"classYear\":\"25\",\"college\":\"NYU\",\"major\":\"Economics\",\"linkedin\":\"https://www.linkedin.com/in/jack-buffolano-83a513312/\",\"instagram\":\"https://www.instagram.com/jack.buffolano/\",\"congratsCaption\":\"BuffolaNOOOO don’t leave us! Jack is off to NYU💜! This diehard Cowboys fan 🤠 and Fortnite gamer 🎮 is trading in late night squad wins for big league dreams 🙌. Whether he’s cracking jokes with his friends or repping the Mets through thick and thin, Jack always keeps it real 💯. And thankfully, he can keep that Mets hat on and continue to rep his city🧡💙. A true team player on and off the field, this baseball player brings energy, laughs, and heart to Nest every day. Plus, he even brings that map knowledge as our resident 50 states map quiz whiz 🗺️. When he’s not at the ballpark, you might just catch him hanging in Brooklyn (the best borough🤷) or at Buffalo Wild Wings🍗 enjoying a meal with the squad. We’ll miss Jack’s presence big time, but NYU just gained a real goat 🐐!!Keep swinging for the fences Jack, the world’s your ballgame ⚾️! Congrats and GOOO BOBCATS! 💜💜💜\"},{\"name\":\"Jack McGrath\",\"classYear\":\"25\",\"college\":\"OSU\",\"major\":\"Business\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/jackmcgrath167/\",\"congratsCaption\":\"No cap🧢! Jack finally took the hat off 🤯and is making it to the big leagues‼️ Our fav Skibidi Rizzler is OSU bound🌳! While this Mets, Jets, AND Knicks fan is definitely NOT trading teams, he will be trading cities❤️🩶. His loyalty for sports runs deep… catch him weekly at one sporting event or another expanding his ball knowledge⚾️🏈🏀!! And when he’s not in the stands, he’s ON THE FIELD… pitching at one of the East Houston Hawks baseball games 🤝! If not that, he’s probably playing Clash Royale (#9ktrophies🎮) or learning the ropes at a construction site 🏗️. Whatever he’s doing and wherever he is, Jack is bound to make a friend: his not-so-secret talent is striking up a conversation with anyone and everyone 🗣️🗣️🗣️. Feeling hungry? Just ask Jack 😉… he’s always stocked with his Hot Cheetos & Lifesaver mints🫰(classic combo 😂). If you’re lucky he’ll share some of his McDonald’s points with you too 🍟. Odds are he has his AirPods in though, probably listening to his 🐐: Travis Scott. Jack, we can’t wait to see all you accomplish at THE Ohio State University! Never change. (But maybe leave the side eye sticker behind 👀❤️😂) Congratulations Jack and GOOOOOO BUCKEYES!!!\"},{\"name\":\"Jade Acker\",\"classYear\":\"25\",\"college\":\"Wesleyan University\",\"major\":\"English\",\"linkedin\":\"https://www.linkedin.com/in/jade-acker-6a0613396/\",\"instagram\":\"https://www.instagram.com/p/DGMj7D-tVdd/\",\"congratsCaption\":\"Lights 🌟…camera 🎥… action 🎬! Jade is headed to Wesleyan University!!! This virtuoso actress has dazzled us with her performances in NEST+m musicals including Little Shop of Horrors 🎭, and we hope to see more of her incredible shows in Connecticut! But, that’s not the only place she shines… say “CHEESE” 📸, because this Mac and Cheese lover will become THE food connoisseur away at college. As EIC of The Eagle ✏️ and writer for the East Hampton Star newspaper 🗞, Jade will take her passion for journalism up to CT, where she’ll deliver all the hot gossip in The Wesleyan Argus 📰. This soccer star will be a “forward” in all the activities Middleton has to offer: from the arts 🎨 to the great outdoors 🏕️🌱, this girl can do it all. Congratulations Jade, we know you’ll light up the Wesleyan stage! GOOOO CARDINALS!\"},{\"name\":\"Janet Omoruyi\",\"classYear\":\"25\",\"college\":\"UPenn\",\"major\":\"Philosophy, Politics & Economics\",\"linkedin\":\"https://www.linkedin.com/in/janet-omoruyi-49121a282/\",\"instagram\":\"https://www.instagram.com/jan.omoruyi/\",\"congratsCaption\":\"❓This New York Times published author, Space Prize winner, Carnegie Hall & Met Museum singer, and Times Square billboard featured student is on her way to the University of Pennsylvania…❓\\n\\n🚨Who is… Janet Omoruyi?\\n\\nBIIIIIIIIIIIGG THINGS ARE HAP-PENN-ING ❤️💙… OUR GIRL IS OFF TO THE IVY LEAGUES! The Queen of Staten Island™️ is making her way onto the mainland… all the way to Pennsylvania! Janet truly does it ALL (seriously…. this girl runs on a 25/8 schedule). She cheers, she debates, she sings, and she shines in the spotlight🌟🤩. Did someone say BSU Co-President💅🏾?! Soul Food Fridays won’t be the same without her heart (and soul)🫶. We’ve all seen Janet’s hard work in action, including in her role as our fearless SGO Senior Rep and Secretary🙌. Her organizational skills are NOT to be messed with👀! Janet might’ve experienced zero gravity🚀 once (insane flex), but we know she’ll only continue to soar to new heights🙈 after she leaves the NEST🥹🪺. Be sure to pack plenty of popcorn (Costco Kirkland brand ONLY🙅‍♀️✅) and those signature BIG GOLD earrings😌. We are so proud of you Janet! PENNSYLVANI-YEAHHHH & LETS GO QUAKERS❤️🤍💙!!!\"},{\"name\":\"Jared Vazquez\",\"classYear\":\"25\",\"college\":\"NYU\",\"major\":\"Psychology\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/jar3d.vxz/\",\"congratsCaption\":\"I can’t believe MY EYES. Jared is staying local… he’s off to New York University! This Travis Scott fanatic and Spanish spelling bee 🐝 champion 🏆 is going to be a mere bike ride away from the Nest! If Jared hasn’t finessed his way to the 2026 World Cup in time… you’re sure to find this BRAINiac in the classroom studying psychology. A Queens 👑 kid at heart, you might see Jared citibiking around town whether rain 🌧️ or shine☀️! We’ll definitely miss him here in the Nest🪺… but this teddy bear 🧸 is sure to have an amazing time off at college! We can’t wait to see (ny)U 💜 continue to thrive in the Big Apple🍎! Congratulations Jared, your kindness is a true gift to all 🎁 and we hope you keep on dribbling your way through New York City! GO BOBCATS!!!\"},{\"name\":\"Jaya Lewis\",\"classYear\":\"25\",\"college\":\"UC Berkeley\",\"major\":\"Sociology\",\"linkedin\":\"https://www.linkedin.com/in/jaya-lewis-11843435b/\",\"instagram\":\"https://www.instagram.com/jayaslewis/\",\"congratsCaption\":\"You geo-guessed it 🌎… Jaya is off to📍UC BERKELEY!!! Our favorite (and only) Liverpool fan is the first Nestie to take over California 😤🐻. Serve 💅? No… SERVE 🎾. We’ve seen this Girls Tennis Team CAPTAIN carry us to PSAL championships two years in a row 👑! (Bringing home the gold 🏆in 2023, might we add). We can’t just forget about her seasonal sports however… Berkeley is NOT ready for this skiing⛷️ -table tennis playing 🏓-horseback riding 🏇(moment of silence) MVP 😜. While her time as an OG Nestie might be coming to end, that Duolingo streak sure won’t be 🤑… (Thank you for the family plan, we all say in unison ❤️). Jaya will be majoring in Niche Soccer References and minoring in Furry Studies and Robloxology 😂😂. But let’s not forget she’s the Spotlight Club 🎤QUEEN, always dazzling us with new songs on guitar 🎸 and vocals 🎵 as Co-Prez. (The voice of an angel 👼, might we add). Jaya, we are so excited to see you thrive at Berkeley 🫶. Wishing you many run-ins with Oski the Bear 😱 and a lifetime of Charleston Chews 🍬. Congratulations, and GO BEARS 🐻💙💛!\"},{\"name\":\"Jordis Rosolinsky\",\"classYear\":\"25\",\"college\":\"Cornell\",\"major\":\"Industrial Labor Relations\",\"linkedin\":\"https://www.linkedin.com/in/jordis-rosolinsky-467183388/\",\"instagram\":\"https://www.instagram.com/j0rdi5_01ivi4/\",\"congratsCaption\":\"We are in a pickle 🥒! This pickle lover is leaving us… for CORNELL❤️. As leader of Epoch and editor of The Eagle, Jordis will be facing an epoch of her own as she heads off to college! As the sun sets on her high school journey… 🌅 perhaps the Cornell Daily Sun awaits her in the horizon?☀️ The captain of the Nest+m girls soccer team and goal scoring machine ⚽️ will be sure to bring her athleticism up to Ithaca! Wait a sec - did we read that right 🧐?! Jordis has a whopping scoring record of 84 goals!!! Not only that, but prepare to see her shredding the gnar at Greek Peak next winter. 😎🏂❄️ Although the West Coast will be calling for you, Ithaca is sure to become your new home (away from home)🏠 . Congratulations Jordis, we know you’ll go on to do BIG things… Gooooo Big Red!❣️ \\nP.S. your secret about the Nest+m sambas is safe with us 😉💌\"},{\"name\":\"Julia Dennis\",\"classYear\":\"25\",\"college\":\"UVM\",\"major\":\"Art History\",\"linkedin\":\"https://www.linkedin.com/in/julia-dennis-905580341/\",\"instagram\":\"https://www.instagram.com/juliad0000/\",\"congratsCaption\":\"(She’s soooo) Julia 💚 is Van Gogh-ing away to University of Vermont! 🖼️ With her fabulous array of hair colors, you’re certain to find more than just green in the Green Mountain State 😉. Someone get her some fleece lined tights… it’s about to get much colder 🥶. Need some music recs? Julias got you covered. Spotify Wrapped hatessss to see her coming - this #1 Crystal Castles fan always has one bud in! 🎧 She loves cooking and baking, and especially sharing treats with us Nesties 😘. Speaking of food, did someone mention Ben & Jerry’s? Julia is about to live the Americone Dream up in VT and hopefully make some of that Tonight Dough… 🍦💰 She might love exploring new places on Geoguessr, but we hope she doesn’t stray too far from home! 🦅 Congratulations Julia, we are so proud of you!\"},{\"name\":\"Julian Malter\",\"classYear\":\"25\",\"college\":\"UFlordia\",\"major\":\"Environmental Engineering\",\"linkedin\":\"https://www.linkedin.com/in/julian-malter-029434387/\",\"instagram\":\"https://www.instagram.com/julianmalter_/\",\"congratsCaption\":\"Intercepted by Malter! 🏈 Our favorite linebacker is running at the 🎶Speed of Sound 🎶 to Gainesville, University of Florida! Leading by example on the field, this determined football captain has brought his teams to multiple championships🏆 and will now bring his vibrant energy to the ole swamp🐊! It’s safe to say 😴 this STEM star 🌟 will be making Nest proud as an Environmental Engineering major at UF! (The climate needs you Julian… 😳🌎) When he’s not serving as a delegate for a Model UN conference🕴️, you can be sure to find him at MSG cheering on the Knicks 🏀 or vibing at concerts 🎵 (yep, he secured those One Night Only tickets)—but now, he’s trading the bright lights 🌃 of NYC for the sunshine ☀️ of Gator Nation. From watching his favorite Giants play to seeing Coldplay perform at Metlife 🎸, Julian is always willing to go on an 🎶Adventure of a Lifetime 🎶. And just like A Sky Full of Stars 🌌, his future is bright ⭐️, and we know he’ll shine wherever he goes✨! Congratulations Julian, we are so proud of you! See ya later alligator 😉🐊🧡!!!\"},{\"name\":\"Keira Theis\",\"classYear\":\"25\",\"college\":\"University of St Andrews\",\"major\":\"Management & Economics\",\"linkedin\":\"https://www.linkedin.com/in/keira-theis-9a0b40391/\",\"instagram\":\"https://www.instagram.com/keiratheis_/\",\"congratsCaption\":\"Decorum, Delegates👩🏼‍⚖️ Keira is embarking on her journey just a hop and skip over the pond…to St Andrews! Done with America🇺🇸, this international girlie is punting the ball over to a whole new country🏴󠁧󠁢󠁳󠁣󠁴󠁿 and swapping “soccer” out for “football”⚽️. Keira served as captain not once but TWICE in her time at Nest👑. And if she had a nickel for every goal scored, she’d have $4.05 (81 goals😉)! With that business degree in action, though, we know she’d quickly turn that into $4.05 BILLION💸. Her hard work doesn’t just end on the field, she also tutors English and serves as secretary for Model UN. Never found without a stylish bag🛍️, her signature nails💅🏼 , & an unbeatable bracelet stack 💎 topped off with a coffee ☕️ in hand (and the occasional matcha🍵 or boba🧋), Keira is bound to spice up the streets of Scotland. And while in Europe, we hope she’ll visit the place of her roots… Deutschland🇩🇪 (#dualcitizen). Though you’re leaving us, as the Scots say, “Haste ye back.” While you are #6 on the field, you will forever remain #1 in our hearts💙🩵. Now let’s get down to business📈👩🏼‍💼 GO SAINTS! 🦁\"},{\"name\":\"Kenny Gualpa\",\"classYear\":\"25\",\"college\":\"UVM\",\"major\":\"Electrical Engineering\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/kennyg_07_0/\",\"congratsCaption\":\"‼️WATCH OUT VERMONT‼️An absolute blizzard of reels is headed your way🚨. Our dear Kenny’s infectious smile and guacamole-making skills will bring him far, and his iPad and Apple Pencil combo will bring him even farther 🤓… This stem demon will be missed by his dear Grima, but the grind must continue ✊. Kenny’s used to finding the slope of the tangent, but now it’s time for him to explore the slopes of the Green Mountains🏔️. When he’s not busy watching cat videos on RedNote, he fantasizes about Checo Perez’s return to F1, which is definitely happening. Definitely! One thing for certain though: Kenny is always down to strike up a conversation and share a laugh with anyone💚. And perhaps a massage. Or two. Burlington is lucky to have this Nintendo DS expert within reach! We are so excited to see our future Ken-gineer thrive at UVM 🥹. Never change. Congratulations Kenny!!! GO CATAMOUNTS 🐈💚💛!!!\"},{\"name\":\"Layla Ibrahim\",\"classYear\":\"25\",\"college\":\"NEU\",\"major\":\"Civil Engineering\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/layla.marina_/\",\"congratsCaption\":\"She may be camera shy📸 but don’t get it twisted - Layla’s been conquering NEST, and now she’s about to do the same at Northeastern🛩️🐾. That’s right, Boston, prepare yourselves. You’re getting the President of Peer Leaders, a 2nd degree black belt in Taekwondo, a beast at Pier 25 mini golf⛳️, and an avid concert goer🎧. Known as Instagram’s #1 reel viewer (and sender) and Trader Joe’s snack connoisseur, Layla is as sweet as the Milk Bar treats she loves and as loyal as her forever BFF Cleo🐶 (yes, she’s that kind of dog mom). She may dodge the camera like it’s sparring practice🥋 but don’t worry, we’ll get her in the group pics, eventually (after 5 attempts and a bribe involving an ice cream sandwich🍦📸). With one foot in Egypt 🇪🇬 and the other in Australia 🇦🇺, she’s truly a multicultural princess👸🏻. And now, she’ll have to open a new Casa La Femme in Boston. Congrats Layla, and GOOOO HUSKIES🐾❤️🖤\"},{\"name\":\"Lauryn Kirkland\",\"classYear\":\"25\",\"college\":\"Cornell\",\"major\":\"Nutrition\",\"linkedin\":\"https://www.linkedin.com/in/lynnae-kirkland-532851375/\",\"instagram\":\"https://www.instagram.com/livelaughlove.lauryn/\",\"congratsCaption\":\"It’s TIMEEEE… Lauryn (with a Y!) is off to the Big Red, CORNELL! Where’s Lauryn?? She’s EVERYWHERE🏎️ serving as BSU Co-President 💅🏾, blocking goals as the Girls Varsity Soccer goalie⚽️😜, cheering away at basketball games 📣, and ofc, working as NEST’s #1 babysitter👩‍🍼🙏. Want to find the way to Lauryn’s heart🫀?! Ask to grab a matcha with her 🍵, compliment her hair (yep, she’s a wash n go queen👑), or invite her to hit up the beach (extra points if the beach is in Barcelona🇪🇸😉)!! While there aren’t any beaches in Ithaca (☹️), there’ll be plenty of sports for Lauryn to play… as she is a MEGA multi-sport athlete⚽️🏐🤸🙈. Just as she’s also a multi-locker owner 😂😂😂. Lauryn’s vibrant personality never fails to brighten up the Nest+m hallways and we know she’ll do the same at Cornell 🫰. The Queen of Queens (former title 😔💔) is continuing her journey even further upstate 🤭… and we are so happy for this absolute star 🌟 to head to the IVY LEAGUESSS and kill it! Congratulations Lauryn and GOOOO Big Red! ❤️🧸 \\nP.S. we are volunteering the NEST reunion to be held at your future farm in Europe 🙏🌷🐄\"},{\"name\":\"Lena Quezada\",\"classYear\":\"25\",\"college\":\"Bing\",\"major\":\"Psychology\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/lenaquezadaa/\",\"congratsCaption\":\"We just lost all motor function 🤯 because Lena is off to BING!!! Whether dominating the volleyball court 🏐, dropping iconic lip combos 💄, or repping BSU and LHSU, Lena does it all effortlessly 😉. If you need her? Check Swann-Pye’s room where she’s probably yapping about her grades, catching up on her work, or let’s be real… napping 😴. The FINAL Quezada sister ™️, the CEO of skipping class for volleyball, and a certified Sonny Angel 👼 & Fuggler collector — Lena is always bringing the BOOM💥. She somehow looks flawless in green 😉💚, always has the freshest nails 💅, and is truly one of a kind. When she’s not setting on the court 🏐 or hitting a home run 🥎, you can catch her perfecting her skills in Papa’s Pizzeria 🍕- a true gaming legend 😎. From Lena Bean moments to legendary laughs, we already know she’s off to do BING things (wink wink😉). Congrats Lena and GOOOOO BEARCATS!! 💚🎉✨\"},{\"name\":\"Lewis Fellows\",\"classYear\":\"25\",\"college\":\"NYU\",\"major\":\"Biology\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/lewissmiguel/\",\"congratsCaption\":\"DIVA DOWN(town). Guess who’s off to NYU? Lewis FELLOWS💜. This LES diva is about to become a wash head… and NO ONE is ready. He is the epitome of fashionably late - while never on time, he always shows up and shows out. Not to mention his perfect set of curls🧑‍🦱! Catch Lewis working away at STEM magazine, attending BSU meetings, supporting the female force, and overall being . Whether he’s serving looks (shoutout his Ice Spice era), getting banned on Roblox👾, obsessing over Dubai chocolate🍫 or explaining niche TikTok references NO ONE asked for - Lewis is in his own chronically online world and we love it 🎮. Wonder what Lewis is up to? He’s either babysitting Flo like a full-time dad or sipping away at his coffee ☕️(don’t even TRY asking for a sip — you’ll get the stink eye and a full rant). And let’s not forget his laugh that echoes through every class - yes, EVERY class. The man finds joy in everything. Even AP Stats tardies. Sophomore year: 200 lates. Senior year? Only 100. Growth 🤭Catch him at NYU living his best sassy academic slay. We hope you’re not late to your classes!Congrats Lewis and GOOOOOO BOBCATS💜\"},{\"name\":\"Lily Carmichael\",\"classYear\":\"25\",\"college\":\"Rensselaer Polytechnic Institute\",\"major\":\"Environmental Engineering\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/citrus.st4r/\",\"congratsCaption\":\"We hope you’re reading this, Lily… Our local luddite is headed OFF(line)📱❌to RPI! With a flip phone 📞 in one hand and a spray paint can in the other, Lily’s trading freeze tag fields and Gaga ball arenas for labs 🧪, lasers, and legendary engineering👷‍♀️⚙️. Call her unreachable, but don’t get it twisted—Lily is the connection 🫶♾️. If you can’t reach her, it’s not because of her flip phone, she’s probably too busy DJing a lit party 🔥🎧🎉 or taking over the stage in Love/sick with her ride-or-die, Ziyoda 🎭🎶. This art club visionary, promposal graffiti queen, and unplugged boss will leave behind a legacy of legendary outfits and artistic talent 📝🎨💅.  As a Physics C survivor (may the force be with her 💥), Lily is taking her brainy🧠 brilliance to RPI to major in Environmental Engineering because yes—she will also be saving our planet🌳🌍 . And while she may have skipped a few calc 🧮 (and theater) classes here and there, she never missed a moment to create something iconic🌟. From sewing her own clothes to hand-making zines, Lily’s creativity knows no bounds 🧵🪡📰. RPI has no clue how cool their newest eco-engineer is. Congrats Lily and LET’S GOOOO RED HAWKS ❤️🛠️🌍!!!\"},{\"name\":\"Maliyah Ambrose\",\"classYear\":\"25\",\"college\":\"SBU\",\"major\":\"Undecided Major\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/msambrose07/\",\"congratsCaption\":\"Ni hao 你好 🇨🇳! Maliyah is off to Stony Brook! She’s ja-makin us crazy to think she is leaving the nest! 🇯🇲Her friendliness knows no end 🙅🏽‍♀️, if you bump into her in the hallways you’re bound for the STORHI-time of your life 📖 and she’ll always encourage you to throw in a couple of your own 😉You can catch Maliyah babysitting lower graders 🤱🏽, twirling some pom-poms 🎀 or directing a BSU assembly 🎥 around the clock ⏰ How does she do it? the world will never know!! Is it a bird? a plane? Superman?? NO! It’s Maliyah soaring on the tennis courts 🎾 the soccer field ⚽️, and down whatever marathon Lauryn has dragged her into!! It’s pretty clear she knows no limit of fun and is ALWAYS down for a good time 😻 Her creativity flows all the way from her well-crafted mandarin and psych projects (earned her free chipotle 🧚‍♀️) down to her luscious hair 💁🏽‍♀️ BTW we still remember the long hair you’d rock in your intricate braided styles before your famous big chop 💇🏽‍♀️ We hope Stony Brook welcomes you with open arms just like NYC did (shoutout home state FL 🌴) Congratulations and ❤️💙 GOOO SEA WOLVES 💙❤️ P.S you’ll always be a gator at heart🐊\"},{\"name\":\"Max Willscher\",\"classYear\":\"25\",\"college\":\"Middlebury\",\"major\":\"Political Science\",\"linkedin\":\"https://www.linkedin.com/in/max-willscher-085521313/\",\"instagram\":\"https://www.instagram.com/maxwillscher_/\",\"congratsCaption\":\"Although a southern cowboy at heart, Max is headed north… to Middlebury! With 0 mins on his Apple Music Replay, this non-music listener is gonna have a long drive up to VT! Pick a sport - any sport! This rock-climbing 🧗‍♀️(and golf playing🏌🏻‍♂️) soccer captain ⚽️ will be nothing short of things to do in Middlebury, and just maybe he’ll try something new… is rugby next? 🏉 Let’s get this snow on the road ❄️… the slopes are simply WAITING to be conquered by Max and his steez ⛷️. Mr. Wells is for sure going to miss his chess mate!♟️We’ve seen Max grow (both metaphorically and literally), and it’s safe to say he WILL-SURE do amazing things at Middlebury and beyond! Congratulations Max, keep on climbing to new heights! 🧗‍♂️🌟Go black panthers! 🖤🐆\"},{\"name\":\"Maximilian Corbett\",\"classYear\":\"25\",\"college\":\"King's College London\",\"major\":\"Political Economy\",\"linkedin\":\"https://www.linkedin.com/in/maximilian-corbett-4b871a225/\",\"instagram\":\"https://www.instagram.com/max.corbett.127/\",\"congratsCaption\":\"🚴‍♂️💨The British are coming, and so is Max Corbett!!!🇬🇧 Say “cheerio” to NEST and “‘ello!” to Kings College London! After countless early morning bike rides and a passion for all things geopolitics and history, this competitive road biker is trading his prosciutto sandwiches for English roasts at King’s College London! 🍽️ Whether he’s leading MUN debates, skiing upstate⛷️, or filming an AP Stats music video all the way in Staten Island (his dedication is on another level)➕🎥, Max is always pushing boundaries. We know he loves history, and although he might not be teaching it, we know he will make some history overseas! 🌊🏰📖 While his bromance with Hippolyte is legendary #bestbromance, it’s time for Max to write the next chapter of his own story in London, and who knows, maybe there are some euro-ventures together in the future?! 🌍🌟 Can’t wait to see you thrive at KINGS! 🤴🇬🇧 Congrats and GO LIONS! 🦁🎓\"},{\"name\":\"Maxine Podgainy\",\"classYear\":\"25\",\"college\":\"Emory\",\"major\":\"Human Health & Economics\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/maxinepod_/\",\"congratsCaption\":\"… And at the top of the pyramid we have… MAXINE to EMORY! An eagle for 13 years 🦅… what’s 4 more?!? Yep… our ICE CREAM QUEEN MAXINE🍦 is rolling her scoops down to Atlanta!!! Although she hopes to one day visit the land down unda 🇦🇺🦘… down south will have to do for now 🤠😉. Maxine might take her coffee plain, but we can assure you she’s nothin but pure sugar ❤️. She lives on Vanderpump Rules (you were lucky if you witnessed her (AP) LIT 🔥🔥🔥presentation), dad jokes, and a thrilling iced coffee addiction 🧊☕️ (RIP Celsius era). Whether she is devouring a book or a NYTimes top 100 meal (SHOUTOUT Borough Bites!) Maxine brings taste and talent everywhere she goes. Also, a NESTm resident Mets fan (don’t talk to her after a loss, which happens often… eek), Maxine crushed her years at NEST like it was post season game against the Colorado Rockies (they suck). When she’s not writing as Head Writer of the Eagle 🦅 or running the world with Girls Inc 💪🏽✨, she’s probably catching Broadway shows with her ✨Glam-Ma✨… but if you can’t find her there, odds are she is in theaters watching Wicked for the… 5TH TIME! She is an amazing friend, and will become an even better practitioner. Watch out emory… big things are coming your way!! Go Maxine and GO EAGLES 🦅 💛🖤\"},{\"name\":\"Micah Killmer\",\"classYear\":\"25\",\"college\":\"Cornell\",\"major\":\"Cognitive Science\",\"linkedin\":\"https://www.linkedin.com/in/micah-killmer-607758385/\",\"instagram\":\"https://www.instagram.com/micahkillmer/\",\"congratsCaption\":\"⏰Wake up! 醒醒!⏰ Big news…👂 Brat Summer is making its way up to Ithaca💚… and Micah is following in its footsteps 👣 to Cornell (rocking his Onitsuka Tigers ofc)! This hyper pop king is ready to take on upstate NY… with his #twinnem, Oscar! We’ll miss Micah at the Nest 🪺… but Cornell is sooo lucky to have his star tennis skills #captain 🎾, knack for ping pong #alsocaptain 🏓, knowledge of calc ♾️, and enthusiasm for cryptocurrency 💱, among many other unique hobbies... And… we hear that cryptography 🔐 is next (watch out Euler)?! They say “the apple’s 🍏 rotten right to the core…” but this 365 party girl is nothin’ but sweet inside and out 🥰. We can’t bear 🐻 to see you GO ⚫️⚪️ , but we know Cornell will keep ya safe for us ❤️‍🩹. Go do BIG things and GOOO BIG RED!\"},{\"name\":\"Michelle Chen\",\"classYear\":\"25\",\"college\":\"Smith (QuestBridge)\",\"major\":\"Biology\",\"linkedin\":\"https://www.linkedin.com/in/michelle-chen-83a691299/\",\"instagram\":\"https://www.instagram.com/mch_06/\",\"congratsCaption\":\"This girl is sure as Heck(scher Scholars) to run the world one day… Michelle is off to Smith College! Her positive energy truly makes Nest+m so chloroful 🌱🎨 and we have no doubt she’ll continue to bond 🧬 with everyone at Smith. There’s little Michelle isn’t talented at - whether that’s Biology, Calc, (answer key whooo? 👀) or Art! She’s an “Overcooked” champion and loves her mobile games… even though she might delete them after a day. No longer will she be sipping tea in AP Lit (sorry Ms. Swann-Pye), but instead at Smith Friday afternoon tea parties! As Communication Club President, NHS Secretary, Book Buddies Leader, and (unofficial) Mandarin tutor, (我们爱你小雪 🫶) our girl is never afraid to lend a helping hand. Congratulations Michelle, cell-ebrating you is so easy! 😉🦠\"},{\"name\":\"Milen Girvin\",\"classYear\":\"25\",\"college\":\"UVA\",\"major\":\"Business\",\"linkedin\":\"https://www.linkedin.com/in/milengirvin/\",\"instagram\":\"https://www.instagram.com/milen.girvin/\",\"congratsCaption\":\"VirginiAHHHH!!! Milen is off to UVA 🎉! From whipping up the best Halloween cupcakes to acing calc (Mr. Grima’s favorite, of course 👩‍🏫📐), this girl is trading in the city lights for the Charlottesville charm. 🧡💙 Where’s Milen, you ask? 👀 You can catch her scooping ice cream at Café Panna (legend has it, she’s generous with free ice cream if you’re lucky enough!🍦😉) And when she’s not serving 🫰(not just ice cream), she’s busy writing and editing for The Eagle newspaper, where her food recommendations are top-tier! ✍️📰 Or perhaps she’s off traveling the world ✈️… in the summer catch her being the most stylish & dedicated camp counselor and jet setter out there 🌎⛺️. We are so proud of you Mil! We already can’t wait for your iconic mirror selfies at UVA🪞📸. Luck of the Irish 😉🇮🇪 is headed down to Virginia! Go Cavaliers!!! ⚔️🧡\"},{\"name\":\"Morgan Sweeney\",\"classYear\":\"25\",\"college\":\"Vanderbilt (POSSE)\",\"major\":\"Law, History, and Society\",\"linkedin\":\"https://www.linkedin.com/in/morgan-sweeney-455152373/\",\"instagram\":\"https://www.instagram.com/morgannn.ms/\",\"congratsCaption\":\"Objection, your honor… Morgan is headed to VANDY👩‍⚖️!! Morgan Wallen??? Scratch that… Morgan SWEENEY is taking over TENNESSEE! Our all-star sports captain 🏐🏀, pillow-stuffing president ⛑️, future legal eagle 🦅 , and every dog’s best friend is sooo ready to light up Vanderbilt🌟! After ALL 13 years at Nest, she knows anything is (POSSE)ble 🧡. Whether dangerously blocking anyone on her court ⛹🏻‍♀️(watch out⚠️), killing any assignment 🔪, or being Red Cross’ fearless leader 🫡 , Morgan is such a joy to be around ❤️. We’re so sad she’s moving down south, but we know she’s leaving behind a legacy of leadership, never-ending (and unstoppable) laughter, and unforgettable taste (yeah, we all know her delicious desserts 🍪🧁 and namesake country music🤠!) Morgan, we are so proud of you! Nashville has no idea what’s coming 🙌. Go #anchordown ⚓️… we know you’ll bring this city to justice one day!!!\"},{\"name\":\"Norman Mei\",\"classYear\":\"25\",\"college\":\"Baruch (Dean Scholars)\",\"major\":\"Accounting\",\"linkedin\":\"https://www.linkedin.com/in/norman-mei-571346350/\",\"instagram\":\"https://www.instagram.com/normanmei_/\",\"github\":\"https://github.com/norman-mei\",\"congratsCaption\":\"This is a 🅱️aruch bound express train. Next stop: College!\\nStand clear of the closing doors please❗️\\nThe man. The myth. The legend. Norman is joining the Baruch baddies 😜 and we seriously couldn’t be prouder 💙! His subway route knowledge puts Google Maps to shame (watch this guy re-imagine the entire public transportation system in 20 years… we’ll wait ⏱️). Always the first to finish his assignments (seriously TOO quick with it), and never the last to help out a friend, we’re certain Norman will have no trouble away at college. Not to mention, his program with Ernst & Young??! (This kid’s LinkedIn is boutta be STACKED). This certified digital genius 💻👾 has already left his digital footprint at school 🧑‍💻👣... Norman’s self-coded NEST+m college map 🗺️ will be in use for generations of nesties to come 😤. We are so proud of you Norman - full steam ahead🚂!!! We are ac-counting on you 😜✨. Congratulations and GOOOO BEARCATS 💙🤍!!!\"},{\"name\":\"Oona Waters\",\"classYear\":\"25\",\"college\":\"Ithaca\",\"major\":\"Occupational Thearpy\",\"linkedin\":\"https://www.linkedin.com/in/oona-waters-865899387/\",\"instagram\":\"https://www.instagram.com/oona.waters_/\",\"congratsCaption\":\"BOOM💥💣! The Ithaca Bombers have called and they are taking OONA!!! The city of Ithaca is about to be blessed with Oona’s bubbly personality and scrumptious scents (she’s always layering perfumes)… 🌸. Speaking of bubbly, you can always catch Oona with a Celsius in hand🫧! From red to ginger to brown hair, Nest has seen it all through Oona’s thirteen years💇‍♀️. Unfortunately Nest will have to replace this resident girls soccer team manager⚽️and BSU enthusiast next year🥲. What will we do?!!!! Queen of Forest Hills (sorry Raphaelle), D1 bathroom breaker, and #1 Barcelona enthusiast is about to take on Ithaca and no one’s ready🖐🏻. We hope you bring your signature Longchamp (and cat hoodie!) with you👜. Ms. Silva’s office is about to be real lonely without you there in the morning☀️And what will we all do without your braiding skills🥲. Though we sure will miss your sweet face, we can’t wait for you to share your kindness with Ithaca💗 Congrats Oona and GOOOO BOMBERS💣\"},{\"name\":\"Patricia Natawidjaja\",\"classYear\":\"25\",\"college\":\"Tufts\",\"major\":\"Engineering\",\"linkedin\":\"https://www.linkedin.com/in/patricia-natawidjaja-b8b327225/\",\"instagram\":\"https://www.instagram.com/patawid/\",\"congratsCaption\":\"Let’s talk about the elephant in the room… PATRICIA IS HEADED TO TUFTS 🐘! With her intricate nail designs (that, yes, she does herself!) and her army of lip products💄, she’s not only a baddie… but a major smartie too 🤓! If you need her, you will probably find her reading 📚(shoutout to the ToG series) or running the robotics team 🤖🦾 as Captain😤! Continuing her #womeninSTEM legacy out of the NEST, Patricia will be making us proud as an engineering major at Tufts! Though, rumor has it that she has been caught napping in calc and physics🧪👩🏻‍🔬. That’s ok… we know she can recite that knowledge in her 😴. From spikes 🏐 to mid-class bites 🍽️, Patricia has kept NEST running, whether she’s leading robotics, guiding school tours, attending Peer Leaders (3 times a year 🤫👀), or repping Comms Club 😜. From Queens (shoutout Rego) to Tufts, this (Indo🇮🇩) queen 👸 is off to make moves in Medford. We’re gonna have a TUF-t time saying goodbye 🥲 but we know she’s gonna crush it. Tufts is lucky to have ya 💙. GOOOOO JUMBOS🐘!\"},{\"name\":\"Rafal Panek\",\"classYear\":\"25\",\"college\":\"Lafayette (POSSE)\",\"major\":\"Civil Engineering\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/r.afalp/\",\"congratsCaption\":\"Our favorite Polish guy🫰will stay repping his flag 🇵🇱 colors… Rafal is off to Lafayette College ❤️🤍! This Posse king is ready to bring his brainrot knowledge on over to Pennsylvania 🧠. Ermmm… are they ready for that? We have no doubt that his affinity for physics and calculus will last for infinity ♾️… (lim (x→∞) f(x)= ∞🤣). His lunchtime whiteboard problem solving, tutoring, and math TA shenanigans have proved that his love for STEM is strong 🤓… you could even say it’s like a gravitational pull?! On the rare occasion that he’s not doing math or physics, you can catch him building his 2000 piece lego sets 🧱. He’s just prepping to become a civil engineer of course🤷‍♂️🥱. OR perhaps he’s off shooting some hoops for the NEST+m basketball team⛹️‍♂️🏀, or exploring Brooklyn (especially Greenpoint!) #represent 😜! If you need a ride be sure to call up Rafal… he’s a trustworthy driver (or so we hear🙉). And don’t forgot to ask him to blast those 2015 white girl bangers🎤🎶… he def knows all the words. We’re sure gonna miss Rafal’s contagious sense of humor and his ability to put a smile on anyone’s face. Lafayette got themselves a good one! Congratulations Rafal and GOOO LEOPARDS 🐆❤️!!!\"},{\"name\":\"Raphaëlle Eckhardt\",\"classYear\":\"25\",\"college\":\"Sciences Po\",\"major\":\"\",\"linkedin\":\"https://www.linkedin.com/in/raphaelle-eckhardt-14709b300/\",\"instagram\":\"https://www.instagram.com/geog_raphy/\",\"congratsCaption\":\"YOU WANNA LIVE IN TAIWAN?!!!🇹🇼 Geog_RAPHY is OFF to explore the globe… 🌏 her first stop?📍Taiwan! On a fully funded government scholarship to study Mandarin, Raphy is off to tackle her third language #trilingual? After her Beijing BRAT summer full of hotpot and bubble tea, are we sure she isn’t just moving for the boba…🧋? Her Austin street Kung Fu Tea (passion fruit always!) is going to have some real competition. After Taiwan, she’ll touch down in Europe to study poli-sci and fraternize with the French #sciencespo🇫🇷. Our SGO prez is getting some real training now 👩‍⚖️😏. While in Europe, maybe a stop in Sicily will be in the cards for her 🃏? This self proclaimed mafia BOSS🩸and foodie is ready to “Leave the gun. [And] Take the cannoli”🚬⚰️. There better be no witnesses!! Speaking of witnesses, let’s call back to Raphs beautiful Witness Theater performance in 2023🎭💙. We hope you keep up with theater-kid lifestyle on your journeys! While FoHi, Nest, and Bruno will sure miss you🥲, we know you are about to go on the adventure of a lifetime. Just don’t forget us😔. Congrats Raph and GOOOO Lion and Foxes🦁🦊!! Set sail and “Carpe Diem!”⛵️再见! Deuces!🎾 Ciao!\\n\\nP.S. we hope you bring back some postcards and film from your travels 🎞️🗺️\"},{\"name\":\"Sean Brust\",\"classYear\":\"25\",\"college\":\"Vanderbilt (POSSE)\",\"major\":\"Civil Engineering\",\"linkedin\":\"https://www.linkedin.com/in/sean-brust/\",\"instagram\":\"https://www.instagram.com/sean.e.brust/\",\"congratsCaption\":\"Broadway, NYC? Nah. Broadway, NASHVILLE! Sean is joining the Posse down at Vandy!!! This Peer Leaders Prez is about to #anchordown somewhere new… and we cannot wait to Tennes(SEE)! From dominating as Skate Club Prezzy 🛹, to impressing EVERYONE with their extensive knowledge of trains 🚊🤓 and fluent Spanish skills (certified spicy white 🌶️), there’s truly nothing Sean can’t do. That includes calc ♾️… one of Mr. Grima’s favorites is planning on majoring in Civil Engineering! (With a minor in Italian Studies 🇮🇹 ofc.) Just kidding!! Call Sean a Nash-villain 😈… because they have stolen our hearts with their infectious kindness and ability to make anyone smile 🥹. Wait… Is Sean from Tennessee? Cause they’re the only TEN WE SEE!!! Will they find a worthy chai (with oat milk) replacement in Nashville though? Only time will tell… Watch out Vandy! You have a MEAN collection of New Balances headed your way 🤪. Congratulations Sean! We ❤️ you!\"},{\"name\":\"Solomon Blecher\",\"classYear\":\"25\",\"college\":\"Cornell\",\"major\":\"Environmental & Sustainability\",\"linkedin\":\"\",\"instagram\":\"\",\"congratsCaption\":\"🚨ALERT: SOLOMON’S GPS IS LOCKED IN ON… CORNELL UNIVERSITY🌽📍This red-headed ERS warrior🥷 and policy whiz 🤓is heading to ITHACA, and honestly, we wouldn’t expect anything less, especially from someone who attended a community board meeting during our senior trip🫡 (Yes, a dedicated legend.) Whether he’s serving at his socialist sleepaway camp🏕️ , lobbying climate and transportation legislation in Albany, or leading the charge at CRFT ♻️or Transportation Alternatives🚌, Solomon’s got one mission: to organize everyone. From MUN motions to mask mandates (he still wears his indoors!), he’s always ten steps ahead, and many pages deep into history books🎒📚 (bonus points if it fits in the iconic map backpack 🗺️📍). Debating Mr. Waldman with the sharp wit of a DSA champ. CHECK ✅ Solving Mr. Grima’s calculus problems in his sleep♾️🛌? Double CHECK ✅💥Solomon’s passion and intelligence are unmatched in everything he does, so we have no doubt he will THRIVE up north. We’ll miss your backpack and your politics. Cornell, watch out, you have a new big RED in town. Congrats Solomon and GO BIG RED🐻❤️!\"},{\"name\":\"Sophia Longo\",\"classYear\":\"25\",\"college\":\"Chapman University\",\"major\":\"Public Relations, Advertising and Entertainment Marketing\",\"linkedin\":\"https://www.linkedin.com/in/sophia-longo-08582435a/\",\"instagram\":\"https://www.instagram.com/sophia_longo_/\",\"congratsCaption\":\"You heard it here first‼️ Sophia is officially West Coast bound 🌊☀️🦀 Our favorite aquaphor enthusiast, muffin maker, and babka lover is headed to Chapman University!! Girl Scout by day, cookie plug by night, she is leaving behind the teachers who relied on her Thin Mint stash (we hope you stocked up!)🍪. With a strawberry açaí refresher🍓in hand and mascara applied in the car, Sophia is a true multitasking queen. From managing the business side of The Eagle 📈to babysitting with unmatched patience (7 years strong!), and an internship in fashion, she’s the definition of booked and busy 📚and always has an amazing playlist to keep her going (sza and Gracie Abrams on repeat ofc🎶). While known to walk into a room fashionably late, she always leaves a lasting impression… whether it’s with her warmth, hugs, or contagious smile. You’ve always made our days brighter just by being yourself, now it’s your turn to soak up that California sun. ☀️ We are gonna miss you Sophia (and so will Nino🐶💔)! Can’t wait to CU shine in your next CHAPter📙✨GOOOO PANTHERS!! 🧡\"},{\"name\":\"Stanley Bochar\",\"classYear\":\"25\",\"college\":\"Ithaca\",\"major\":\"Stage Management\",\"linkedin\":\"https://www.linkedin.com/in/sophia-longo-08582435a/\",\"instagram\":\"https://www.instagram.com/stooooooooooooon/\",\"congratsCaption\":\"🎭🔥STAN THE MAN IS OFF TO ITHACA COLLEGE💣! A French Woods veteran 🏕️🎭and SAGE icon, Stan is never afraid to spread joy 🤩 and color 🌈wherever he goes. This circus-loving 🤹‍♀️, glam-rock-worshipping🤘🎸, cue-calling queen 👸🎬 has spread their wings wide🪽at NEST+m over their 13 years whether it be performing in NEST FEST👩‍🎤, working tech crew with Mr. Yusah, or performing with SAGE 🏳️‍🌈Cultural Exploration Day – and by the way, we know David Bowie👨‍🎤 was admiring your stage makeup as much as the rest of us 👆❤️. Stan’s creativity never takes a break💪, we can’t wait to see what you do when you CALL your OWN shots out in the real world🌍 . Ithaca, get ready, this beam of light is coming your way (cue the spotlight 🔦🕴️) Break a leg Stan🦵, and GOOOO BOMBERS 💣💣💣!!!\"},{\"name\":\"Tiernan Brody\",\"classYear\":\"25\",\"college\":\"Bucknell\",\"major\":\"Anthropology\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/tiernanbrody/\",\"congratsCaption\":\"PENNSYLVANI-YUHHHH!!! Tiernan is off to Bucknell! Outside of the Nest hallways, you can be sure to find this social butterfly 🦋 chatting it up at Lazy Sundaes🧋, volunteering at the elderly home 👵🏼, or BEASTING the volleyball courts 🏐🔥. And while she might pull up to school fashionably late, she always comes prepared with her signature iced hazelnut latte 🌰 and apple tart🍎 in hand 😉. O Captain, my Captain… this volleyball powerhouse has even held the Captain title two years in a row 👑👸🏼! Beyond her volleyball expertise, Tiernan is also a certified baddie always popping out with a fresh new set 💅🏼. As she finally embarks on her journey to Lewisburg, we hope she’ll find sushi that will meet her standards 🍣😋 (and a good fork to eat her ice cream with 🍨). And while the views at Bucknell may not compare to her fav city Prague 🇨🇿, she’ll be sure to get some good pics at the picturesque campus 📸📸. After 13 years at NEST, it’s suffice to say that Tiernan has made her mark. We’re gonna miss her ability to strike up a convo with anyone and always make them laugh! But we know she will be migrating onto bigger places and reaching new heights ⛰️ off at college. Congratulations Tiernan, we are so proud of you! Bucknell got a good one 🫶. Gooooo Bison!!! 🦬 P. S. we know your cats will miss you… 🐈🐈‍⬛\"},{\"name\":\"Veronica Morris\",\"classYear\":\"25\",\"college\":\"Cornell\",\"major\":\"Sociology\",\"linkedin\":\"https://www.linkedin.com/in/veronica-morris-66a519323/\",\"instagram\":\"https://www.instagram.com/veronica.morris_/\",\"congratsCaption\":\"EXTRA! EXTRA! READ ALL ABOUT IT! 📰 Veronica is off to Cornell!!! No longer will she just be integrating NYC, but THE ENTIRE STATE OF NEW YORK 🥳. From Newspaper EIC, to Mental Health Club Leader, to StuGov Vice President, this girl truly does it all. 👀 Looking for Veronica? 👀 You’ll often find her bending it like Beckham in East River Park ⚽️, shooting hoops on the Nest+m courts (you may know her as Le-bronica 🏀⛹🏼‍♀️), or running up that Strava in Prospect Park. If not, she’s probably on a CitiBike 🚲 flying over the Manhattan Bridge! Or wait… better clear the streets because this newly permitted gal will be driving a “Fast Car” all the way up to Ithaca! She’s got the voice of an angel and can play a MEAN tune on guitar. A favorite of Ms. Bruckenthal for Speakers of Social Change, Veronica is never afraid to both lend an ear👂and speak her mind. She’s like sunshine in human form 🥰☀️. Congratulations Veronica, you have such an infectious joy and we know you’ll take Cornell by storm. Ithaca ain’t ready for this one!!! GO BIG RED!\"},{\"name\":\"Xena Cole Nelson\",\"classYear\":\"25\",\"college\":\"UCSB\",\"major\":\"Psychology & Brain Science\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/xenascn/\",\"congratsCaption\":\"That’s right—Xena (the Warrior Princess👸) is off to UC Santa Barbara!!! California’s about to meet its newest ray of sunshine! ☀️ Whether she’s curating a front-page headline as EIC 📝, lending her voice to the Mental Health Club 🎤, or returning to her preschool roots as the sweetest volunteer, she does it all with purpose, poise, and a Strawberry Açaí Refresher in hand 🍓😜! Good thing they have a Trader Joes in California for her curated snack selection 🤌: Takis, Inca Corn, and Hold the Cones 😋! With Frank Ocean and Gracie Abrams on repeat 🎶 and a love for romcoms 🎬, no one does soft girl summer quite like Xena will. Catch her on a weekend getaway or vacation✈️ as she serves looks 💅🏻from her overpacked suitcase 🧳, with a signature tan line! Dedicated and radiant with her early bird gym sessions 💪 and always stunning in her iconic gold jewelry 💍, Xena is an effortless clean girl 🫧 with a coastal soul 🌊. The curls, the elegance, the kindness… we’re already feeling the void she’ll leave behind. With cheerleading 📣 in her past, Xena’s bringing that school spirit to UCSB! We’re so proud of you! We can’t wait to see what you do! GOOOOO GAUCHOS!!! 🩵💛\"},{\"name\":\"Ziyoda Samadova\",\"classYear\":\"25\",\"college\":\"Middlebury\",\"major\":\"Psychology\",\"linkedin\":\"\",\"instagram\":\"https://www.instagram.com/ziyoda_s4/\",\"congratsCaption\":\"WATCHHH OUT MIDDLEBURY… looks like there is a new Panther on the prowl 🐾!!! Ziyoda is headed up north to VT and we couldn’t be MORE excited. Whether she is making magic in Art Club🎨, dropping epic song recs in Music Appreciation Club (rip ☠️🕊️)🎧, or stealing the stage in Love/sick (with her iconic partner in crime, Lily) Ziyoda is always keeping things cool 😎, calm 🧘‍♀️, and creative 🦄. When she’s not playing freeze tag or dominating games on Daniel’s iPad 👾 (don’t test her), she is probably chilling with her three cats or lets be real, in the big stall of the girls bathroom🚽. Our resident thrift queen👸, hallway poet📝, and unofficial gym class DJ🎧 is taking her talents and music taste to Vermont🌲, and we are not emotionally prepared. Middlebury is about to become a lot less MID. Get ready for the coolest panther yet… don’t say we didn’t warn ya ✍️. Congrats Ziyoda and GOOO PANTHERS!!! 🐆💙\"}]"));}),
+"[project]/src/data/colleges.ts [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "colleges",
+    ()=>colleges
+]);
+const TYPE_IVY_LEAGUE = "Ivy League";
+const TYPE_SUNY = "SUNY";
+const TYPE_CUNY = "CUNY";
+const TYPE_PURDUE = "Purdue University System";
+const TYPE_OTHER_PUBLIC = "Other Public";
+const TYPE_OTHER_PRIVATE = "Other Private";
+const TYPE_UNDECIDED = "Undecided";
+const colleges = {
+    "Cornell University": {
+        name: "Cornell University",
+        lat: 42.454323,
+        lng: -76.475266,
+        type: TYPE_IVY_LEAGUE,
+        imageUrl: "https://images.seeklogo.com/logo-png/19/2/cornell-university-logo-png_seeklogo-190243.png",
+        homepageUrl: "https://www.cornell.edu/",
+        stateOrCountry: "NY"
+    },
+    "Princeton University": {
+        name: "Princeton University",
+        lat: 40.343899,
+        lng: -74.660049,
+        type: TYPE_IVY_LEAGUE,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Princeton_seal.svg/1200px-Princeton_seal.svg.png",
+        homepageUrl: "https://www.princeton.edu/",
+        stateOrCountry: "NJ"
+    },
+    "University of Pennsylvania": {
+        name: "University of Pennsylvania",
+        lat: 39.952305,
+        lng: -75.193703,
+        type: TYPE_IVY_LEAGUE,
+        imageUrl: "https://branding.web-resources.upenn.edu/sites/default/files/styles/card_3x2/public/2022-03/UniversityofPennsylvania_Shield_RGB-2.png?h=3c287ac3&itok=HgG1DNc-",
+        homepageUrl: "https://www.upenn.edu/",
+        stateOrCountry: "PA"
+    },
+    "Brown University": {
+        name: "Brown University",
+        lat: 41.826820,
+        lng: -71.402931,
+        type: TYPE_IVY_LEAGUE,
+        imageUrl: "https://thebruinclub.wordpress.com/wp-content/uploads/2013/11/brown_logo.gif",
+        homepageUrl: "https://www.brown.edu/",
+        stateOrCountry: "RI"
+    },
+    "Yale University": {
+        name: "Yale University",
+        lat: 41.316307,
+        lng: -72.922585,
+        type: TYPE_IVY_LEAGUE,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Yale_University_logo.svg/500px-Yale_University_logo.svg.png",
+        homepageUrl: "https://www.yale.edu/",
+        stateOrCountry: "CT"
+    },
+    "Harvard University": {
+        name: "Harvard University",
+        lat: 42.374443,
+        lng: -71.116943,
+        type: TYPE_IVY_LEAGUE,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Harvard_University_coat_of_arms.svg/1200px-Harvard_University_coat_of_arms.svg.png",
+        homepageUrl: "https://www.harvard.edu/",
+        stateOrCountry: "MA"
+    },
+    "Dartmouth College": {
+        name: "Dartmouth College",
+        lat: 43.704540,
+        lng: -72.288986,
+        type: TYPE_IVY_LEAGUE,
+        imageUrl: "https://logolook.net/wp-content/uploads/2024/04/Dartmouth-College-Logo.png",
+        homepageUrl: "https://home.dartmouth.edu/",
+        stateOrCountry: "NH"
+    },
+    "Columbia University": {
+        name: "Columbia University",
+        lat: 40.807384,
+        lng: -73.963036,
+        type: TYPE_IVY_LEAGUE,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Columbia_coat_of_arms_no_crest.svg/640px-Columbia_coat_of_arms_no_crest.svg.png",
+        homepageUrl: "https://www.columbia.edu/",
+        stateOrCountry: "NY"
+    },
+    "Binghamton University": {
+        name: "Binghamton University",
+        lat: 42.0894,
+        lng: -75.9695,
+        type: TYPE_SUNY,
+        imageUrl: "https://pbs.twimg.com/profile_images/601475591918002177/qeftl81n_400x400.png",
+        homepageUrl: "https://www.binghamton.edu/",
+        stateOrCountry: "NY"
+    },
+    "University at Albany": {
+        name: "University at Albany",
+        lat: 42.6842,
+        lng: -73.8261,
+        type: TYPE_SUNY,
+        imageUrl: "https://www.albany.edu/sites/default/files/UAlbanyMark_F_S01A_HEX_Gold_Black_300ppi_.jpg",
+        homepageUrl: "https://www.albany.edu/",
+        stateOrCountry: "NY"
+    },
+    "Stony Brook University": {
+        name: "Stony Brook University",
+        lat: 40.9041,
+        lng: -73.1238,
+        type: TYPE_SUNY,
+        imageUrl: "https://www.master-of-finance.org/wp-content/uploads/2018/07/stony-brook-university-300x250.png",
+        homepageUrl: "https://www.stonybrook.edu/",
+        stateOrCountry: "NY"
+    },
+    "SUNY New Paltz": {
+        name: "SUNY New Paltz",
+        lat: 41.7386,
+        lng: -74.0852,
+        type: TYPE_SUNY,
+        imageUrl: "https://www.newpaltz.edu/media/ocm/toolkit/the-new-paltz-brand/vdp_pg13-2415x873.jpg",
+        homepageUrl: "https://www.newpaltz.edu/",
+        stateOrCountry: "NY"
+    },
+    "Farmingdale State College": {
+        name: "Farmingdale State College",
+        lat: 40.7529,
+        lng: -73.4267,
+        type: TYPE_SUNY,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/SUNY_Farmingdale_seal.svg/1200px-SUNY_Farmingdale_seal.svg.png",
+        homepageUrl: "https://www.farmingdale.edu/",
+        stateOrCountry: "NY"
+    },
+    "Fashion Institute of Technology": {
+        name: "Fashion Institute of Technology",
+        lat: 40.7467,
+        lng: -73.9942,
+        type: TYPE_SUNY,
+        imageUrl: "https://www.fitnyc.edu/images/cer/fit-master-brand-wordmark-2-line.jpg",
+        homepageUrl: "https://www.fitnyc.edu/",
+        stateOrCountry: "NY"
+    },
+    "University at Buffalo": {
+        name: "University at Buffalo",
+        lat: 42.9985,
+        lng: -78.7892,
+        type: TYPE_SUNY,
+        imageUrl: "https://images.seeklogo.com/logo-png/30/2/university-at-buffalo-logo-png_seeklogo-307211.png",
+        homepageUrl: "https://www.buffalo.edu/",
+        stateOrCountry: "NY"
+    },
+    "Borough of Manhattan Community College": {
+        name: "Borough of Manhattan Community College",
+        lat: 40.7179,
+        lng: -74.0120,
+        type: TYPE_CUNY,
+        imageUrl: "https://bmccprodstroac.blob.core.windows.net/uploads/2022/01/logo-2line-300x195.jpg",
+        homepageUrl: "https://www.bmcc.cuny.edu/",
+        stateOrCountry: "NY"
+    },
+    "City College of New York": {
+        name: "City College of New York",
+        lat: 40.8194,
+        lng: -73.9500,
+        type: TYPE_CUNY,
+        imageUrl: "https://www.ccny.cuny.edu/sites/default/files/2022-06/RGB_CNNY_Horizontal_Version_P2665C.png",
+        homepageUrl: "https://www.ccny.cuny.edu/",
+        stateOrCountry: "NY"
+    },
+    "Baruch College": {
+        name: "Baruch College",
+        lat: 40.7404,
+        lng: -73.9832,
+        type: TYPE_CUNY,
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjeFAV6ipn_I_ijO_HY8NtztoDY3XTt4oRPA&s",
+        homepageUrl: "https://www.baruch.cuny.edu/",
+        stateOrCountry: "NY"
+    },
+    "Hunter College": {
+        name: "Hunter College",
+        lat: 40.7678,
+        lng: -73.9645,
+        type: TYPE_CUNY,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/9/98/Hunter_college_logo.png",
+        homepageUrl: "https://hunter.cuny.edu/",
+        stateOrCountry: "NY"
+    },
+    "College of Staten Island": {
+        name: "College of Staten Island",
+        lat: 40.6022,
+        lng: -74.1504,
+        type: TYPE_CUNY,
+        imageUrl: "https://academicworks.cuny.edu/assets/md5images/514e3c424d39651db69ee26172128457.jpg",
+        homepageUrl: "https://www.csi.cuny.edu/",
+        stateOrCountry: "NY"
+    },
+    "Brooklyn College": {
+        name: "Brooklyn College",
+        lat: 40.631268001943816,
+        lng: -73.95204807700672,
+        type: TYPE_CUNY,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Brooklyn_College_Logo.svg/2560px-Brooklyn_College_Logo.svg.png",
+        homepageUrl: "https://www.brooklyn.cuny.edu/",
+        stateOrCountry: "NY"
+    },
+    "Hostos Community College": {
+        name: "Hostos Community College",
+        lat: 40.817428681718546,
+        lng: -73.92720183924145,
+        type: TYPE_CUNY,
+        imageUrl: "https://www.hostos.cuny.edu/getmedia/6381bdb0-c999-42b2-9baf-f5e7d62b2c64/Brand-Asset_Hostos-Pri-Vertical_2.aspx;.gif;;?width=250&height=144",
+        homepageUrl: "https://www.hostos.cuny.edu/",
+        stateOrCountry: "NY"
+    },
+    "Queens College": {
+        name: "Queens College",
+        lat: 40.73678658620217,
+        lng: -73.82015856564789,
+        type: TYPE_CUNY,
+        imageUrl: "https://micefa.org/wp-content/uploads/2017/09/Queens_College_Logo-300x152.png",
+        homepageUrl: "https://www.qc.cuny.edu/",
+        stateOrCountry: "NY"
+    },
+    "Rensselaer Polytechnic Institute": {
+        name: "Rensselaer Polytechnic Institute",
+        lat: 42.72988889585694,
+        lng: -73.67906006172221,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Rensselear_poly_inst_seal.png",
+        homepageUrl: "https://www.rpi.edu/",
+        stateOrCountry: "NY"
+    },
+    "University of Edinburgh": {
+        name: "University of Edinburgh",
+        lat: 55.9445,
+        lng: -3.1892,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/University_of_Edinburgh_ceremonial_roundel.svg/250px-University_of_Edinburgh_ceremonial_roundel.svg.png",
+        homepageUrl: "https://www.ed.ac.uk/",
+        stateOrCountry: "GBR"
+    },
+    "Oberlin College": {
+        name: "Oberlin College",
+        lat: 41.29600657516989,
+        lng: -82.221110452876,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/7/75/Formal_Seal_of_Oberlin_College%2C_Oberlin%2C_OH%2C_USA.svg/1200px-Formal_Seal_of_Oberlin_College%2C_Oberlin%2C_OH%2C_USA.svg.png",
+        homepageUrl: "https://www.oberlin.edu/",
+        stateOrCountry: "OH"
+    },
+    "Middlebury College": {
+        name: "Middlebury College",
+        lat: 44.00813840918396,
+        lng: -73.17606275693102,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://www.middlebury.edu/sites/default/files/styles/1136x639/public/2021-09/mdl_master_left_blue.png?fv=paBhF2wq&itok=T-evX_gn",
+        homepageUrl: "https://www.middlebury.edu/",
+        stateOrCountry: "VT"
+    },
+    "University of California, Los Angeles": {
+        name: "University of California, Los Angeles",
+        lat: 34.0689,
+        lng: -118.4452,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://brand.ucla.edu/images/logos-and-marks/campus-logo.jpg",
+        homepageUrl: "https://www.ucla.edu/",
+        stateOrCountry: "CA"
+    },
+    "University of Southern California": {
+        name: "University of Southern California",
+        lat: 34.0224,
+        lng: -118.2851,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://identity.usc.edu/wp-content/uploads/2022/09/PrimaryMonogram_0921.png",
+        homepageUrl: "https://www.usc.edu/",
+        stateOrCountry: "CA"
+    },
+    "Washington University in St. Louis": {
+        name: "Washington University in St. Louis",
+        lat: 38.6487,
+        lng: -90.3048,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_oL6U7oIn12tHuQSAoBj657KrWLVTEGa30w&s",
+        homepageUrl: "https://wustl.edu/",
+        stateOrCountry: "MO"
+    },
+    "Babson College": {
+        name: "Babson College",
+        lat: 42.2990,
+        lng: -71.2648,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/9/93/Babson-logo.png",
+        homepageUrl: "https://www.babson.edu/",
+        stateOrCountry: "MA"
+    },
+    "Fordham University": {
+        name: "Fordham University",
+        lat: 40.8613,
+        lng: -73.8862,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://www.fordham.edu/media/review/content-assets/migrated/images/Athletic_Logo_Primary_Letter_Mark_1.jpg",
+        homepageUrl: "https://www.fordham.edu/",
+        stateOrCountry: "NY"
+    },
+    "University of Michigan": {
+        name: "University of Michigan",
+        lat: 42.27716082082987,
+        lng: -83.73829293087273,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/ed/University_of_Michigan_Logo.png",
+        homepageUrl: "https://umich.edu/",
+        stateOrCountry: "MI"
+    },
+    "Ithaca College": {
+        name: "Ithaca College",
+        lat: 42.4220,
+        lng: -76.4944,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://logowik.com/content/uploads/images/ithaca-college8996.jpg",
+        homepageUrl: "https://www.ithaca.edu/",
+        stateOrCountry: "NY"
+    },
+    "Pratt Institute": {
+        name: "Pratt Institute",
+        lat: 40.6910,
+        lng: -73.9631,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://www.pratt.edu/wp-content/themes/pratt/static/img/og.png",
+        homepageUrl: "https://www.pratt.edu/",
+        stateOrCountry: "NY"
+    },
+    "Towson University": {
+        name: "Towson University",
+        lat: 39.3941,
+        lng: -76.6100,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://www.towson.edu/brand/images/brand-brandmarks-horiz-sq.jpg",
+        homepageUrl: "https://www.towson.edu/",
+        stateOrCountry: "MD"
+    },
+    "Emerson College": {
+        name: "Emerson College",
+        lat: 42.352113683371854,
+        lng: -71.06584657503319,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://brand.emerson.edu/wp-content/uploads/sites/11/2017/04/Emerson-PrimaryLogo-Purple-600px.png",
+        homepageUrl: "https://emerson.edu/",
+        stateOrCountry: "MA"
+    },
+    "Northeastern University": {
+        name: "Northeastern University",
+        lat: 42.3398,
+        lng: -71.0892,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj8Gdl0Gui9xl5q_D4acxRtSg-k4HVkE5dYQ&s",
+        homepageUrl: "https://www.northeastern.edu/",
+        stateOrCountry: "MA"
+    },
+    "Tufts University": {
+        name: "Tufts University",
+        lat: 42.4057,
+        lng: -71.1186,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Tufts_University_wordmark.svg/2560px-Tufts_University_wordmark.svg.png",
+        homepageUrl: "https://www.tufts.edu/",
+        stateOrCountry: "MA"
+    },
+    "Northwestern University": {
+        name: "Northwestern University",
+        lat: 42.0565,
+        lng: -87.6753,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://www.northwestern.edu/brand/images/wordmark/guideline-sm4.gif",
+        homepageUrl: "https://www.northwestern.edu/",
+        stateOrCountry: "IL"
+    },
+    "McGill University": {
+        name: "McGill University",
+        lat: 45.5048,
+        lng: -73.5772,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://www.designyourway.net/blog/wp-content/uploads/2024/04/the-meaning-behind-the-mcGill-university-logo.jpg",
+        homepageUrl: "https://www.mcgill.ca/",
+        stateOrCountry: "CAN"
+    },
+    "Massachusetts Institute of Technology": {
+        name: "Massachusetts Institute of Technology",
+        lat: 42.3601,
+        lng: -71.0942,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MIT_logo.svg/2560px-MIT_logo.svg.png",
+        homepageUrl: "https://web.mit.edu/",
+        stateOrCountry: "MA"
+    },
+    "Wesleyan University": {
+        name: "Wesleyan University",
+        lat: 41.5557,
+        lng: -72.6576,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Wesleyan_University.svg/1200px-Wesleyan_University.svg.png",
+        homepageUrl: "https://www.wesleyan.edu/",
+        stateOrCountry: "CT"
+    },
+    "Vassar College": {
+        name: "Vassar College",
+        lat: 41.6870,
+        lng: -73.8969,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/c/c7/Vassar_College_Seal.svg",
+        homepageUrl: "https://www.vassar.edu/",
+        stateOrCountry: "NY"
+    },
+    "Williams College": {
+        name: "Williams College",
+        lat: 42.7133,
+        lng: -73.2032,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://organizationalperformancegroup.com/wp-content/uploads/2023/11/Williams-College-logo.png",
+        homepageUrl: "https://www.williams.edu/",
+        stateOrCountry: "MA"
+    },
+    "Smith College": {
+        name: "Smith College",
+        lat: 42.3176,
+        lng: -72.6370,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Smith_College_logo_%282000%29%2C_color%2C_stacked.svg/693px-Smith_College_logo_%282000%29%2C_color%2C_stacked.svg.png",
+        homepageUrl: "https://www.smith.edu/",
+        stateOrCountry: "MA"
+    },
+    "Colgate University": {
+        name: "Colgate University",
+        lat: 42.8172,
+        lng: -75.5370,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://www.colgate.edu/sites/default/files/2020-10/Col_Athletics_C_RGB_500_0.png",
+        homepageUrl: "https://www.colgate.edu/",
+        stateOrCountry: "NY"
+    },
+    "New York University": {
+        name: "New York University",
+        lat: 40.7295,
+        lng: -73.9965,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://yt3.ggpht.com/-RZYi5isxH_M/AAAAAAAAAAI/AAAAAAAAAAA/rmWpoe2qZzI/s900-c-k-no/photo.jpg",
+        homepageUrl: "https://www.nyu.edu/",
+        stateOrCountry: "NY"
+    },
+    "University of Vermont": {
+        name: "University of Vermont",
+        lat: 44.4774,
+        lng: -73.1962,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/3/34/Vermont_Catamounts_logo.svg/1200px-Vermont_Catamounts_logo.svg.png",
+        homepageUrl: "https://www.uvm.edu/",
+        stateOrCountry: "VT"
+    },
+    "Barnard College": {
+        name: "Barnard College",
+        lat: 40.8095,
+        lng: -73.9640,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://barnardstore.com/cdn/shop/products/barnard-seal-blue.jpg?v=1580924558",
+        homepageUrl: "https://barnard.edu/",
+        stateOrCountry: "NY"
+    },
+    "Rochester Institute of Technology": {
+        name: "Rochester Institute of Technology",
+        lat: 43.0849,
+        lng: -77.6744,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://www.rit.edu/brandportal/sites/rit.edu.brandportal/files/2022-10/RIT-00071A_RGB_whiteTM.jpg",
+        homepageUrl: "https://www.rit.edu/",
+        stateOrCountry: "NY"
+    },
+    "Georgetown University": {
+        name: "Georgetown University",
+        lat: 38.9076,
+        lng: -77.0723,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://www.georgetown.edu/wp-content/uploads/2019/10/Georgetown_logo_blueRGB-300x210.jpg",
+        homepageUrl: "https://www.georgetown.edu/",
+        stateOrCountry: "DC"
+    },
+    "Boston University": {
+        name: "Boston University",
+        lat: 42.3505,
+        lng: -71.1054,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/1/15/Boston_University_Terriers_logo.svg/1200px-Boston_University_Terriers_logo.svg.png",
+        homepageUrl: "https://www.bu.edu/",
+        stateOrCountry: "MA"
+    },
+    "University of Colorado Boulder": {
+        name: "University of Colorado Boulder",
+        lat: 40.0076,
+        lng: -105.2659,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://www.colorado.edu/brand/sites/default/files/styles/original_image_size/public/2024-12/lockup_center_0.png?itok=6qHN63TX",
+        homepageUrl: "https://www.colorado.edu/",
+        stateOrCountry: "CO"
+    },
+    "Bucknell University": {
+        name: "Bucknell University",
+        lat: 40.9547,
+        lng: -76.8836,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Bucknell_Bison_logo.svg/1200px-Bucknell_Bison_logo.svg.png",
+        homepageUrl: "https://www.bucknell.edu/",
+        stateOrCountry: "PA"
+    },
+    "University of Wisconsin-Madison": {
+        name: "University of Wisconsin-Madison",
+        lat: 43.0766,
+        lng: -89.4125,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://brand.wisc.edu/content/uploads/2023/09/vert-w-crest-logo-web-digital-color.png",
+        homepageUrl: "https://www.wisc.edu/",
+        stateOrCountry: "WI"
+    },
+    "University of Massachusetts Amherst": {
+        name: "University of Massachusetts Amherst",
+        lat: 42.3862,
+        lng: -72.5261,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/4f/UMass_Seal_Medium_PMS_202.png",
+        homepageUrl: "https://www.umass.edu/",
+        stateOrCountry: "MA"
+    },
+    "Pennsylvania State University": {
+        name: "Pennsylvania State University",
+        lat: 40.7982,
+        lng: -77.8599,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://brand.psu.edu/images/backgrounds/veritcal-1-mark_registered.png",
+        homepageUrl: "https://www.psu.edu/",
+        stateOrCountry: "PA"
+    },
+    "Florida State University": {
+        name: "Florida State University",
+        lat: 30.4414,
+        lng: -84.2965,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4MvcZLICQ3xHwuSAmLfq0vdf5Bq20ivlXXg&s",
+        homepageUrl: "https://www.fsu.edu/",
+        stateOrCountry: "FL"
+    },
+    "Johns Hopkins University": {
+        name: "Johns Hopkins University",
+        lat: 39.3299,
+        lng: -76.6205,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://crystalpng.com/wp-content/uploads/2025/01/johns-hopkins-university-logo-in-circle.png",
+        homepageUrl: "https://www.jhu.edu/",
+        stateOrCountry: "MD"
+    },
+    "Syracuse University": {
+        name: "Syracuse University",
+        lat: 43.0392,
+        lng: -76.1347,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://1000logos.net/wp-content/uploads/2022/02/Syracuse-Orange-Logo-2006.png",
+        homepageUrl: "https://www.syracuse.edu/",
+        stateOrCountry: "NY"
+    },
+    "American University": {
+        name: "American University",
+        lat: 38.9379,
+        lng: -77.0893,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://www.american.edu/ucm/images/AU_stacked_logo.png",
+        homepageUrl: "https://www.american.edu/",
+        stateOrCountry: "DC"
+    },
+    "Howard University": {
+        name: "Howard University",
+        lat: 38.92344291674185,
+        lng: -77.01977855792838,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://data.org/wp-content/uploads/2022/05/Howard-Logo.png",
+        homepageUrl: "https://howard.edu/",
+        stateOrCountry: "DC"
+    },
+    "Carleton College": {
+        name: "Carleton College",
+        lat: 44.4612,
+        lng: -93.1536,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://cdn.carleton.edu/uploads/sites/158/2020/06/full-carleton-c-ray-symbol.png",
+        homepageUrl: "https://www.carleton.edu/",
+        stateOrCountry: "MN"
+    },
+    "The Cooper Union": {
+        name: "The Cooper Union",
+        lat: 40.7296,
+        lng: -73.9907,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://studyarchitecture.com/wp-content/uploads/82_TheCooperUnion_icon_white.png",
+        homepageUrl: "https://cooper.edu/",
+        stateOrCountry: "NY"
+    },
+    "St. John's University": {
+        name: "St. John's University",
+        lat: 40.7218,
+        lng: -73.7935,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/9/90/St._John%27s_Red_Storm_logo.svg",
+        homepageUrl: "https://www.stjohns.edu/",
+        stateOrCountry: "NY"
+    },
+    "Connecticut College": {
+        name: "Connecticut College",
+        lat: 41.3786,
+        lng: -72.1059,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/8/8b/Formal_Seal_of_Connecticut_College%2C_New_London%2C_CT%2C_USA.svg/1200px-Formal_Seal_of_Connecticut_College%2C_New_London%2C_CT%2C_USA.svg.png",
+        homepageUrl: "https://www.conncoll.edu/",
+        stateOrCountry: "CT"
+    },
+    "University of Virginia": {
+        name: "University of Virginia",
+        lat: 38.0336,
+        lng: -78.5080,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://1000logos.net/wp-content/uploads/2022/07/University-of-Virginia-Logo.png",
+        homepageUrl: "https://www.virginia.edu/",
+        stateOrCountry: "VA"
+    },
+    "Wellesley College": {
+        name: "Wellesley College",
+        lat: 42.2934,
+        lng: -71.3064,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Formal_Logo_of_Wellesley_College%2C_Wellesley%2C_MA%2C_USA.svg/2560px-Formal_Logo_of_Wellesley_College%2C_Wellesley%2C_MA%2C_USA.svg.png",
+        homepageUrl: "https://www.wellesley.edu/",
+        stateOrCountry: "MA"
+    },
+    "University of Rhode Island": {
+        name: "University of Rhode Island",
+        lat: 41.4900,
+        lng: -71.5278,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/University_of_Rhode_Island_seal.svg/1200px-University_of_Rhode_Island_seal.svg.png",
+        homepageUrl: "https://www.uri.edu/",
+        stateOrCountry: "RI"
+    },
+    "Rutgers University": {
+        name: "Rutgers University",
+        lat: 40.5008,
+        lng: -74.4474,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://1000logos.net/wp-content/uploads/2017/08/Logo-Rutgers-University.jpg",
+        homepageUrl: "https://www.rutgers.edu/",
+        stateOrCountry: "NJ"
+    },
+    "AMDA College of the Performing Arts": {
+        name: "AMDA College of the Performing Arts",
+        lat: 40.7705,
+        lng: -73.9850,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://cdn.dancemedia.com/listings/31/kyzPkoIiximk56vFujMgQ6emkV91Iu2n0JEc93Bh.png",
+        homepageUrl: "https://www.amda.edu/",
+        stateOrCountry: "NY"
+    },
+    "University of Pittsburgh": {
+        name: "University of Pittsburgh",
+        lat: 40.444480064496155,
+        lng: -79.96147622166838,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://www.brand.pitt.edu/sites/default/files/inline-images/clear_spacing_0.png",
+        homepageUrl: "https://www.pitt.edu/",
+        stateOrCountry: "PA"
+    },
+    "NYU Shanghai": {
+        name: "NYU Shanghai",
+        lat: 31.22586624513313,
+        lng: 121.53413452615789,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/NYU_Shanghai_logo.svg/1200px-NYU_Shanghai_logo.svg.png",
+        homepageUrl: "https://shanghai.nyu.edu/",
+        stateOrCountry: "CHN"
+    },
+    "University of Arizona": {
+        name: "University of Arizona",
+        lat: 32.2319,
+        lng: -110.9535,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://phoenixmed.arizona.edu/sites/default/files/campus/marcomm/brand/master-logo/1-ua-vertical/ua_stack_rgb_4.png",
+        homepageUrl: "https://www.arizona.edu/",
+        stateOrCountry: "AZ"
+    },
+    "Skidmore College": {
+        name: "Skidmore College",
+        lat: 43.09591225667546,
+        lng: -73.7854101443904,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://collegeaim.org/wp-content/uploads/2021/09/Skidmore_Wordmark_Thick_Green.png",
+        homepageUrl: "https://www.skidmore.edu/",
+        stateOrCountry: "NY"
+    },
+    "Union College": {
+        name: "Union College",
+        lat: 42.8174,
+        lng: -73.9298,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://images.squarespace-cdn.com/content/v1/540402efe4b014c74d2fd2fe/1614274310286-JEL8U4FSJGKHO090FXT3/Union+College.png",
+        homepageUrl: "https://www.union.edu/",
+        stateOrCountry: "NY"
+    },
+    "Temple University": {
+        name: "Temple University",
+        lat: 39.9813,
+        lng: -75.1554,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://logos-world.net/wp-content/uploads/2023/03/Temple-University-Logo.png",
+        homepageUrl: "https://www.temple.edu/",
+        stateOrCountry: "PA"
+    },
+    "United States Naval Academy": {
+        name: "United States Naval Academy",
+        lat: 38.9828,
+        lng: -76.4850,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Logo_of_the_United_States_Naval_Academy.svg/1200px-Logo_of_the_United_States_Naval_Academy.svg.png",
+        homepageUrl: "https://www.usna.edu/",
+        stateOrCountry: "MD"
+    },
+    "Case Western Reserve University": {
+        name: "Case Western Reserve University",
+        lat: 41.5043,
+        lng: -81.6084,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://case.edu/brand/sites/default/files/2023-05/Centered-Four-Line-Logo-on-Blue_0.jpeg",
+        homepageUrl: "https://case.edu/",
+        stateOrCountry: "OH"
+    },
+    "NYU London": {
+        name: "NYU London",
+        lat: 51.51328636811055,
+        lng: -0.11473932462894088,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAfc6Ni6I0QzsYKmqhB3yPBVywpPirBeVM9Q&s",
+        homepageUrl: "https://www.nyu.edu/london.html",
+        stateOrCountry: "GBR"
+    },
+    "University of California San Diego": {
+        name: "University of California San Diego",
+        lat: 32.8801,
+        lng: -117.2340,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://content.sportslogos.net/logos/35/6819/full/uc_san_diego_tritons_logo_secondary_2002_sportslogosnet-9613.png",
+        homepageUrl: "https://ucsd.edu/",
+        stateOrCountry: "CA"
+    },
+    "Haverford College": {
+        name: "Haverford College",
+        lat: 40.0084,
+        lng: -75.3060,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://www.interfolio.com/wp-content/uploads/Haverford_Logo.png",
+        homepageUrl: "https://www.haverford.edu/",
+        stateOrCountry: "PA"
+    },
+    "Pace University": {
+        name: "Pace University",
+        lat: 40.7111,
+        lng: -74.0048,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/79/Pace_University_Logo_2021.png",
+        homepageUrl: "https://www.pace.edu/",
+        stateOrCountry: "NY"
+    },
+    "George Washington University": {
+        name: "George Washington University",
+        lat: 38.8994,
+        lng: -77.0489,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://communications.gwu.edu/sites/g/files/zaxdzs5371/files/2024-04/athletics-logo-examples-gw_0.jpg",
+        homepageUrl: "https://www.gwu.edu/",
+        stateOrCountry: "DC"
+    },
+    "University of Rochester": {
+        name: "University of Rochester",
+        lat: 43.1285,
+        lng: -77.6275,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://1000logos.net/wp-content/uploads/2022/07/University-of-Rochester-Logo.png",
+        homepageUrl: "https://www.rochester.edu/",
+        stateOrCountry: "NY"
+    },
+    "Worcester Polytechnic Institute": {
+        name: "Worcester Polytechnic Institute",
+        lat: 42.2743,
+        lng: -71.8076,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/e/ec/WPI_logo.svg/1200px-WPI_logo.svg.png",
+        homepageUrl: "https://www.wpi.edu/",
+        stateOrCountry: "MA"
+    },
+    "Boston College": {
+        name: "Boston College",
+        lat: 42.3355,
+        lng: -71.1685,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/9/96/Boston_College_Eagles_logo.svg/1200px-Boston_College_Eagles_logo.svg.png",
+        homepageUrl: "https://www.bc.edu/",
+        stateOrCountry: "MA"
+    },
+    "Brandeis University": {
+        name: "Brandeis University",
+        lat: 42.3659,
+        lng: -71.2580,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://www.brandeis.edu/brand/images/visual-identity.jpg",
+        homepageUrl: "https://www.brandeis.edu/",
+        stateOrCountry: "MA"
+    },
+    "Vanderbilt University": {
+        name: "Vanderbilt University",
+        lat: 36.1447,
+        lng: -86.8027,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://cdn.vanderbilt.edu/vu-news/files/20230520091240/2022-Vanderbilt-University-wordmark.jpg",
+        homepageUrl: "https://www.vanderbilt.edu/",
+        stateOrCountry: "TN"
+    },
+    "Bard College": {
+        name: "Bard College",
+        lat: 42.0215,
+        lng: -73.9107,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://slsvcoalition.org/wp-content/uploads/2021/06/Bard-College-scaled.jpeg",
+        homepageUrl: "https://www.bard.edu/",
+        stateOrCountry: "NY"
+    },
+    "Emory University": {
+        name: "Emory University",
+        lat: 33.7925,
+        lng: -84.3240,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://1000logos.net/wp-content/uploads/2022/06/Emory-University-Logo.png",
+        homepageUrl: "https://www.emory.edu/",
+        stateOrCountry: "GA"
+    },
+    "Purdue University": {
+        name: "Purdue University",
+        lat: 40.4237,
+        lng: -86.9212,
+        type: TYPE_PURDUE,
+        imageUrl: "https://engineering.purdue.edu/ECE/Communications/files/PU-V-Full-RGB.png",
+        homepageUrl: "https://www.purdue.edu/",
+        stateOrCountry: "IN"
+    },
+    "University of St Andrews": {
+        name: "University of St Andrews",
+        lat: 56.3410,
+        lng: -2.7924,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfpZWJM12MG8E5y6Lx6wTg8ZpYmXrGkznKiw&s",
+        homepageUrl: "https://www.st-andrews.ac.uk/",
+        stateOrCountry: "GBR"
+    },
+    "Indiana University Bloomington": {
+        name: "Indiana University Bloomington",
+        lat: 39.1653,
+        lng: -86.5264,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://logos-world.net/wp-content/uploads/2022/01/Indiana-University-Logo.png",
+        homepageUrl: "https://www.iu.edu/",
+        stateOrCountry: "IN"
+    },
+    "University of Richmond": {
+        name: "University of Richmond",
+        lat: 37.5793,
+        lng: -77.5353,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXMzFe3klcIl1J_FhO02G6r1SBoecRkYhhkA&s",
+        homepageUrl: "https://www.richmond.edu/",
+        stateOrCountry: "VA"
+    },
+    "Lehigh University": {
+        name: "Lehigh University",
+        lat: 40.6073,
+        lng: -75.3778,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://collegeaim.org/wp-content/uploads/2021/08/Lehigh-University-logo.png",
+        homepageUrl: "https://www1.lehigh.edu/",
+        stateOrCountry: "PA"
+    },
+    "University of Washington": {
+        name: "University of Washington",
+        lat: 47.6553,
+        lng: -122.3035,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/5/58/University_of_Washington_seal.svg/1200px-University_of_Washington_seal.svg.png",
+        homepageUrl: "https://www.washington.edu/",
+        stateOrCountry: "WA"
+    },
+    "University of Maryland, College Park": {
+        name: "University of Maryland, College Park",
+        lat: 38.9869,
+        lng: -76.9426,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://umd-brand.transforms.svdcdn.com/production/uploads/images/logos-formal-seal.jpg?w=1801&h=1801&auto=compress%2Cformat&fit=crop&dm=1651267392&s=81a14f930f7888983f0f8bc10146c0b2",
+        homepageUrl: "https://www.umd.edu/",
+        stateOrCountry: "MD"
+    },
+    "Hamilton College": {
+        name: "Hamilton College",
+        lat: 43.0509,
+        lng: -75.4065,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://s3.amazonaws.com/mediacdn.hamilton.edu/images/3:2/300/logohamiltonlogocolorjpgjpg.jpg",
+        homepageUrl: "https://www.hamilton.edu/",
+        stateOrCountry: "NY"
+    },
+    "Fairfield University": {
+        name: "Fairfield University",
+        lat: 41.159862537939865,
+        lng: -73.25779806570878,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://1000logos.net/wp-content/uploads/2021/06/Fairfield-Stags-logo.png",
+        homepageUrl: "https://www.fairfield.edu/",
+        stateOrCountry: "CT"
+    },
+    "University of Miami": {
+        name: "University of Miami",
+        lat: 25.7198,
+        lng: -80.2790,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://logos-world.net/wp-content/uploads/2022/02/University-Of-Miami-Symbol.png",
+        homepageUrl: "https://welcome.miami.edu/",
+        stateOrCountry: "FL"
+    },
+    "Hobart and William Smith Colleges": {
+        name: "Hobart and William Smith Colleges",
+        lat: 42.85823553920702,
+        lng: -76.98669262110342,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://pbs.twimg.com/profile_images/950488578970259456/zBWqPkOe_400x400.jpg",
+        homepageUrl: "https://www.hws.edu/",
+        stateOrCountry: "NY"
+    },
+    "Tulane University": {
+        name: "Tulane University",
+        lat: 29.9346,
+        lng: -90.1220,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/7/7e/Tulane_logo.svg/800px-Tulane_logo.svg.png",
+        homepageUrl: "https://tulane.edu/",
+        stateOrCountry: "LA"
+    },
+    "University of Florida": {
+        name: "University of Florida",
+        lat: 29.6436,
+        lng: -82.3549,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://1000logos.net/wp-content/uploads/2022/07/University-of-Florida-Logo.png",
+        homepageUrl: "https://www.ufl.edu/",
+        stateOrCountry: "FL"
+    },
+    "University of California, Berkeley": {
+        name: "University of California, Berkeley",
+        lat: 37.8719,
+        lng: -122.2585,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://brand.berkeley.edu/wp-content/uploads/2024/08/logo-variations-thumbnail-gold-blue-1.png",
+        homepageUrl: "https://www.berkeley.edu/",
+        stateOrCountry: "CA"
+    },
+    "University of Chicago": {
+        name: "University of Chicago",
+        lat: 41.7886,
+        lng: -87.5987,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://1000logos.net/wp-content/uploads/2022/07/University-of-Chicago-Logo.png",
+        homepageUrl: "https://www.uchicago.edu/",
+        stateOrCountry: "IL"
+    },
+    "Carnegie Mellon University": {
+        name: "Carnegie Mellon University",
+        lat: 40.4433,
+        lng: -79.9436,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://www.cmu.edu/brand/brand-guidelines/images/wordmarksquare-black-600x600.png",
+        homepageUrl: "https://www.cmu.edu/",
+        stateOrCountry: "PA"
+    },
+    "Duke University": {
+        name: "Duke University",
+        lat: 36.0014,
+        lng: -78.9382,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://logos-world.net/wp-content/uploads/2023/08/Duke-University-Logo.jpg",
+        homepageUrl: "https://duke.edu/",
+        stateOrCountry: "NC"
+    },
+    "Molloy University": {
+        name: "Molloy University",
+        lat: 40.686304859193,
+        lng: -73.62706838655407,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f7/Molloy_University_logo.png/250px-Molloy_University_logo.png",
+        homepageUrl: "https://www.molloy.edu/",
+        stateOrCountry: "NY"
+    },
+    "Davidson College": {
+        name: "Davidson College",
+        lat: 35.50160957320831,
+        lng: -80.84241063074866,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://www.davidson.edu/sites/default/files/styles/max_650x650/public/2023-08/Primary-Lockup-NewsStory.png?itok=BJeJoK6D",
+        homepageUrl: "https://www.davidson.edu/",
+        stateOrCountry: "NC"
+    },
+    "Bentley University": {
+        name: "Bentley University",
+        lat: 42.38559544108198,
+        lng: -71.2218761289859,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://d2f5upgbvkx8pz.cloudfront.net/sites/default/files/inline-files/Bentley_Logo_Vertical_Centered_Blue.png",
+        homepageUrl: "https://www.bentley.edu/",
+        stateOrCountry: "MA"
+    },
+    "Muhlenberg College": {
+        name: "Muhlenberg College",
+        lat: 40.598201389145224,
+        lng: -75.50810760019013,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://www.tours.vividmediany.com/wp-content/uploads/2022/06/Muhlenberg-Virtual-tour-logo.png",
+        homepageUrl: "https://www.muhlenberg.edu/",
+        stateOrCountry: "PA"
+    },
+    "William and Mary": {
+        name: "William and Mary",
+        lat: 37.271052088297736,
+        lng: -76.71642908892584,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://brand.wm.edu/wp-content/uploads/2022/06/Athletics-WM-Green-on-Gold-300x244.png",
+        homepageUrl: "https://www.wm.edu/",
+        stateOrCountry: "VA"
+    },
+    "Bates College": {
+        name: "Bates College",
+        lat: 44.105883325008925,
+        lng: -70.20220795125299,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://www.bates.edu/communications-marketing/files/2013/01/bates-bobcat-primary3-white.jpg",
+        homepageUrl: "https://www.bates.edu/",
+        stateOrCountry: "ME"
+    },
+    "Ohio State University": {
+        name: "Ohio State University",
+        lat: 40.00601488158067,
+        lng: -83.02830531874122,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Ohio_State_Buckeyes_logo.svg/2082px-Ohio_State_Buckeyes_logo.svg.png",
+        homepageUrl: "https://www.osu.edu/",
+        stateOrCountry: "OH"
+    },
+    "Arizona State University": {
+        name: "Arizona State University",
+        lat: 33.42302431674467,
+        lng: -111.92779841036524,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHGPodz7sxsDiDzrsxKl5TXj0QitIgIB3yZQ&s",
+        homepageUrl: "https://www.asu.edu/",
+        stateOrCountry: "AZ"
+    },
+    "University of East London": {
+        name: "University of East London",
+        lat: 51.50772556661829,
+        lng: 0.06501698390938543,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://www.globalstudentcentre.com/wp-content/uploads/2023/02/UEL-logo-1.png",
+        homepageUrl: "https://www.uel.ac.uk/",
+        stateOrCountry: "GBR"
+    },
+    "Occidental College": {
+        name: "Occidental College",
+        lat: 34.12738460072989,
+        lng: -118.21050787222104,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Occidental_College_logo.svg/2560px-Occidental_College_logo.svg.png",
+        homepageUrl: "https://www.oxy.edu/",
+        stateOrCountry: "CA"
+    },
+    "University of the Highlands and Islands": {
+        name: "University of the Highlands and Islands",
+        lat: 57.4754445523381,
+        lng: -4.184040112710482,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDB_VSjLIboInFQOK3tYGfA1vZqXtzSaAFYg&s",
+        homepageUrl: "https://www.uhi.ac.uk/en/",
+        stateOrCountry: "GBR"
+    },
+    "Lafayette College": {
+        name: "Lafayette College",
+        lat: 40.698398037581164,
+        lng: -75.21018300536727,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/Lafayette_Leopards_logo.svg/1200px-Lafayette_Leopards_logo.svg.png",
+        homepageUrl: "https://www.lafayette.edu/",
+        stateOrCountry: "PA"
+    },
+    "Maastricht University": {
+        name: "Maastricht University",
+        lat: 50.84702434518238,
+        lng: 5.688130300487597,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://my.aacsb.edu/Portals/0/assets/images/contact/Maastricht-University.png",
+        homepageUrl: "https://www.maastrichtuniversity.nl/",
+        stateOrCountry: "NLD"
+    },
+    "University of California, Santa Barbara": {
+        name: "University of California, Santa Barbara",
+        lat: 34.41402480701875,
+        lng: -119.84912938961659,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a8/UC_Santa_Barbara_Gauchos_logo.svg/1200px-UC_Santa_Barbara_Gauchos_logo.svg.png",
+        homepageUrl: "https://www.ucsb.edu/",
+        stateOrCountry: "CA"
+    },
+    "Chapman University": {
+        name: "Chapman University",
+        lat: 33.7942942972981,
+        lng: -117.85179928514427,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://brand.chapman.edu/wp-content/uploads/2020/05/CU-Master-Brand-2018.png",
+        homepageUrl: "https://www.chapman.edu/",
+        stateOrCountry: "CA"
+    },
+    "Sciences Po": {
+        name: "Sciences Po",
+        lat: 48.85382169007917,
+        lng: 2.328770612033854,
+        type: TYPE_OTHER_PRIVATE,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Logo_Sciences_Po.svg/2560px-Logo_Sciences_Po.svg.png",
+        homepageUrl: "https://www.sciencespo.fr/fr/",
+        stateOrCountry: "FRA"
+    },
+    "King's College London": {
+        name: "King's College London",
+        lat: 51.511631656423596,
+        lng: -0.11620537037285264,
+        type: TYPE_OTHER_PUBLIC,
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/King%27s_College_London_logo.svg/2560px-King%27s_College_London_logo.svg.png",
+        homepageUrl: "https://www.kcl.ac.uk/",
+        stateOrCountry: "GBR"
+    },
+    "Generic College": {
+        name: "Generic College",
+        lat: 0,
+        lng: 0,
+        type: "Undecided",
+        imageUrl: "placeholder-logo.png",
+        homepageUrl: "#",
+        stateOrCountry: "N/A"
+    },
+    "Undecided": {
+        name: "Undecided",
+        lat: 0,
+        lng: 0,
+        type: TYPE_UNDECIDED,
+        imageUrl: "placeholder-logo.png",
+        homepageUrl: "#",
+        stateOrCountry: "N/A"
+    }
+};
+}),
+"[project]/src/data/majors.ts [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "majorToAreaMapping",
+    ()=>majorToAreaMapping
+]);
+const majorToAreaMapping = {
+    "animal behavior": "STEM",
+    "astronomy": "STEM",
+    "astrophysics": "STEM",
+    "biochemistry": "STEM",
+    "biochemistry & molecular biology": "STEM",
+    "biology": "STEM",
+    "biological sciences": "STEM",
+    "biotechnology": "STEM",
+    "biotechnology & molecular science": "STEM",
+    "cell biology": "STEM",
+    "chemistry": "STEM",
+    "chemistry & mathematics": "STEM",
+    "cognitive science": "STEM",
+    "cognitive studies": "STEM",
+    "computer programming": "STEM",
+    "computer science": "STEM",
+    "computer science & business": "STEM",
+    "cs": "STEM",
+    "cybersecurity": "STEM",
+    "data analytics": "STEM",
+    "data science": "STEM",
+    "ecology": "STEM",
+    "ecology & evolutionary biology": "STEM",
+    "ecology & music": "STEM",
+    "entomology": "STEM",
+    "environmental & sustainability": "STEM",
+    "environmental science": "STEM",
+    "environmental science & policy": "STEM",
+    "evolutionary biology": "STEM",
+    "forestry": "STEM",
+    "foresty": "STEM",
+    "foresty & urban arboriculture": "STEM",
+    "geoscience": "STEM",
+    "geology": "STEM",
+    "human biology": "STEM",
+    "human health & economics": "STEM",
+    "information science": "STEM",
+    "integrative biology": "STEM",
+    "integrative neuroscience": "STEM",
+    "marine biology": "STEM",
+    "materials science": "STEM",
+    "mathematics": "STEM",
+    "mathematics & statistics": "STEM",
+    "math": "STEM",
+    "meteorology": "STEM",
+    "molecular and cell biology": "STEM",
+    "molecular biology": "STEM",
+    "molecular science": "STEM",
+    "neuroscience": "STEM",
+    "oceanography": "STEM",
+    "physics": "STEM",
+    "plant science": "STEM",
+    "pre-mathematics": "STEM",
+    "psychology & brain science": "STEM",
+    "robotics": "STEM",
+    "statistics": "STEM",
+    "urban arboriculture": "STEM",
+    "zoology": "STEM",
+    "aerospace engineering": "Engineering",
+    "aeronautical engineering technology": "Engineering",
+    "biomedical engineering": "Engineering",
+    "bme": "Engineering",
+    "biomolecular engineering": "Engineering",
+    "chemical engineering": "Engineering",
+    "civil": "Engineering",
+    "civil engineering": "Engineering",
+    "civil & environmental engineering": "Engineering",
+    "computer engineering": "Engineering",
+    "design engineering": "Engineering",
+    "electrical engineering": "Engineering",
+    "engineering": "Engineering",
+    "environmental engineering": "Engineering",
+    "environmental engineering and ethics": "Engineering",
+    "industrial engineering": "Engineering",
+    "manufacturing": "Engineering",
+    "manufacturing & design engineering": "Engineering",
+    "manufacturing engineering": "Engineering",
+    "materials engineering": "Engineering",
+    "materials science & engineering": "Engineering",
+    "mechanical engineering": "Engineering",
+    "software engineering": "Engineering",
+    "accounting": "Business/Economics",
+    "actuarial science": "Business/Economics",
+    "advertising": "Business/Economics",
+    "applied economics and management": "Business/Economics",
+    "biomedical studies & finance": "Business/Economics",
+    "business": "Business/Economics",
+    "business administration": "Business/Economics",
+    "business administration & finanical economics": "Business/Economics",
+    "business administration & psychology": "Business/Economics",
+    "business adminstration": "Business/Economics",
+    "business analytics": "Business/Economics",
+    "business economics": "Business/Economics",
+    "business management": "Business/Economics",
+    "business & economics": "Business/Economics",
+    "computer information systems": "Business/Economics",
+    "computer programming and information systems": "Business/Economics",
+    "econ": "Business/Economics",
+    "economics": "Business/Economics",
+    "economics & african american studies": "Business/Economics",
+    "economics & mathematics": "Business/Economics",
+    "entrepreneurship": "Business/Economics",
+    "finance": "Business/Economics",
+    "finance & international business": "Business/Economics",
+    "financial economics": "Business/Economics",
+    "hospitality management": "Business/Economics",
+    "human resources": "Business/Economics",
+    "information systems": "Business/Economics",
+    "international business": "Business/Economics",
+    "management": "Business/Economics",
+    "management & economics": "Business/Economics",
+    "marketing": "Business/Economics",
+    "marketing & advertising": "Business/Economics",
+    "marketing management": "Business/Economics",
+    "philsophy & politics and economics": "Business/Economics",
+    "political economy": "Business/Economics",
+    "politics & economics": "Business/Economics",
+    "public relations, advertising and entertainment marketing": "Business/Economics",
+    "real estate": "Business/Economics",
+    "sport management": "Business/Economics",
+    "supply chain management": "Business/Economics",
+    "africana studies": "Humanities/Social Sciences",
+    "africana studies & economics & multi-cultural media": "Humanities/Social Sciences",
+    "africana studies & political science": "Humanities/Social Sciences",
+    "african american studies": "Humanities/Social Sciences",
+    "ancient history": "Humanities/Social Sciences",
+    "anthropology": "Humanities/Social Sciences",
+    "applied psychology": "Humanities/Social Sciences",
+    "archaeological studies": "Humanities/Social Sciences",
+    "archaeology": "Humanities/Social Sciences",
+    "area studies": "Humanities/Social Sciences",
+    "art history": "Humanities/Social Sciences",
+    "art history & religious studies": "Humanities/Social Sciences",
+    "classics": "Humanities/Social Sciences",
+    "communication studies": "Humanities/Social Sciences",
+    "communications": "Humanities/Social Sciences",
+    "comparative literature": "Humanities/Social Sciences",
+    "creative writing": "Humanities/Social Sciences",
+    "criminal justice": "Humanities/Social Sciences",
+    "criminology": "Humanities/Social Sciences",
+    "development": "Humanities/Social Sciences",
+    "digital journalism": "Humanities/Social Sciences",
+    "english": "Humanities/Social Sciences",
+    "english & creative writing": "Humanities/Social Sciences",
+    "english language & literature": "Humanities/Social Sciences",
+    "english literature": "Humanities/Social Sciences",
+    "environmental policy": "Humanities/Social Sciences",
+    "environmental studies": "Humanities/Social Sciences",
+    "environmental studies & economics": "Humanities/Social Sciences",
+    "ethics": "Humanities/Social Sciences",
+    "foreign languages": "Humanities/Social Sciences",
+    "gender studies": "Humanities/Social Sciences",
+    "geography": "Humanities/Social Sciences",
+    "global affairs": "Humanities/Social Sciences",
+    "government": "Humanities/Social Sciences",
+    "history": "Humanities/Social Sciences",
+    "history of art": "Humanities/Social Sciences",
+    "history & politics": "Humanities/Social Sciences",
+    "humanities": "Humanities/Social Sciences",
+    "industrial and labor relations": "Humanities/Social Sciences",
+    "industrial labor relations": "Humanities/Social Sciences",
+    "industiral and labor relations": "Humanities/Social Sciences",
+    "international development": "Humanities/Social Sciences",
+    "international relations": "Humanities/Social Sciences",
+    "ir": "Humanities/Social Sciences",
+    "journalism": "Humanities/Social Sciences",
+    "labor relations": "Humanities/Social Sciences",
+    "law": "Humanities/Social Sciences",
+    "law & society": "Humanities/Social Sciences",
+    "law, history, and society": "Humanities/Social Sciences",
+    "liberal arts": "Humanities/Social Sciences",
+    "liberal studies": "Humanities/Social Sciences",
+    "linguistics": "Humanities/Social Sciences",
+    "literature": "Humanities/Social Sciences",
+    "magazine": "Humanities/Social Sciences",
+    "magazine, news & digital journalism": "Humanities/Social Sciences",
+    "mandarin": "Humanities/Social Sciences",
+    "mathematics & ancient history": "Humanities/Social Sciences",
+    "media arts production": "Humanities/Social Sciences",
+    "media studies": "Humanities/Social Sciences",
+    "modern languages": "Humanities/Social Sciences",
+    "multi-cultural media": "Humanities/Social Sciences",
+    "news": "Humanities/Social Sciences",
+    "philosophy": "Humanities/Social Sciences",
+    "philosophy & journalism": "Humanities/Social Sciences",
+    "philosophy & sociology": "Humanities/Social Sciences",
+    "philsophy": "Humanities/Social Sciences",
+    "policy": "Humanities/Social Sciences",
+    "policy studies": "Humanities/Social Sciences",
+    "polisci": "Humanities/Social Sciences",
+    "political science": "Humanities/Social Sciences",
+    "political science & anthropology": "Humanities/Social Sciences",
+    "politics": "Humanities/Social Sciences",
+    "pre-law": "Humanities/Social Sciences",
+    "psych": "Humanities/Social Sciences",
+    "psychology": "Humanities/Social Sciences",
+    "psychology & political science": "Humanities/Social Sciences",
+    "public policy": "Humanities/Social Sciences",
+    "public relations": "Humanities/Social Sciences",
+    "religious studies": "Humanities/Social Sciences",
+    "social anthropology": "Humanities/Social Sciences",
+    "social sciences": "Humanities/Social Sciences",
+    "sociology": "Humanities/Social Sciences",
+    "society": "Humanities/Social Sciences",
+    "urban planning": "Humanities/Social Sciences",
+    "urban studies": "Humanities/Social Sciences",
+    "women's studies": "Humanities/Social Sciences",
+    "acting": "Arts/Design",
+    "animation": "Arts/Design",
+    "art": "Arts/Design",
+    "architecture": "Arts/Design",
+    "cinema studies": "Arts/Design",
+    "collaborative arts": "Arts/Design",
+    "dance": "Arts/Design",
+    "design": "Arts/Design",
+    "design & production": "Arts/Design",
+    "digital design": "Arts/Design",
+    "digital design & animation": "Arts/Design",
+    "drama": "Arts/Design",
+    "fashion design": "Arts/Design",
+    "fashion merchandising": "Arts/Design",
+    "film": "Arts/Design",
+    "film production": "Arts/Design",
+    "film studies": "Arts/Design",
+    "film, photography, and visual arts": "Arts/Design",
+    "fine arts": "Arts/Design",
+    "flim": "Arts/Design",
+    "game design": "Arts/Design",
+    "game design and development": "Arts/Design",
+    "graphic design": "Arts/Design",
+    "industrial design": "Arts/Design",
+    "interior design": "Arts/Design",
+    "music": "Arts/Design",
+    "music composition": "Arts/Design",
+    "music performance": "Arts/Design",
+    "musical studies": "Arts/Design",
+    "performing arts": "Arts/Design",
+    "photography": "Arts/Design",
+    "politics & flim": "Arts/Design",
+    "production": "Arts/Design",
+    "studio art": "Arts/Design",
+    "television, radio and flim": "Arts/Design",
+    "theater": "Arts/Design",
+    "theatre": "Arts/Design",
+    "theatre & english": "Arts/Design",
+    "urban design": "Arts/Design",
+    "visual arts": "Arts/Design",
+    "clinical health studies & physical therapy": "Health Sciences",
+    "biomedical studies": "Health Sciences",
+    "exercise science": "Health Sciences",
+    "food science": "Health Sciences",
+    "global public health": "Health Sciences",
+    "global public health & biology": "Health Sciences",
+    "health sciences": "Health Sciences",
+    "hssp": "Health Sciences",
+    "occupational thearpy": "Health Sciences",
+    "kinesiology": "Health Sciences",
+    "medicine": "Health Sciences",
+    "medicine, science, and the humanities": "Health Sciences",
+    "nursing": "Health Sciences",
+    "nutrition": "Health Sciences",
+    "occupational therapy": "Health Sciences",
+    "pharmacology": "Health Sciences",
+    "pharmacy": "Health Sciences",
+    "physical therapy": "Health Sciences",
+    "pre-dental": "Health Sciences",
+    "pre-health": "Health Sciences",
+    "pre-med": "Health Sciences",
+    "pre-medicine": "Health Sciences",
+    "pre-pharmacy": "Health Sciences",
+    "public health": "Health Sciences",
+    "public health science": "Health Sciences",
+    "social work": "Health Sciences",
+    "speech pathology": "Health Sciences",
+    "education": "Education",
+    "elementary education": "Education",
+    "secondary english education": "Education",
+    "special education": "Education",
+    "teacher tech design": "Education",
+    "teaching": "Education",
+    "exploratory": "Undecided/Other",
+    "general studies": "Undecided/Other",
+    "n/a": "Undecided/Other",
+    "other": "Undecided/Other",
+    "undecided": "Undecided/Other",
+    "undecided major": "Undecided/Other"
+};
+}),
+"[project]/src/lib/utils.ts [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "cn",
+    ()=>cn,
+    "normalizeCollegeName",
+    ()=>normalizeCollegeName,
+    "parseRawData",
+    ()=>parseRawData
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/clsx/dist/clsx.mjs [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$tailwind$2d$merge$2f$dist$2f$bundle$2d$mjs$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/tailwind-merge/dist/bundle-mjs.mjs [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$colleges$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/data/colleges.ts [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$majors$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/data/majors.ts [app-ssr] (ecmascript)");
+;
+;
+;
+;
+function cn(...inputs) {
+    return (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$tailwind$2d$merge$2f$dist$2f$bundle$2d$mjs$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["twMerge"])((0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["clsx"])(inputs));
+}
+function normalizeForFilename(str) {
+    if (!str) return '';
+    return str.toLowerCase().replace(/[èé]/g, 'e').replace(/\s+/g, '_').replace(/[()']/g, '');
+}
+function normalizeCollegeName(name) {
+    const originalNameLower = name.trim().toLowerCase();
+    const mapping = {
+        "bing": "Binghamton University",
+        "ualbany": "University at Albany",
+        "sbu": "Stony Brook University",
+        "ccny": "City College of New York",
+        "bmcc": "Borough of Manhattan Community College",
+        "csi": "College of Staten Island",
+        "ub": "University at Buffalo",
+        "u rhode island": "University of Rhode Island",
+        "maastricht": "Maastricht University",
+        "ucsb": "University of California, Santa Barbara",
+        "union": "Union College",
+        "nyu shanghai": "NYU Shanghai",
+        "nyu london": "NYU London",
+        "mit": "Massachusetts Institute of Technology",
+        "lafayette": "Lafayette College",
+        "u washington": "University of Washington",
+        "flordia state university": "Florida State University",
+        "farifield university": "Fairfield University",
+        "uflorida": "University of Florida",
+        "uflordia": "University of Florida",
+        "amda": "AMDA College of the Performing Arts"
+    };
+    if (mapping[originalNameLower]) return mapping[originalNameLower];
+    // Partial matches
+    const partials = [
+        [
+            "harvard",
+            "Harvard University"
+        ],
+        [
+            "hobart and william smith colleges",
+            "Hobart and William Smith Colleges"
+        ],
+        [
+            "bates",
+            "Bates College"
+        ],
+        [
+            "brooklyn college",
+            "Brooklyn College"
+        ],
+        [
+            "yale",
+            "Yale University"
+        ],
+        [
+            "arizona state university",
+            "Arizona State University"
+        ],
+        [
+            "muhlenberg",
+            "Muhlenberg College"
+        ],
+        [
+            "hostos",
+            "Hostos Community College"
+        ],
+        [
+            "columbia",
+            "Columbia University"
+        ],
+        [
+            "occidental",
+            "Occidental College"
+        ],
+        [
+            "bentley",
+            "Bentley University"
+        ],
+        [
+            "davidson",
+            "Davidson College"
+        ],
+        [
+            "molloy",
+            "Molloy University"
+        ],
+        [
+            "rutgers",
+            "Rutgers University"
+        ],
+        [
+            "pratt",
+            "Pratt Institute"
+        ],
+        [
+            "fordham",
+            "Fordham University"
+        ],
+        [
+            "brown",
+            "Brown University"
+        ],
+        [
+            "dartmouth",
+            "Dartmouth College"
+        ],
+        [
+            "tufts",
+            "Tufts University"
+        ],
+        [
+            "northwestern",
+            "Northwestern University"
+        ],
+        [
+            "syracuse",
+            "Syracuse University"
+        ],
+        [
+            "brandeis",
+            "Brandeis University"
+        ],
+        [
+            "middlebury",
+            "Middlebury College"
+        ],
+        [
+            "hamilton",
+            "Hamilton College"
+        ],
+        [
+            "emerson",
+            "Emerson College"
+        ],
+        [
+            "emory",
+            "Emory University"
+        ],
+        [
+            "pace",
+            "Pace University"
+        ],
+        [
+            "williams",
+            "Williams College"
+        ],
+        [
+            "bard",
+            "Bard College"
+        ],
+        [
+            "barnard",
+            "Barnard College"
+        ],
+        [
+            "ithaca",
+            "Ithaca College"
+        ],
+        [
+            "vassar",
+            "Vassar College"
+        ],
+        [
+            "haverford",
+            "Haverford College"
+        ],
+        [
+            "smith",
+            "Smith College"
+        ],
+        [
+            "oberlin",
+            "Oberlin College"
+        ],
+        [
+            "cornell",
+            "Cornell University"
+        ],
+        [
+            "vanderbilt",
+            "Vanderbilt University"
+        ],
+        [
+            "princeton",
+            "Princeton University"
+        ],
+        [
+            "duke",
+            "Duke University"
+        ],
+        [
+            "tulane",
+            "Tulane University"
+        ],
+        [
+            "bucknell",
+            "Bucknell University"
+        ],
+        [
+            "skidmore",
+            "Skidmore College"
+        ],
+        [
+            "babson",
+            "Babson College"
+        ],
+        [
+            "colgate",
+            "Colgate University"
+        ],
+        [
+            "towson",
+            "Towson University"
+        ],
+        [
+            "boston college",
+            "Boston College"
+        ],
+        [
+            "boston u",
+            "Boston University"
+        ],
+        [
+            "georgetown",
+            "Georgetown University"
+        ],
+        [
+            "baruch",
+            "Baruch College"
+        ],
+        [
+            "hunter",
+            "Hunter College"
+        ],
+        [
+            "upenn",
+            "University of Pennsylvania"
+        ],
+        [
+            "u penn",
+            "University of Pennsylvania"
+        ],
+        [
+            "washu",
+            "Washington University in St. Louis"
+        ],
+        [
+            "umich",
+            "University of Michigan"
+        ],
+        [
+            "neu",
+            "Northeastern University"
+        ],
+        [
+            "mcgill",
+            "McGill University"
+        ],
+        [
+            "nyu",
+            "New York University"
+        ],
+        [
+            "usc",
+            "University of Southern California"
+        ],
+        [
+            "ucla",
+            "University of California, Los Angeles"
+        ],
+        [
+            "ucsd",
+            "University of California San Diego"
+        ],
+        [
+            "uc berkeley",
+            "University of California, Berkeley"
+        ],
+        [
+            "rit",
+            "Rochester Institute of Technology"
+        ],
+        [
+            "uvm",
+            "University of Vermont"
+        ],
+        [
+            "u colorado boulder",
+            "University of Colorado Boulder"
+        ],
+        [
+            "howard",
+            "Howard University"
+        ],
+        [
+            "uw madison",
+            "University of Wisconsin-Madison"
+        ],
+        [
+            "umass amherst",
+            "University of Massachusetts Amherst"
+        ],
+        [
+            "penn state",
+            "Pennsylvania State University"
+        ],
+        [
+            "florida state university",
+            "Florida State University"
+        ],
+        [
+            "johns hopkins",
+            "Johns Hopkins University"
+        ],
+        [
+            "john hopkins",
+            "Johns Hopkins University"
+        ],
+        [
+            "cooper union",
+            "The Cooper Union"
+        ],
+        [
+            "uva",
+            "University of Virginia"
+        ],
+        [
+            "upitt",
+            "University of Pittsburgh"
+        ],
+        [
+            "uarizona",
+            "University of Arizona"
+        ],
+        [
+            "us naval academy",
+            "United States Naval Academy"
+        ],
+        [
+            "case western",
+            "Case Western Reserve University"
+        ],
+        [
+            "gwu",
+            "George Washington University"
+        ],
+        [
+            "urochester",
+            "University of Rochester"
+        ],
+        [
+            "wpi",
+            "Worcester Polytechnic Institute"
+        ],
+        [
+            "indiana university",
+            "Indiana University Bloomington"
+        ],
+        [
+            "indiania university",
+            "Indiana University Bloomington"
+        ],
+        [
+            "university of washington",
+            "University of Washington"
+        ],
+        [
+            "umaryland college park",
+            "University of Maryland, College Park"
+        ],
+        [
+            "u maryland college park",
+            "University of Maryland, College Park"
+        ],
+        [
+            "fairfield university",
+            "Fairfield University"
+        ],
+        [
+            "umiami",
+            "University of Miami"
+        ],
+        [
+            "university of florida",
+            "University of Florida"
+        ],
+        [
+            "uchicago",
+            "University of Chicago"
+        ],
+        [
+            "carnegie mellon",
+            "Carnegie Mellon University"
+        ],
+        [
+            "st andrews",
+            "University of St Andrews"
+        ],
+        [
+            "purdue",
+            "Purdue University"
+        ],
+        [
+            "fit",
+            "Fashion Institute of Technology"
+        ],
+        [
+            "university of the highlands and islands",
+            "University of the Highlands and Islands"
+        ],
+        [
+            "osu",
+            "Ohio State University"
+        ],
+        [
+            "ohio state",
+            "Ohio State University"
+        ]
+    ];
+    for (const [key, val] of partials){
+        if (originalNameLower.includes(key)) return val;
+    }
+    // Direct lookup in college list
+    for(const key in __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$colleges$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["colleges"]){
+        if (key.toLowerCase() === originalNameLower) return key;
+    }
+    // Suffix stripping
+    let baseName = name;
+    const posseMatch = name.match(/\s*\(posse\)/i);
+    const questbridgeMatch = name.match(/\s*\(questbridge\)/i);
+    const macaulayMatch = name.match(/\s*\(macaulay\)/i);
+    if (posseMatch) baseName = name.replace(posseMatch[0], '').trim();
+    else if (questbridgeMatch) baseName = name.replace(questbridgeMatch[0], '').trim();
+    else if (macaulayMatch) baseName = name.replace(macaulayMatch[0], '').trim();
+    if (baseName !== name) {
+        const normalizedBase = normalizeCollegeName(baseName);
+        if (__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$colleges$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["colleges"][normalizedBase]) return normalizedBase;
+        return baseName;
+    }
+    return name;
+}
+function getMajorArea(specificMajor) {
+    if (!specificMajor) return "Unknown";
+    const lowerSpecificMajor = specificMajor.toLowerCase().trim();
+    if ([
+        "",
+        "undecided",
+        "undecided major",
+        "n/a",
+        "exploratory"
+    ].includes(lowerSpecificMajor)) {
+        return "Undecided/Other";
+    }
+    let mappedArea = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$majors$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["majorToAreaMapping"][lowerSpecificMajor];
+    // Refine STEM bucket into sub-areas when possible
+    if (mappedArea === "STEM") {
+        if (lowerSpecificMajor.includes("computer science") || lowerSpecificMajor === "cs") {
+            mappedArea = "Computer Science";
+        } else if (lowerSpecificMajor.includes("information technology") || lowerSpecificMajor === "it") {
+            mappedArea = "IT";
+        } else if (lowerSpecificMajor.includes("statistics")) {
+            mappedArea = "Statistics";
+        } else if (lowerSpecificMajor.includes("math")) {
+            mappedArea = "Mathematics";
+        } else if (lowerSpecificMajor.includes("physics") || lowerSpecificMajor.includes("chemistry")) {
+            mappedArea = "Physical Sciences";
+        } else if (lowerSpecificMajor.includes("biology") || lowerSpecificMajor.includes("neuroscience") || lowerSpecificMajor.includes("biochem")) {
+            mappedArea = "Life Sciences";
+        }
+    }
+    if (mappedArea) return mappedArea;
+    // Heuristic matching
+    if (lowerSpecificMajor.includes('&') || lowerSpecificMajor.includes(' and ')) {
+        return "Other"; // Simplified for brevity, can expand if needed
+    }
+    // Fallback keywords
+    if (lowerSpecificMajor.includes("engineering")) return "Engineering";
+    if (lowerSpecificMajor.includes("computer science") || lowerSpecificMajor === "cs") return "Computer Science";
+    if (lowerSpecificMajor.includes("information technology") || lowerSpecificMajor === "it") return "IT";
+    if (lowerSpecificMajor.includes("business") || lowerSpecificMajor.includes("finance")) return "Business/Economics";
+    if (lowerSpecificMajor.includes("art") || lowerSpecificMajor.includes("design")) return "Arts/Design";
+    if (lowerSpecificMajor.includes("communication")) return "Communications";
+    if (lowerSpecificMajor.includes("journalism")) return "Journalism";
+    if (lowerSpecificMajor.includes("biology") || lowerSpecificMajor.includes("health")) return "Life Sciences";
+    if (lowerSpecificMajor.includes("math")) return "Mathematics";
+    if (lowerSpecificMajor.includes("physics") || lowerSpecificMajor.includes("chemistry")) return "Physical Sciences";
+    return "Other";
+}
+function parseRawData(jsonData) {
+    const rawEntries = jsonData.map((entry)=>({
+            seniorName: entry.name.trim(),
+            collegeNameRaw: entry.college.trim(),
+            major: entry.major && entry.major.trim() !== "" ? entry.major.trim() : "Undecided Major",
+            gradClass: `'${entry.classYear.trim()}`,
+            originalFirstName: entry.name.trim().split(/\s+/)[0],
+            linkedin: entry.linkedin && entry.linkedin.trim() !== "" ? entry.linkedin.trim() : undefined,
+            instagram: entry.instagram && entry.instagram.trim() !== "" ? entry.instagram.trim() : undefined,
+            github: entry.github && entry.github.trim() !== "" ? entry.github.trim() : undefined,
+            congratsCaption: entry.congratsCaption && entry.congratsCaption.trim() !== "" ? entry.congratsCaption.trim() : undefined
+        }));
+    // Handle duplicate first names in a grad class
+    const firstNameCountsByClass = new Map();
+    for (const entry of rawEntries){
+        if (!firstNameCountsByClass.has(entry.gradClass)) {
+            firstNameCountsByClass.set(entry.gradClass, new Map());
+        }
+        const classCounts = firstNameCountsByClass.get(entry.gradClass);
+        const normName = normalizeForFilename(entry.originalFirstName);
+        classCounts.set(normName, (classCounts.get(normName) || 0) + 1);
+    }
+    return rawEntries.map((entry, index)=>{
+        const photoYear = entry.gradClass.replace("'", "");
+        const normFirstName = normalizeForFilename(entry.originalFirstName);
+        const classCounts = firstNameCountsByClass.get(entry.gradClass);
+        const honoraries = [];
+        const rawLower = entry.collegeNameRaw.toLowerCase();
+        if (rawLower.includes("(questbridge)")) honoraries.push("questbridge");
+        if (rawLower.includes("(posse)")) honoraries.push("posse");
+        if (rawLower.includes("(dean scholars)")) honoraries.push("dean_scholars");
+        if (rawLower.includes("(macaulay)")) honoraries.push("macaulay");
+        let photoFilename = normFirstName;
+        if (classCounts.get(normFirstName) > 1) {
+            photoFilename = normalizeForFilename(entry.seniorName);
+        }
+        // Images live in public/<gradYear>/<filename>.{jpg,png}
+        const seniorPhotoUrlBase = `/${photoYear}/${photoFilename}`;
+        const normalizedNameKey = normalizeCollegeName(entry.collegeNameRaw);
+        const collegeDetails = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$colleges$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["colleges"][normalizedNameKey] || __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$colleges$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["colleges"]["Generic College"];
+        // Derive locationFocus when not provided in data
+        let locationFocus = collegeDetails.locationFocus;
+        if (!locationFocus) {
+            if (collegeDetails.stateOrCountry === 'NY') {
+                const inNYC = collegeDetails.lat >= 40.47 && collegeDetails.lat <= 40.92 && collegeDetails.lng >= -74.26 && collegeDetails.lng <= -73.70;
+                locationFocus = inNYC ? "InCityNYC" : "InStateNYOther";
+            } else if (collegeDetails.stateOrCountry && collegeDetails.stateOrCountry.length === 2) {
+                locationFocus = "OutOfStateUS";
+            } else {
+                locationFocus = "International";
+            }
+        }
+        // Derive isCampusPublic when not provided
+        let isCampusPublic = collegeDetails.isCampusPublic;
+        if (typeof isCampusPublic === 'undefined') {
+            const t = (collegeDetails.type || '').toLowerCase();
+            isCampusPublic = t.includes('public') || t.includes('suny') || t.includes('cuny') || t.includes('university system');
+        }
+        let finalCollegeName = collegeDetails.name;
+        if (collegeDetails.name === "Generic College" && normalizedNameKey !== "Undecided") {
+            finalCollegeName = normalizedNameKey;
+        }
+        if (normalizedNameKey === "Undecided") finalCollegeName = "Undecided";
+        return {
+            id: index,
+            originalIndex: index,
+            seniorName: entry.seniorName,
+            gradClass: entry.gradClass,
+            collegeName: finalCollegeName,
+            collegeKey: normalizedNameKey,
+            collegeNameRaw: entry.collegeNameRaw,
+            major: entry.major,
+            majorArea: getMajorArea(entry.major),
+            lat: collegeDetails.lat,
+            lng: collegeDetails.lng,
+            collegeType: collegeDetails.type,
+            collegeImageUrl: collegeDetails.imageUrl,
+            collegeHomepageUrl: collegeDetails.homepageUrl,
+            isCampusPublic: !!isCampusPublic,
+            locationFocus: locationFocus || "N/A",
+            stateOrCountry: collegeDetails.stateOrCountry,
+            seniorPhotoUrl: `${seniorPhotoUrlBase}.jpg`,
+            seniorPhotoUrlPng: `${seniorPhotoUrlBase}.png`,
+            linkedInUrl: entry.linkedin,
+            instagramUrl: entry.instagram,
+            githubUrl: entry.github,
+            bioCaption: entry.congratsCaption,
+            isIndividuallyVisible: true,
+            isVisible: true,
+            honoraries
+        };
+    });
+}
+}),
+"[project]/src/contexts/DataContext.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "DataProvider",
+    ()=>DataProvider,
+    "useData",
+    ()=>useData
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$students$2e$json__$28$json$29$__ = __turbopack_context__.i("[project]/src/data/students.json (json)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/utils.ts [app-ssr] (ecmascript)");
+'use client';
+;
+;
+;
+;
+const DataContext = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createContext"])(undefined);
+const DataProvider = ({ children })=>{
+    const allStudents = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
+        return (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["parseRawData"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$students$2e$json__$28$json$29$__["default"]);
+    }, []);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(DataContext.Provider, {
+        value: {
+            allStudents
+        },
+        children: children
+    }, void 0, false, {
+        fileName: "[project]/src/contexts/DataContext.tsx",
+        lineNumber: 20,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0));
+};
+const useData = ()=>{
+    const context = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useContext"])(DataContext);
+    if (!context) throw new Error('useData must be used within a DataProvider');
+    return context;
+};
+}),
+"[project]/src/lib/constants.ts [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "GRAD_CLASS_COLORS",
+    ()=>GRAD_CLASS_COLORS,
+    "MAP_ID_DARK",
+    ()=>MAP_ID_DARK,
+    "MAP_ID_LIGHT",
+    ()=>MAP_ID_LIGHT,
+    "MAP_STYLE_DARK",
+    ()=>MAP_STYLE_DARK,
+    "NYC_BOUNDS",
+    ()=>NYC_BOUNDS,
+    "PREDEFINED_MAJOR_AREAS",
+    ()=>PREDEFINED_MAJOR_AREAS
+]);
+const MAP_ID_DARK = '27f65917b8e0eec9e9450357';
+const MAP_ID_LIGHT = '27f65917b8e0eec92a95d812';
+const MAP_STYLE_DARK = [
+    {
+        elementType: "geometry",
+        stylers: [
+            {
+                color: "#1f2937"
+            }
+        ]
+    },
+    {
+        elementType: "labels.text.stroke",
+        stylers: [
+            {
+                color: "#1f2937"
+            }
+        ]
+    },
+    {
+        elementType: "labels.text.fill",
+        stylers: [
+            {
+                color: "#9ca3af"
+            }
+        ]
+    },
+    {
+        featureType: "administrative.locality",
+        elementType: "labels.text.fill",
+        stylers: [
+            {
+                color: "#d1d5db"
+            }
+        ]
+    },
+    {
+        featureType: "poi",
+        elementType: "labels.text.fill",
+        stylers: [
+            {
+                color: "#d1d5db"
+            }
+        ]
+    },
+    {
+        featureType: "poi.park",
+        elementType: "geometry",
+        stylers: [
+            {
+                color: "#374151"
+            }
+        ]
+    },
+    {
+        featureType: "poi.park",
+        elementType: "labels.text.fill",
+        stylers: [
+            {
+                color: "#9ca3af"
+            }
+        ]
+    },
+    {
+        featureType: "road",
+        elementType: "geometry",
+        stylers: [
+            {
+                color: "#4b5563"
+            }
+        ]
+    },
+    {
+        featureType: "road",
+        elementType: "geometry.stroke",
+        stylers: [
+            {
+                color: "#111827"
+            }
+        ]
+    },
+    {
+        featureType: "road",
+        elementType: "labels.text.fill",
+        stylers: [
+            {
+                color: "#e5e7eb"
+            }
+        ]
+    },
+    {
+        featureType: "transit",
+        elementType: "geometry",
+        stylers: [
+            {
+                color: "#2c3340"
+            }
+        ]
+    },
+    {
+        featureType: "water",
+        elementType: "geometry",
+        stylers: [
+            {
+                color: "#0f172a"
+            }
+        ]
+    },
+    {
+        featureType: "water",
+        elementType: "labels.text.fill",
+        stylers: [
+            {
+                color: "#60a5fa"
+            }
+        ]
+    }
+];
+const GRAD_CLASS_COLORS = {
+    "'21": "#00FFFF",
+    "'22": "#FF0000",
+    "'23": "#99CC00",
+    "'24": "#FFBB33",
+    "'25": "#007FFF",
+    "'26": "#FF69B4"
+};
+const PREDEFINED_MAJOR_AREAS = [
+    "Arts/Design",
+    "Business/Economics",
+    "Communications",
+    "Computer Science",
+    "Education",
+    "Engineering",
+    "Health Sciences",
+    "Humanities",
+    "Humanities/Social Sciences",
+    "IT",
+    "Journalism",
+    "Life Sciences",
+    "Mathematics",
+    "Physical Sciences",
+    "Social Sciences",
+    "Statistics",
+    "STEM",
+    "Other",
+    "Undecided/Other",
+    "Unknown"
+];
+const NYC_BOUNDS = {
+    north: 40.92,
+    south: 40.47,
+    west: -74.26,
+    east: -73.70
+};
+}),
+"[project]/src/contexts/FilterContext.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "FilterProvider",
+    ()=>FilterProvider,
+    "useFilters",
+    ()=>useFilters
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$contexts$2f$DataContext$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/contexts/DataContext.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/constants.ts [app-ssr] (ecmascript)");
+'use client';
+;
+;
+;
+;
+const FilterContext = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createContext"])(undefined);
+const FilterProvider = ({ children })=>{
+    const { allStudents } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$contexts$2f$DataContext$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useData"])();
+    const initialGradClasses = {
+        "'21": true,
+        "'22": true,
+        "'23": true,
+        "'24": true,
+        "'25": true,
+        "'26": true
+    };
+    const initialLocationFocus = {
+        "InCityNYC": true,
+        "InStateNYOther": true,
+        "OutOfStateUS": true,
+        "International": true,
+        "N/A": true
+    };
+    const initialMajorAreas = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["PREDEFINED_MAJOR_AREAS"].reduce((acc, area)=>({
+            ...acc,
+            [area]: true
+        }), {});
+    const initialStateCountry = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
+        const map = {};
+        allStudents.forEach((s)=>{
+            if (s.stateOrCountry && s.stateOrCountry.length === 2 && s.stateOrCountry !== 'NY') {
+                map[s.stateOrCountry] = true;
+            }
+        });
+        return map;
+    }, [
+        allStudents
+    ]);
+    const [hiddenStudents, setHiddenStudents] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(()=>{
+        if ("TURBOPACK compile-time truthy", 1) return new Set();
+        //TURBOPACK unreachable
+        ;
+    });
+    const [hiddenColleges, setHiddenColleges] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(()=>{
+        if ("TURBOPACK compile-time truthy", 1) return new Set();
+        //TURBOPACK unreachable
+        ;
+    });
+    const [filterState, setFilterState] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])({
+        gradClasses: initialGradClasses,
+        locationFocus: initialLocationFocus,
+        majorAreas: initialMajorAreas,
+        stateCountry: initialStateCountry,
+        searchQuery: ""
+    });
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if ("TURBOPACK compile-time truthy", 1) return;
+        //TURBOPACK unreachable
+        ;
+    }, []);
+    // Load filters after mount to avoid SSR/client mismatch
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if ("TURBOPACK compile-time truthy", 1) return;
+        //TURBOPACK unreachable
+        ;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if ("TURBOPACK compile-time truthy", 1) return;
+        //TURBOPACK unreachable
+        ;
+    }, [
+        filterState
+    ]);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if ("TURBOPACK compile-time truthy", 1) return;
+        //TURBOPACK unreachable
+        ;
+    }, [
+        hiddenStudents
+    ]);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if ("TURBOPACK compile-time truthy", 1) return;
+        //TURBOPACK unreachable
+        ;
+    }, [
+        hiddenColleges
+    ]);
+    const filteredStudents = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
+        return allStudents.filter((student)=>{
+            if (!student.isIndividuallyVisible) return false;
+            if (hiddenStudents.has(student.id)) return false;
+            if (hiddenColleges.has(student.collegeName)) return false;
+            // Grad Class
+            if (!filterState.gradClasses[student.gradClass]) return false;
+            // Location Focus
+            if (!filterState.locationFocus[student.locationFocus]) return false;
+            // State/Country (out-of-state filtering)
+            const hasStateFilters = Object.keys(filterState.stateCountry || {}).length > 0;
+            if (hasStateFilters && student.stateOrCountry && student.stateOrCountry.length === 2 && student.stateOrCountry !== 'NY') {
+                if (!filterState.stateCountry[student.stateOrCountry]) return false;
+            }
+            // Major Area
+            // Logic handles complex majors roughly
+            const areas = student.majorArea.split(' & ').map((s)=>s.trim());
+            const hasMatchingArea = areas.some((area)=>filterState.majorAreas[area]);
+            if (!hasMatchingArea) return false;
+            // Search
+            if (filterState.searchQuery) {
+                const q = filterState.searchQuery.toLowerCase();
+                const matches = student.seniorName.toLowerCase().includes(q) || student.collegeName.toLowerCase().includes(q) || student.major.toLowerCase().includes(q);
+                if (!matches) return false;
+            }
+            return true;
+        });
+    }, [
+        allStudents,
+        filterState
+    ]);
+    const toggleGradClass = (cls)=>{
+        setFilterState((prev)=>({
+                ...prev,
+                gradClasses: {
+                    ...prev.gradClasses,
+                    [cls]: !prev.gradClasses[cls]
+                }
+            }));
+    };
+    const toggleLocationFocus = (focus)=>{
+        setFilterState((prev)=>({
+                ...prev,
+                locationFocus: {
+                    ...prev.locationFocus,
+                    [focus]: !prev.locationFocus[focus]
+                }
+            }));
+    };
+    const toggleMajorArea = (area)=>{
+        setFilterState((prev)=>({
+                ...prev,
+                majorAreas: {
+                    ...prev.majorAreas,
+                    [area]: !prev.majorAreas[area]
+                }
+            }));
+    };
+    const toggleStateCountry = (stateCode)=>{
+        setFilterState((prev)=>({
+                ...prev,
+                stateCountry: {
+                    ...prev.stateCountry,
+                    [stateCode]: !prev.stateCountry[stateCode]
+                }
+            }));
+    };
+    const toggleStudentVisibility = (id)=>{
+        setHiddenStudents((prev)=>{
+            const next = new Set(prev);
+            if (next.has(id)) next.delete(id);
+            else next.add(id);
+            return next;
+        });
+    };
+    const toggleCollegeVisibility = (collegeName)=>{
+        setHiddenColleges((prev)=>{
+            const next = new Set(prev);
+            if (next.has(collegeName)) next.delete(collegeName);
+            else next.add(collegeName);
+            return next;
+        });
+    };
+    const isStudentVisible = (id)=>!hiddenStudents.has(id);
+    const isCollegeVisible = (collegeName)=>!hiddenColleges.has(collegeName);
+    const resetFilters = ()=>{
+        setFilterState({
+            gradClasses: initialGradClasses,
+            locationFocus: initialLocationFocus,
+            majorAreas: initialMajorAreas,
+            stateCountry: initialStateCountry,
+            searchQuery: ""
+        });
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FilterContext.Provider, {
+        value: {
+            filterState,
+            setFilterState,
+            filteredStudents,
+            toggleGradClass,
+            toggleLocationFocus,
+            toggleMajorArea,
+            toggleStateCountry,
+            toggleStudentVisibility,
+            toggleCollegeVisibility,
+            isStudentVisible,
+            isCollegeVisible,
+            resetFilters
+        },
+        children: children
+    }, void 0, false, {
+        fileName: "[project]/src/contexts/FilterContext.tsx",
+        lineNumber: 218,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0));
+};
+const useFilters = ()=>{
+    const context = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useContext"])(FilterContext);
+    if (!context) throw new Error('useFilters must be used within a FilterProvider');
+    return context;
+};
+}),
+"[project]/src/contexts/UIContext.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "UIProvider",
+    ()=>UIProvider,
+    "useUI",
+    ()=>useUI
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+'use client';
+;
+;
+const UIContext = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createContext"])(undefined);
+const UIProvider = ({ children })=>{
+    const [selectedStudent, setSelectedStudent] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [isPhotoPopupOpen, setIsPhotoPopupOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [activeHoverId, setActiveHoverId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [popupAnchorRect, setPopupAnchorRect] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const openPhotoPopup = (student, anchorRect)=>{
+        setSelectedStudent(student);
+        setPopupAnchorRect(anchorRect ?? null);
+        setIsPhotoPopupOpen(true);
+    };
+    const closePhotoPopup = ()=>{
+        setIsPhotoPopupOpen(false);
+    // Don't clear selectedStudent immediately to avoid flicker
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(UIContext.Provider, {
+        value: {
+            selectedStudent,
+            setSelectedStudent,
+            isPhotoPopupOpen,
+            openPhotoPopup,
+            closePhotoPopup,
+            activeHoverId,
+            setActiveHoverId,
+            popupAnchorRect
+        },
+        children: children
+    }, void 0, false, {
+        fileName: "[project]/src/contexts/UIContext.tsx",
+        lineNumber: 46,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0));
+};
+const useUI = ()=>{
+    const context = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useContext"])(UIContext);
+    if (!context) throw new Error('useUI must be used within a UIProvider');
+    return context;
+};
+}),
+"[externals]/next/dist/server/app-render/work-unit-async-storage.external.js [external] (next/dist/server/app-render/work-unit-async-storage.external.js, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("next/dist/server/app-render/work-unit-async-storage.external.js", () => require("next/dist/server/app-render/work-unit-async-storage.external.js"));
+
+module.exports = mod;
+}),
+"[externals]/next/dist/server/app-render/work-async-storage.external.js [external] (next/dist/server/app-render/work-async-storage.external.js, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("next/dist/server/app-render/work-async-storage.external.js", () => require("next/dist/server/app-render/work-async-storage.external.js"));
+
+module.exports = mod;
+}),
+"[externals]/next/dist/server/app-render/action-async-storage.external.js [external] (next/dist/server/app-render/action-async-storage.external.js, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("next/dist/server/app-render/action-async-storage.external.js", () => require("next/dist/server/app-render/action-async-storage.external.js"));
+
+module.exports = mod;
+}),
+"[externals]/next/dist/server/app-render/after-task-async-storage.external.js [external] (next/dist/server/app-render/after-task-async-storage.external.js, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("next/dist/server/app-render/after-task-async-storage.external.js", () => require("next/dist/server/app-render/after-task-async-storage.external.js"));
+
+module.exports = mod;
+}),
+"[externals]/next/dist/server/app-render/dynamic-access-async-storage.external.js [external] (next/dist/server/app-render/dynamic-access-async-storage.external.js, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("next/dist/server/app-render/dynamic-access-async-storage.external.js", () => require("next/dist/server/app-render/dynamic-access-async-storage.external.js"));
+
+module.exports = mod;
+}),
+];
+
+//# sourceMappingURL=%5Broot-of-the-server%5D__4c27b43d._.js.map

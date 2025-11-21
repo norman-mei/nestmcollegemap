@@ -1,0 +1,238 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: #0f172a;
+  background-color: #f8fafc;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+.dark body {
+  color: #e5e7eb;
+  background-color: #0f0f10;
+}
+
+/* Basic scrollbar styling to mimic the custom thin scrollbars used in the outline without an extra plugin */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #9ca3af;
+  border-radius: 9999px;
+}
+
+.scrollbar-thumb-gray-400 {
+  scrollbar-color: #9ca3af transparent;
+}
+
+/* Google Maps container tweaks */
+.gm-style iframe {
+  border-radius: 0.5rem;
+}
+
+/* Info window styling for map panels */
+.info-window-content {
+  line-height: 1.5;
+  max-width: 320px;
+  color: #0f172a;
+}
+.dark .info-window-content {
+  color: #e5e7eb;
+}
+.info-window-content .transit-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 4px;
+  display: inline-block;
+}
+.info-window-content .transit-label {
+  font-weight: bold;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 0.85em;
+  margin-right: 4px;
+  border: 1px solid;
+  display: inline-block;
+}
+.info-window-content .transit-label.bus { background-color: #d9534f; color: #fff; border-color: #b52b27; }
+.info-window-content .transit-label.subway { background-color: #4caf50; color: #fff; border-color: #388e3c; }
+.info-window-content .transit-label.rail { background-color: #0275d8; color: #fff; border-color: #014c8c; }
+.info-window-content .transit-label.streetcar { background-color: #00aeef; color: #fff; border-color: #008cba; }
+.info-window-content .transit-label.light-rail { background-color: #f59e0b; color: #fff; border-color: #d97706; }
+.info-window-content .transit-label.ferry { background-color: #8a2be2; color: #fff; border-color: #7324bf; }
+.info-window-content .transit-stop-link {
+  color: inherit;
+  text-decoration: none;
+}
+.info-window-content .transit-stop-link:hover {
+  text-decoration: underline;
+}
+.info-window-content .social-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  margin-left: 3px;
+}
+.info-window-content .info-chip {
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 9999px;
+  font-size: 0.8em;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: rgba(99, 102, 241, 0.12);
+  color: #1f2937;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.info-window-content .info-chip.muted {
+  background: rgba(107, 114, 128, 0.12);
+}
+.info-window-content .info-chip.chip-ivy {
+  background: #0b5345;
+  border-color: #064e3b;
+  color: #ecfdf3;
+}
+.info-window-content .info-chip.chip-suny {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  color: #e0ecff;
+}
+.info-window-content .info-chip.chip-cuny {
+  background: #0369a1;
+  border-color: #075985;
+  color: #e0f2fe;
+}
+.info-window-content .info-chip.chip-nyc {
+  background: #dc2626;
+  border-color: #b91c1c;
+  color: #fef2f2;
+}
+.info-window-content .info-chip.chip-nystate {
+  background: #2563eb;
+  border-color: #1d4ed8;
+  color: #e0ecff;
+}
+.info-window-content .info-chip.chip-outofstate {
+  background: #0ea5e9;
+  border-color: #0284c7;
+  color: #ecfeff;
+}
+.info-window-content .info-chip.chip-international {
+  background: #10b981;
+  border-color: #059669;
+  color: #ecfdf3;
+}
+.info-window-content .info-chip.chip-purdue {
+  background: #f59e0b;
+  border-color: #d97706;
+  color: #1f2937;
+}
+.info-window-content .info-chip.chip-generic-type {
+  background: #4b5563;
+  border-color: #374151;
+  color: #f9fafb;
+}
+.info-window-content .info-chip.chip-public {
+  background: #16a34a;
+  border-color: #15803d;
+  color: #ecfdf3;
+}
+.info-window-content .info-chip.chip-private {
+  background: #7c3aed;
+  border-color: #6d28d9;
+  color: #f5f3ff;
+}
+.dark .info-window-content .info-chip {
+  border-color: rgba(255,255,255,0.25);
+  color: #e5e7eb;
+  background: rgba(99, 102, 241, 0.35);
+}
+.dark .info-window-content .info-chip.muted {
+  background: rgba(107, 114, 128, 0.35);
+}
+.dark .info-window-content .info-chip.chip-ivy {
+  background: #0a422b;
+  border-color: #0a422b;
+}
+.dark .info-window-content .info-chip.chip-suny {
+  background: #1e3a8a;
+  border-color: #1e3a8a;
+}
+.dark .info-window-content .info-chip.chip-cuny {
+  background: #0b4f71;
+  border-color: #0b4f71;
+}
+.dark .info-window-content .info-chip.chip-nyc {
+  background: #991b1b;
+  border-color: #7f1d1d;
+  color: #fee2e2;
+}
+.dark .info-window-content .info-chip.chip-nystate {
+  background: #1e3a8a;
+  border-color: #1e3a8a;
+  color: #e0ecff;
+}
+.dark .info-window-content .info-chip.chip-outofstate {
+  background: #075985;
+  border-color: #0e7490;
+  color: #e0f2fe;
+}
+.dark .info-window-content .info-chip.chip-international {
+  background: #0f766e;
+  border-color: #115e59;
+  color: #d1fae5;
+}
+.dark .info-window-content .info-chip.chip-purdue {
+  background: #b45309;
+  border-color: #92400e;
+  color: #fef3c7;
+}
+.dark .info-window-content .info-chip.chip-generic-type {
+  background: #1f2937;
+  border-color: #111827;
+  color: #e5e7eb;
+}
+.dark .info-window-content .info-chip.chip-public {
+  background: #166534;
+  border-color: #14532d;
+  color: #dcfce7;
+}
+.dark .info-window-content .info-chip.chip-private {
+  background: #6b21a8;
+  border-color: #581c87;
+  color: #f5d0fe;
+}
+.info-window-content .time-format-select {
+  padding: 2px 6px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: inherit;
+}
+.dark .info-window-content .time-format-select {
+  border-color: #374151;
+  background: #1f2937;
+  color: #e5e7eb;
+}
