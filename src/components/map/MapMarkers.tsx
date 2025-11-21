@@ -564,11 +564,16 @@ export default function MapMarkers({ students }: MapMarkersProps) {
         : { ...baseRequest, radius: 7500 };
 
       const html = await new Promise<string>((resolve) => {
-        service.nearbySearch(request, (results, status) => {
-          if (status !== google.maps.places.PlacesServiceStatus.OK || !results || results.length === 0) {
-            resolve('');
-            return;
-          }
+        service.nearbySearch(
+          request,
+          (
+            results: google.maps.places.PlaceResult[] | null,
+            status: google.maps.places.PlacesServiceStatus
+          ) => {
+            if (status !== google.maps.places.PlacesServiceStatus.OK || !results || results.length === 0) {
+              resolve('');
+              return;
+            }
 
           const uniqueStops = new Map<string, { place: google.maps.places.PlaceResult; distance: number; typeDetails: { type: string; icon: string; labelClass: string } }>();
           results.slice(0, 25).forEach((place) => {
@@ -612,8 +617,9 @@ export default function MapMarkers({ students }: MapMarkersProps) {
             `;
           });
           htmlString += '</ol>';
-          resolve(htmlString);
-        });
+            resolve(htmlString);
+          }
+        );
       });
 
       transitCacheRef.current.set(cacheKey, html);
