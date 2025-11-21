@@ -58,7 +58,8 @@ export default function CollegeMap() {
           fullscreenControl={false} // We have custom controls or layout handles this
           mapTypeId={mapType}
           onMapTypeIdChanged={(e) => {
-            const newType = (e.detail?.map?.getMapTypeId?.() as google.maps.MapTypeId | string | undefined) ?? mapType;
+            const mapInstance = (e as { detail?: { map?: google.maps.Map } }).detail?.map;
+            const newType = (mapInstance?.getMapTypeId?.() as google.maps.MapTypeId | string | undefined) ?? mapType;
             if (newType === 'satellite' || newType === 'roadmap') setMapType(newType);
           }}
           className="w-full h-full"
