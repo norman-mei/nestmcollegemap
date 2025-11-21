@@ -1,15 +1,15 @@
 'use client';
 
 import React, { useState, useEffect } from "react";
-import SidebarContainer from "@/components/sidebar/SidebarContainer";
-import StudentList from "@/components/sidebar/StudentList";
-import FilterPanel from "@/components/sidebar/FilterPanel";
-import StatisticsPanel from "@/components/sidebar/StatisticsPanel";
-import TrendCharts from "@/components/sidebar/TrendCharts";
-import CollegeMap from "@/components/map/CollegeMap";
-import PhotoPopup from "@/components/ui/PhotoPopup";
-import TutorialTour from "@/components/ui/TutorialTour";
-import InfoModals from "@/components/ui/InfoModals";
+import SidebarContainer from "../components/sidebar/SidebarContainer";
+import StudentList from "../components/sidebar/StudentList";
+import FilterPanel from "../components/sidebar/FilterPanel";
+import StatisticsPanel from "../components/sidebar/StatisticsPanel";
+import TrendCharts from "../components/sidebar/TrendCharts";
+import CollegeMap from "../components/map/CollegeMap";
+import PhotoPopup from "../components/ui/PhotoPopup";
+import TutorialTour from "../components/ui/TutorialTour";
+import InfoModals from "../components/ui/InfoModals";
 
 export default function Home() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);

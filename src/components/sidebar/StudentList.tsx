@@ -2,11 +2,13 @@
 
 import React, { useMemo, useState, useEffect } from 'react';
 import { useFilters } from '@/contexts/FilterContext';
+import { useData } from '@/contexts/DataContext';
 import { useUI } from '@/contexts/UIContext';
 import { ProcessedStudent } from '@/lib/types';
 import { GRAD_CLASS_COLORS } from '@/lib/constants';
 
 type CollapsedState = Record<string, boolean>;
+type SuggestionItem = { value: string; type: 'Student' | 'College' | 'Major' };
 
 const gradOrder = ["'21","'22","'23","'24","'25","'26"];
 const getFirstName = (full: string) => full.trim().split(/\s+/)[0] || full;
@@ -15,15 +17,19 @@ const getLastName = (full: string) => {
   return parts.length > 1 ? parts[parts.length - 1] : full;
 };
 const displayGradClass = (gradClass: string) => gradClass.replace(/^'+/, '');
+const suggestionTypeRank: Record<SuggestionItem['type'], number> = { Student: 0, College: 1, Major: 2 };
 
 export default function StudentList() {
   const { filteredStudents, filterState, setFilterState, toggleStudentVisibility, toggleCollegeVisibility, isStudentVisible, isCollegeVisible } = useFilters();
+  const { allStudents } = useData();
   const { openPhotoPopup, setActiveHoverId, activeHoverId } = useUI();
   const [isGallery, setIsGallery] = useState(false);
   const [sortTarget, setSortTarget] = useState<'students' | 'colleges'>('students');
   const [studentSort, setStudentSort] = useState<'grad_first' | 'grad_last' | 'first' | 'last'>('grad_first');
   const [collegeSort, setCollegeSort] = useState<'name_asc' | 'name_desc' | 'count_desc' | 'count_asc'>('name_asc');
   const [collapsedClasses, setCollapsedClasses] = useState<CollapsedState>({});
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [highlightedIndex, setHighlightedIndex] = useState(-1);
 
   // Load persisted collapsed state after mount to avoid SSR/client mismatch
   useEffect(() => {
@@ -42,6 +48,50 @@ export default function StudentList() {
     if (typeof window === 'undefined') return;
     localStorage.setItem('collapsedGradClasses', JSON.stringify(collapsedClasses));
   }, [collapsedClasses]);
+
+  const suggestionPool = useMemo(() => {
+    const seen = new Set<string>();
+    const pool: SuggestionItem[] = [];
+    const add = (value: string, type: SuggestionItem['type']) => {
+      if (!value) return;
+      const trimmed = value.trim();
+      if (!trimmed) return;
+      const key = `${type}|${trimmed.toLowerCase()}`;
+      if (seen.has(key)) return;
+      seen.add(key);
+      pool.push({ value: trimmed, type });
+    };
+
+    allStudents.forEach((s) => {
+      add(s.seniorName, 'Student');
+      add(s.collegeName, 'College');
+      add(s.major, 'Major');
+    });
+
+    return pool;
+  }, [allStudents]);
+
+  const filteredSuggestions = useMemo(() => {
+    const query = filterState.searchQuery.trim().toLowerCase();
+    if (!query) return [];
+
+    return suggestionPool
+      .filter((item) => item.value.toLowerCase().includes(query))
+      .sort((a, b) => {
+        const aStarts = a.value.toLowerCase().startsWith(query) ? 0 : 1;
+        const bStarts = b.value.toLowerCase().startsWith(query) ? 0 : 1;
+        if (aStarts !== bStarts) return aStarts - bStarts;
+        const typeDelta = suggestionTypeRank[a.type] - suggestionTypeRank[b.type];
+        if (typeDelta !== 0) return typeDelta;
+        return a.value.localeCompare(b.value);
+      })
+      .slice(0, 8);
+  }, [filterState.searchQuery, suggestionPool]);
+
+  useEffect(() => {
+    setHighlightedIndex(-1);
+    if (!filterState.searchQuery.trim()) setShowSuggestions(false);
+  }, [filterState.searchQuery]);
 
   const sortedStudents = useMemo(() => {
     const list = [...filteredStudents];
@@ -130,7 +180,44 @@ export default function StudentList() {
   }, [filteredStudents, setActiveHoverId, openPhotoPopup]);
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFilterState((prev) => ({ ...prev, searchQuery: e.target.value }));
+    const value = e.target.value;
+    setFilterState((prev) => ({ ...prev, searchQuery: value }));
+    setShowSuggestions(Boolean(value.trim()));
+    setHighlightedIndex(-1);
+  };
+
+  const selectSuggestion = (value: string) => {
+    setFilterState((prev) => ({ ...prev, searchQuery: value }));
+    setShowSuggestions(false);
+    setHighlightedIndex(-1);
+  };
+
+  const handleSearchKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setShowSuggestions(true);
+      setHighlightedIndex((prev) => {
+        const next = prev + 1;
+        if (!filteredSuggestions.length) return prev;
+        return next >= filteredSuggestions.length ? 0 : next;
+      });
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setShowSuggestions(true);
+      setHighlightedIndex((prev) => {
+        if (!filteredSuggestions.length) return prev;
+        const next = prev - 1;
+        return next < 0 ? filteredSuggestions.length - 1 : next;
+      });
+    } else if (e.key === 'Enter') {
+      if (highlightedIndex >= 0 && highlightedIndex < filteredSuggestions.length) {
+        e.preventDefault();
+        selectSuggestion(filteredSuggestions[highlightedIndex].value);
+      }
+    } else if (e.key === 'Escape') {
+      setShowSuggestions(false);
+      setHighlightedIndex(-1);
+    }
   };
 
   const toggleClass = (gradClass: string) => {
@@ -270,14 +357,44 @@ export default function StudentList() {
       <div id="student-list-toolbar" className="p-4 border-b border-gray-300 dark:border-neutral-800 bg-white dark:bg-neutral-900 sticky top-0 z-10">
         <h2 className="text-lg font-bold mb-2">College List & Seniors</h2>
         <div className="flex gap-2 mb-2">
-          <input
-            type="text"
-            placeholder="Search..."
-            id="student-search-input"
-            className="flex-1 px-3 py-2 border rounded-full text-sm dark:bg-neutral-800 dark:border-neutral-700"
-            value={filterState.searchQuery}
-            onChange={handleSearch}
-          />
+          <div className="flex-1 relative">
+            <input
+              type="text"
+              placeholder="Search students, colleges, majors..."
+              id="student-search-input"
+              className="w-full px-3 py-2 border rounded-full text-sm dark:bg-neutral-800 dark:border-neutral-700"
+              value={filterState.searchQuery}
+              autoComplete="off"
+              onChange={handleSearch}
+              onFocus={() => filterState.searchQuery.trim() && setShowSuggestions(true)}
+              onBlur={() => setTimeout(() => setShowSuggestions(false), 100)}
+              onKeyDown={handleSearchKeyDown}
+            />
+            {showSuggestions && filteredSuggestions.length > 0 && (
+              <div className="absolute left-0 right-0 mt-1 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800 rounded-lg shadow-lg z-20 max-h-64 overflow-y-auto">
+                {filteredSuggestions.map((s, idx) => {
+                  const isActive = idx === highlightedIndex;
+                  return (
+                    <button
+                      key={`${s.type}-${s.value}`}
+                      type="button"
+                      className={`w-full px-3 py-2 flex items-center justify-between text-sm ${
+                        isActive ? 'bg-blue-50 dark:bg-blue-900/30' : ''
+                      } hover:bg-gray-100 dark:hover:bg-neutral-800`}
+                      onMouseDown={(e) => {
+                        e.preventDefault();
+                        selectSuggestion(s.value);
+                      }}
+                      onMouseEnter={() => setHighlightedIndex(idx)}
+                    >
+                      <span className="text-left text-gray-900 dark:text-gray-100 truncate">{s.value}</span>
+                      <span className="ml-3 text-xs text-gray-500">{s.type}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            )}
+          </div>
           <select
             className="px-2 py-1 border rounded text-sm dark:bg-neutral-800 dark:border-neutral-700"
             id="list-mode-select"
