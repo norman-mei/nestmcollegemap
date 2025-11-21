@@ -204,7 +204,9 @@ export default function MapMarkers({ students }: MapMarkersProps) {
       debugLog('Created marker clusterer instance');
     }
 
-    const previousCount = clustererRef.current.getMarkers?.().length;
+    const previousCount =
+      ((clustererRef.current as unknown as { getMarkers?: () => google.maps.Marker[] })?.getMarkers?.() || [])
+        .length;
     clustererRef.current.clearMarkers();
     debugLog('Cleared clusterer markers', { previousCount });
     markersRef.current = {};
