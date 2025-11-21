@@ -813,9 +813,11 @@ export default function MapMarkers({ students }: MapMarkersProps) {
 
     clustererRef.current.addMarkers(newMarkers);
     const durationMs = (typeof performance !== 'undefined' ? performance.now() : Date.now()) - buildStart;
+    const clusterMarkers =
+      ((clustererRef.current as unknown as { getMarkers?: () => google.maps.Marker[] })?.getMarkers?.() || []).length;
     debugLog('Added markers to clusterer', {
       added: newMarkers.length,
-      clusterCount: clustererRef.current.getMarkers?.().length,
+      clusterCount: clusterMarkers,
       durationMs: Math.round(durationMs),
     });
 
