@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import { APIProvider, Map, useMap, MapEvent } from '@vis.gl/react-google-maps';
+import { APIProvider, Map, useMap } from '@vis.gl/react-google-maps';
 import { useTheme } from '@/contexts/ThemeContext';
 import { useFilters } from '@/contexts/FilterContext';
 import { MAP_STYLE_DARK } from '@/lib/constants';
@@ -57,7 +57,7 @@ export default function CollegeMap() {
           disableDefaultUI={false}
           fullscreenControl={false} // We have custom controls or layout handles this
           mapTypeId={mapType}
-          onMapTypeIdChanged={(e: MapEvent<'maptypeid_changed'>) => {
+          onMapTypeIdChanged={(e) => {
             const newType = (e.detail?.map?.getMapTypeId?.() as google.maps.MapTypeId | string | undefined) ?? mapType;
             if (newType === 'satellite' || newType === 'roadmap') setMapType(newType);
           }}
