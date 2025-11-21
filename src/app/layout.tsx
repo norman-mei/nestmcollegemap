@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/contexts/ThemeContext";
 import { DataProvider } from "@/contexts/DataContext";
 import { FilterProvider } from "@/contexts/FilterContext";
 import { UIProvider } from "@/contexts/UIContext";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "NEST+m College Map",
@@ -31,6 +32,7 @@ export default function RootLayout({
                     </UIProvider>
                 </FilterProvider>
             </DataProvider>
+            <Analytics />
         </ThemeProvider>
       </body>
     </html>
