@@ -11,7 +11,7 @@ const INSTAGRAM_LINKS: Record<string, string> = {
   "'23": 'https://www.instagram.com/nestmdecisions2023/',
   "'24": 'https://www.instagram.com/nestmdecisions2024/',
   "'25": 'https://www.instagram.com/nestmdecisions25/',
-  "'26": 'https://www.instagram.com/nestmseniors2026/',
+  "'26": 'https://www.instagram.com/nestm.decisions2026/',
 };
 
 const REGION_OPTIONS = [
