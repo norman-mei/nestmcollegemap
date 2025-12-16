@@ -253,6 +253,7 @@ export const majorToAreaMapping: Record<string, string> = {
     "global public health": "Health Sciences",
     "global public health & biology": "Health Sciences",
     "health sciences": "Health Sciences",
+    "Health, Medicine, & Society": "Health Sciences",
     "hssp": "Health Sciences",
     "occupational thearpy": "Health Sciences",
     "kinesiology": "Health Sciences",
