@@ -136,7 +136,8 @@ export const colleges: Record<string, CollegeInfo> = {
     "Sciences Po": { name: "Sciences Po", lat: 48.85382169007917,   lng: 2.328770612033854, type: TYPE_OTHER_PRIVATE , imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Logo_Sciences_Po.svg/2560px-Logo_Sciences_Po.svg.png", homepageUrl: "https://www.sciencespo.fr/fr/", stateOrCountry: "FRA"},
     "King's College London": { name: "King's College London", lat: 51.511631656423596, lng: -0.11620537037285264, type: TYPE_OTHER_PUBLIC, imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/King%27s_College_London_logo.svg/2560px-King%27s_College_London_logo.svg.png", homepageUrl: "https://www.kcl.ac.uk/", stateOrCountry: "GBR" },
     "Villanova University": { name: "Villanova University", lat: 40.03696637200985,  lng: -75.34258198286143, type: TYPE_OTHER_PRIVATE, imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Villanova_Wildcats_logo.svg/250px-Villanova_Wildcats_logo.svg.png?20180601181956", homepageUrl: "https://www1.villanova.edu/university.html", stateOrCountry: "PA" },
-
+    "Bowdoin College": { name: "Bowdoin College", lat: 43.90779338577932,  lng: -69.96396491344582, type: TYPE_OTHER_PRIVATE, imageUrl: "https://upload.wikimedia.org/wikipedia/en/e/e8/Formal_Seal_of_Bowdoin_College%2C_Brunswick%2C_ME%2C_USA.svg", homepageUrl: "https://www.bowdoin.edu/", stateOrCountry: "ME" },
+    
     "Generic College": { name: "Generic College", lat: 0, lng: 0, type: "Undecided", imageUrl: "placeholder-logo.png", homepageUrl: "#", stateOrCountry: "N/A"},
     "Undecided": { name: "Undecided", lat: 0, lng: 0, type: TYPE_UNDECIDED, imageUrl: "placeholder-logo.png", homepageUrl: "#", stateOrCountry: "N/A" }
 };
