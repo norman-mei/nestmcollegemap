@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useState, useMemo } from 'react';
 import rawData from '@/data/students.json';
+import generated26 from '@/data/class26.generated.json';
 import { parseRawData } from '@/lib/utils';
 import { ProcessedStudent, RawStudent } from '@/lib/types';
 
@@ -13,7 +14,10 @@ const DataContext = createContext<DataContextType | undefined>(undefined);
 
 export const DataProvider = ({ children }: { children: React.ReactNode }) => {
   const allStudents = useMemo(() => {
-    return parseRawData(rawData as RawStudent[]);
+    return parseRawData([
+      ...(rawData as RawStudent[]),
+      ...(generated26 as RawStudent[]),
+    ]);
   }, []);
 
   return (

@@ -31,6 +31,24 @@ NEXT_PUBLIC_OPENWEATHER_API_KEY=your_openweather_key   # optional, enables live 
 
 Other scripts: `npm run lint`, `npm run build`, and `npm start` (after build).
 
+### Class of '26 automation (Instagram -> data)
+1) One-time login to capture an Instagram session (headful Playwright):  
+`npm run login:ig`  
+This saves `storage/ig-state.ujson` (ignored by git).
+
+2) Fetch new posts (on/after 2026-01-16) into the app:  
+`npm run fetch:26`  
+What it does:
+- Pulls new posts from `nestm.decisions2026` using the saved session (Graph API not required).
+- Downloads images to `public/26/`, OCRs name/college/major, and builds `src/data/class26.generated.json` in the same `RawStudent` shape as `students.json` (unknown colleges fall back to `Generic College`).
+- Dedupe by Instagram shortcode; skips anything before 2026-01-16.  
+- Writes a review CSV to `storage/class26.review.csv` so you can spot low-confidence OCR rows.
+- For testing with an earlier cutoff, set `MIN_DATE` (ISO `YYYY-MM-DD`):  
+`MIN_DATE=2026-01-10 npm run fetch:26`
+
+3) Scheduling: on the host where the app runs, add a weekly cron such as:  
+`0 7 * * 1 cd /path/to/repo && npm run fetch:26 >> /tmp/class26.log 2>&1`
+
 ## 📁 Project Structure
 ```
 src/
