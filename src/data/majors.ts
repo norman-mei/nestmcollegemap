@@ -126,6 +126,7 @@ export const majorToAreaMapping: Record<string, string> = {
     "african american studies": "Humanities/Social Sciences",
     "ancient history": "Humanities/Social Sciences",
     "anthropology": "Humanities/Social Sciences",
+    "anthropology & human biology": "Humanities/Social Sciences",
     "applied psychology": "Humanities/Social Sciences",
     "archaeological studies": "Humanities/Social Sciences",
     "archaeology": "Humanities/Social Sciences",
